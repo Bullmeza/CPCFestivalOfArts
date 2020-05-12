@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!--Loading Bar-->
+    <script src="nanobar.js"></script>
+
+    <!--Animations-->
+    <link rel="stylesheet" href="animate.css" />
+
+
+    <title>Festival Of The Arts</title>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+    <nav class="navbar navbar-dark bg-dark fixed-top mt-2">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>  <span>Expand</span>
+         </button>
+        <a href="next">
+            <span class="text-white display-4 font-weight-bolder mr-1">
+                <span class="pr-3">Next</span>
+            <span><img class="animated bounceOutRight infinite delay-2s slower filter" src="img/right-chevron.svg"  width="50px"></span>
+            </span>
+        </a>
+
+
+        <div class="collapse navbar-collapse mt-2" id="navbarNavDropdown">
+            <ul class="navbar-nav container-fluid flex-row animated zoomInDown faster">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <img src="img/home.png">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="drama.html">
+
+                        <img src="img/drama.png">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="music.html">
+                        <img src="img/music.png">
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="art.html">
+                        <img src="img/art.png">
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="tech.html">
+                        <img src="img/comp.png">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sing.html">
+                        <img src="img/sing.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="arrow animated bounce infinite delay-1s slower">
+                <a href="#J1">
+                    <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+            <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+              </svg>
+                </a>
+            </div>
+
+            <div class="carousel-item active" data-interval="10000">
+                <video autoplay muted loop id="myVideo">
+                    <source src="vid/robo1.mp4" type="video/mp4">
+                  </video>
+                <h1 class="text">
+                    Technology
+                </h1>
+            </div>
+            <div class="carousel-item paral p2" data-interval="8000">
+            </div>
+            <div class="carousel-item paral p3" data-interval="8000">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div id="J1" class="jumbotron jumbotron-fluid text-white bg-dark mt-0" style="clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+        <div class="container p-4">
+            <h1 class="display-4 font-weight-bold" id="T1">Gr. 8 Graphic Design</h1>
+            <p class="lead">The students learned how to photoshop and whatever</p>
+        </div>
+    </div>
+
+    <div class="container-fluid w-75 ">
+        <div id="Services" class="container-fluid p-3">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="hovereffect text-center">
+                        <img class="img-responsive" src="img/tech/graphic_design/1.jpg" alt="">
+                        <div class="overlay">
+                            <p class="font-weight-bolder">
+                                Cool Name
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="hovereffect text-center">
+                        <img class="img-responsive" src="img/tech/graphic_design/2.jpg" alt="">
+                        <div class="overlay">
+                            <p class="font-weight-bolder">
+                                Cool Name
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="hovereffect text-center">
+                        <img class="img-responsive" src="img/tech/graphic_design/3.jpg" alt="">
+                        <div class="overlay">
+                            <p class="font-weight-bolder">
+                                Cool Name
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="hovereffect text-center">
+                    <img class="img-responsive" src="img/tech/graphic_design/4.jpg" alt="">
+                    <div class="overlay">
+                        <p class="font-weight-bolder">
+                            Cool Name
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="hovereffect text-center">
+                    <img class="img-responsive" src="img/tech/graphic_design/5.jpg" alt="">
+                    <div class="overlay">
+                        <p class="font-weight-bolder">
+                            Cool Name
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="hovereffect text-center">
+                    <img class="img-responsive" src="img/tech/graphic_design/6.jpg" alt="">
+                    <div class="overlay">
+                        <p class="font-weight-bolder">
+                            Cool Name
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="hovereffect text-center">
+                    <img class="img-responsive" src="img/tech/graphic_design/7.png" alt="">
+                    <div class="overlay">
+                        <p class="font-weight-bolder">
+                            Cool Name
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="hovereffect text-center">
+                    <img class="img-responsive" src="img/tech/graphic_design/8.jpg" alt="">
+                    <div class="overlay">
+                        <p class="font-weight-bolder">
+                            Cool Name
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="hovereffect text-center">
+                    <img class="img-responsive" src="img/tech/graphic_design/9.jpg" alt="">
+                    <div class="overlay">
+                        <p class="font-weight-bolder">
+                            Cool Name
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid text-white bg-dark mt-0" style="clip-path: polygon(0 calc(100% - 10vh), 0 0, 100% 0, 100% 100%);">
+        <div class="container text-right p-4">
+            <h1 class="display-4 font-weight-bold ">Gr. 9 Photography</h1>
+            <p class="lead">The students learned how to photoshop and whatever The students learned how to photoshop and whatever The students learned how to photoshop and whatever The students learned how to photoshop and whatever
+            </p>
+        </div>
+    </div>
+    <div class="container-fluid w-75 ">
+        <div id="Services" class="container-fluid p-3">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="hovereffect text-center">
+                        <img class="img-responsive" src="img/tech/photography/1.jpg" alt="">
+                        <div class="overlay">
+                            <p class="font-weight-bolder">
+                                Cool Name
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="hovereffect text-center">
+                        <img class="img-responsive" src="img/tech/photography/2.jpg" alt="">
+                        <div class="overlay">
+                            <p class="font-weight-bolder">
+                                Cool Name
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="hovereffect text-center">
+                        <img class="img-responsive" src="" alt="">
+                        <div class="overlay">
+                            <p class="font-weight-bolder">
+                                Cool Name
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var simplebar = new Nanobar();
+        simplebar.go(72);
+    </script>
+
+
+
+
+
+</body>
+
+</html>
