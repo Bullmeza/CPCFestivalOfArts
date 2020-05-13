@@ -44,9 +44,11 @@
 
     <div class="embed-responsive embed-responsive-16by9">
         <iframe id="vid" style="visibility: visible;" width="1903" height="800" src="https://www.youtube.com/embed/GQMmv1G9Vpk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <div class="container-fluid text-center" style="position: absolute; top:30%; visibility: hidden;">
+        <div class="container-fluid" style="position: absolute; top:80%; visibility: visible;">
             <a href="home.html" style="color: inherit; text-decoration: none;">
-                <h1 id="next" class="display-1 animated heartBeat infinite slower delay-2s text-white font-weight-bold">Next</h1>
+                <button id="Join" type="button" style="font-size:5em; background: #002d72; border-color: white; font-family:'Montserrat', sans-serif;;" class="btn btn-primary float-right">
+                    <h1 style="font-size:0.6em;" class="text-uppercase font-weight-bolder">Skip&rsaquo;</h1>
+                </button>
             </a>
         </div>
     </div>
@@ -57,16 +59,11 @@
 
     <script>
         window.onload = function() {
-            window.setTimeout(next, 5000);
+            window.setTimeout(next, 89000);
         }
 
-
-        var simplebar = new Nanobar();
-        simplebar.go(10);
-
         function next() {
-            document.getElementById("next").style.visibility = "visible";
-            document.getElementById("vid").style.visibility = "hidden";
+            window.location.replace("home.html");
 
         }
     </script>

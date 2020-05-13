@@ -13,6 +13,10 @@
     clear: both;
 }
 
+.transform {
+    transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+}
+
 .hex {
     position: relative;
     list-style-type: none;
@@ -21,17 +25,18 @@
     visibility: hidden;
     outline: 1px solid transparent;
     /* fix for jagged edges in FF on hover transition */
-    transform: rotate(-60deg) skewY(30deg) translatez(-1px);
 }
 
 .hex * {
     position: absolute;
     visibility: visible;
     outline: 1px solid transparent;
+    background-color: white;
     /* fix for jagged edges in FF on hover transition */
 }
 
-.hexIn {
+.hexIn,
+.hexInNoHover {
     display: block;
     width: 100%;
     height: 100%;
@@ -41,7 +46,7 @@
     transform: skewY(-30deg) rotate(60deg);
 }
 
-.hex:hover img {
+.hexIn:hover img {
     opacity: 0.4;
     filter: alpha(opacity=40);
     -webkit-transform: translate3d(0, 0, 0);
@@ -57,7 +62,6 @@
     width: auto;
     height: 100%;
     margin: 0 auto;
-    padding: 10%;
 }
 
 
@@ -134,3 +138,13 @@
 
 
 /* End Hexagons */
+
+.zoom {
+    transition: transform .2s;
+    /* Animation */
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.2);
+}
