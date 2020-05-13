@@ -33,6 +33,7 @@
     <style>
         body {
             background-color: #343a40;
+            overflow: hidden;
         }
         
         #Join:hover {
@@ -45,7 +46,7 @@
 
 
     <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
+        <div class="carousel-inner" style="height: 94vh;">
             <div class="carousel-item active paral" data-interval="500" style='background-image: url("img/intro/1.JPG")'>
             </div>
             <div class="carousel-item paral" style='background-image: url("img/intro/2.JPG")'>
@@ -81,15 +82,42 @@
         </div>
     </div>
 
-    <div class="container-fluid text-center " style="position: absolute; top:25vh;  ">
-        <div class="container p-5" style="background-color: rgba(255, 255, 255, 0.7);">
-            <h1 class=" display-2 font-weight-bold">Spring Virtual Festival Of The Arts</h1>
-            <a href="intro2.html" style="color: inherit; text-decoration: none;">
-                <h1 id="Join" class="display-4 animated heartBeat infinite slower delay-2s ">Join Us</h1>
+    <div class="container-fluid text-center text-white" style="position: absolute; top:20vh;">
+        <div class="container p-3" style="background-color: rgba(255,255,255,0.6);">
+            <img src="img/logo/I1.png" width="100%" class="animated slideInLeft slow">
+            <img src="img/logo/I2.png" width="100%" class="animated slideInRight slow">
+            <img src="img/logo/I3.png" width="100%" class="animated slideInLeft slow">
+            <img src="img/logo/I4.png" width="100%" class="animated slideInRight slow">
+        </div>
+        <div class="container mt-5 animated heartBeat delay-5s">
+            <a href="intro2.html" style="   color: inherit;
+            text-decoration: none;">
+                <h1 class="display-2" id="Join" class="">
+                    Join Us
+                </h1>
             </a>
         </div>
-        <img src="img/logo.png">
+
     </div>
+
+
+    <footer class="footer">
+        <div class="container-fluid m-0 p-0">
+            <div class="float-left p-2">
+                <img src="img/white_logo.png" height="40px" width="auto">
+            </div>
+            <div class="float-right p-2 filter">
+                <img src="img/logo/instagram-seeklogo.com.svg" width="40px">
+            </div>
+            <div class="float-right p-1">
+                <img src="img/logo/Twitter_Logo_WhiteOnImage.svg" width="50px">
+            </div>
+            <div class="float-right filter">
+                <img src="img/logo/fb.svg" width="60px">
+            </div>
+
+        </div>
+    </footer>
 
 
     <script>
