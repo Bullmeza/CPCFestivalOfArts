@@ -32,96 +32,69 @@
 <body>
     <style>
         body {
-            overflow: hidden;
             background-color: #343a40;
         }
     </style>
 
 
 
-    <nav class="navbar navbar-dark bg-dark fixed-top mt-2">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>  <span>Expand</span>
-     </button>
-        <a href="next">
-            <span class="text-white display-4 font-weight-bolder mr-1">
-            <span class="pr-3">Next</span>
-            <span><img class="animated bounceOutRight infinite delay-2s slower filter" src="img/right-chevron.svg"  width="50px"></span>
-            </span>
-        </a>
 
 
-        <div class="collapse navbar-collapse mt-2" id="navbarNavDropdown">
-            <ul class="navbar-nav container-fluid flex-row animated zoomInDown faster">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">
-                        <img src="img/home.png">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="drama.html">
-
-                        <img src="img/drama.png">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="music.html">
-                        <img src="img/music.png">
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="art.html">
-                        <img src="img/art.png">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tech.html">
-                        <img src="img/comp.png">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sing.html">
-                        <img src="img/sing.png">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
     <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselIndicators" data-slide-to="2"></li>
-        </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active" data-interval="10000">
-                <video autoplay muted loop id="myVideo">
-                    <source src="vid/robo1.mp4" type="video/mp4">
-                  </video>
-                <h1 class="text">
-                    Welcome
-                </h1>
+            <div class="carousel-item active paral" data-interval="500" style='background-image: url("img/intro/1.JPG")'>
             </div>
-            <div class="carousel-item paral p2" data-interval="8000">
+            <div class="carousel-item paral" style='background-image: url("img/intro/2.JPG")'>
             </div>
-            <div class="carousel-item paral p3" data-interval="8000">
+            <div class="carousel-item paral" style='background-image: url("img/intro/3.JPG")'>
+            </div>
+            <div class="carousel-item paral" style='background-image: url("img/intro/4.JPG")'>
+            </div>
+            <div class="carousel-item paral" style='background-image: url("img/intro/5.JPG")'>
+            </div>
+            <div class="carousel-item paral" style='background-image: url("img/intro/6.JPG")'>
+            </div>
+            <div class="carousel-item paral" style='background-image: url("img/intro/7.JPG")'>
+            </div>
+            <div class="carousel-item paral" style='background-image: url("img/intro/8.JPG")'>
+            </div>
+            <div class="carousel-item paral" style='background-image: url("img/intro/9.JPG")'>
+            </div>
+            <div class="carousel-item paral" style='background-image: url("img/intro/10.JPG")'>
+            </div>
+            <div class="carousel-item paral" style='background-image: url("img/intro/11.JPG")'>
+            </div>
+            <div class="carousel-item paral" style='background-image: url("img/intro/12.JPG")'>
+            </div>
+            <div class="carousel-item paral" style='background-image: url("img/intro/13.JPG")'>
+            </div>
+            <div class="carousel-item paral" style='background-image: url("img/intro/14.JPG")'>
+            </div>
+            <div class="carousel-item paral" style='background-image: url("img/intro/15.JPG")'>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+    </div>
+
+    <div class="container-fluid text-center " style="position: absolute; top:25vh; background-color: rgb(255, 255, 255, 0.7);">
+        <h1 class=" display-3 font-weight-bold ">Spring Virtual Festival Of The Arts</h1>
+        <a href="intro2.html" style="color: inherit; ">
+            <h1 class="display-4 animated heartBeat infinite slower delay-2s ">Join Us</h1>
         </a>
     </div>
 
 
+
+
+
+
+
     <script>
+        $('.carousel').carousel({
+            interval: 1500
+        })
+
         var simplebar = new Nanobar();
-        simplebar.go(5);
+        simplebar.go(1);
     </script>
 
 
