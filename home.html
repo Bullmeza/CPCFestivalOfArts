@@ -37,10 +37,6 @@
             color: white;
         }
         
-        .hexIn:hover img {
-            background-color: gray;
-        }
-        
         @media only screen and (max-width: 1199px) {
             .container {
                 width: 100%;
@@ -54,75 +50,98 @@
                 width: 54%;
             }
         }
+        
+        .delay {
+            --animate-delay: 0.25s;
+        }
+        
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
     </style>
 
 
     <div class="container">
         <ul id="hexGrid">
-            <li class="hex transform">
+            <div class="hex transform">
                 <a class="hexInNoHover" href="#">
-                    <img src="img/logo/home.png" class="animate__animated animate__fadeInTopLeft" alt="" style="background-color: #4169E1; padding: 20%;" />
+                    <img src="img/logo/home.png" class="animate__animated animate__fadeInTopLeft animate__delay-1s delay" alt="" style="background-color: #4169E1; padding: 20%;" />
+                    <h1> Hello</h1>
+                    <p>yo</p>
                 </a>
-            </li>
-            <li class="hex transform">
-                <a class="hexIn" href="#">
-                    <img src="img/logo/drama.png" class="animate__animated animate__fadeInTopRight" alt="" style="padding: 15%;" />
+            </div>
+
+            <div class="hex transform ">
+                <a class="hexIn " href="# ">
+                    <img src="img/logo/drama.png " class="animate__animated animate__fadeInTopRight animate__delay-1s delay " alt=" " style="padding: 15%; " />
+                    <h1>Drama</h1>
+                    <p>&#10240;</p>
                 </a>
-            </li>
-            <li class="hex transform">
-                <a class="hexIn" href="#">
-                    <img src="img/logo/music.png" class="animate__animated animate__fadeInLeft" alt="" style="padding: 25%;" />
-                </a>
-            </li>
-            <li class="hex">
-                <img src="img/logo/tree.png" alt="" class="animate__animated" style="padding: 15%; background-color: transparent; " />
-            </li>
-            <li class="hex transform">
-                <a class="hexIn" href="#">
-                    <img src="img/logo/art.png" alt="" class="animate__animated animate__fadeInRight" style="padding: 20%;" />
-                </a>
-            </li>
-            <li class="hex transform">
-                <a class="hexIn" href="tech.html">
-                    <img src="img/logo/comp.png" alt="" class="animate__animated animate__fadeInBottomLeft" style="padding: 10%;" />
+            </div>
+            <li class="hex transform ">
+                <a class="hexIn " href="# ">
+                    <img src="img/logo/music.png " class="animate__animated animate__fadeInLeft animate__delay-1s delay " alt=" " style="padding: 25%; " />
+                    <h1>Music</h1>
+                    <p>&#10240;</p>
                 </a>
             </li>
             <li class="hex ">
-                <a class="hexIn" href="#">
-                    <img class="animate__animated animate__fadeInBottomRight" src="img/logo/coffeehouse.png" alt="" style="padding: 20%;" />
+                <img src="img/logo/tree.png " alt=" " style="padding: 15%; background-color: transparent; " />
+            </li>
+            <li class="hex transform ">
+                <a class="hexIn " href="# ">
+                    <img src="img/logo/art.png " alt=" " class="animate__animated animate__fadeInRight animate__delay-1s delay " style="padding: 20%; " />
+                    <h1>Art</h1>
+                    <p>&#10240;</p>
+                </a>
+            </li>
+            <li class="hex transform ">
+                <a class="hexIn " href="tech.html ">
+                    <img src="img/logo/comp.png " alt=" " class="animate__animated animate__fadeInBottomLeft animate__delay-1s delay " style="padding: 10%; " />
+                    <h1 style="font-size: 2.5em;">Technology</h1>
+                    <p>&#10240;</p>
+                </a>
+            </li>
+            <li class="hex">
+                <a class="hexIn" href="# ">
+                    <img class="animate__animated animate__fadeInBottomRight animate__delay-1s delay " src="img/logo/coffeehouse.png " alt=" " style="padding: 20%; " />
+                    <h1 style="font-size: 2.25em;">Virtual Coffee House</h1>
+                    <p>&#10240;</p>
                 </a>
             </li>
         </ul>
     </div>
-    <a href="https://m.facebook.com/story.php?story_fbid=10156858418462251&id=109125222250&__tn__=-R">
-        <img class="zoom" src="img/20logo.png" alt="" style="bottom:10vh; width: 10%; position: fixed; right: 2vw; border: 0;" />
+    <a href="https://m.facebook.com/story.php?story_fbid=10156858418462251&id=109125222250&__tn__=-R ">
+        <img class="zoom " src="img/20logo.png " alt=" " style="bottom:10vh; width: 10%; position: fixed; right: 2vw; border: 0; " />
     </a>
 
-    <footer class="footer fixed-bottom bg-dark" style="max-height: 8vh;">
-        <div class="container-fluid m-0 p-0 text-center">
-            <a href="https://www.crestwood.on.ca/">
-                <div class="float-left p-2">
-                    <img src="img/white_logo.png" height="40px" width="auto">
+    <footer class="footer fixed-bottom bg-dark " style="max-height: 6vh; ">
+        <div class="container-fluid m-0 p-0 text-center ">
+            <a href="https://www.crestwood.on.ca/ ">
+                <div class="float-left p-2 ">
+                    <img src="img/white_logo.png " height="40px " width="auto ">
                 </div>
             </a>
-            <div class="float-left text-center w-75 p-3 text-white">
-                <h1 style="font-size: 1.5em;  font-family: Georgia;">
+            <div class="float-left text-center w-75 p-3 text-white ">
+                <h1 style="font-size: 1.5em; font-family: Georgia; ">
                     &#10240;&#10240;&#10240;&#10240;&#10240;Inspire Excellence &centerdot; Nurture Individuality
                 </h1>
             </div>
-            <a href="https://www.instagram.com/crestwoodpreparatory/?hl=en">
-                <div class="float-right p-2 pt-3 filter">
-                    <img src="img/logo/instagram-seeklogo.com.svg" width="28px">
+            <a href="https://www.instagram.com/crestwoodpreparatory/?hl=en ">
+                <div class="float-right p-2 pt-3 filter ">
+                    <img src="img/logo/instagram-seeklogo.com.svg " width="28px ">
                 </div>
             </a>
-            <a href="https://twitter.com/CrestwoodPrep?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+            <a href="https://twitter.com/CrestwoodPrep?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor ">
                 <div class="float-right p-2 ">
-                    <img src="img/logo/Twitter_Logo_WhiteOnImage.svg" width="36px">
+                    <img src="img/logo/Twitter_Logo_WhiteOnImage.svg " width="36px ">
                 </div>
             </a>
-            <a href="https://www.facebook.com/crestwoodprep/">
-                <div class="float-right filter p-1">
-                    <img src="img/logo/fb.svg" width="38px">
+            <a href="https://www.facebook.com/crestwoodprep/ ">
+                <div class="float-right filter p-1 ">
+                    <img src="img/logo/fb.svg " width="38px ">
                 </div>
             </a>
         </div>

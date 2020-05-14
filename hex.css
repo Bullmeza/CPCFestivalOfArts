@@ -156,9 +156,49 @@
     transform: scale(1.2);
 }
 
-.centered {
+
+/* Text */
+
+.hex h1,
+.hex p {
+    margin: 0;
+    width: 102%;
+    left: -1%;
+    /* prevent line on the right where background doesn't cover image */
+    padding: 5%;
+    box-sizing: border-box;
+    background-color: rgba(240, 240, 150, 0.9);
+    font-weight: 300;
+    transition: transform .2s ease-out, opacity .3s ease-out;
+    font-family: Georgia;
+}
+
+.hex h1 {
+    bottom: 50%;
+    padding-top: 70%;
+    font-size: 3em;
+    z-index: 1;
+    transform: translateY(-100%) translatez(-1px);
+}
+
+.hex h1:after {
+    content: '';
     position: absolute;
+    bottom: 0;
+    left: 45%;
+    width: 10%;
+    text-align: center;
+}
+
+.hex p {
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-bottom: 50%;
+    transform: translateY(100%) translatez(-1px);
+}
+
+.hexIn:hover h1,
+.hexIn:focus h1,
+.hexIn:hover p,
+.hexIn:focus p {
+    transform: translateY(0%) translatez(-1px);
 }
