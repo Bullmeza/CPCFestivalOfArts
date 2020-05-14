@@ -20,7 +20,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <!--Animations-->
-    <link rel="stylesheet" href="animate.css" />
+    <!-- <link rel="stylesheet" href="animate.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
     <title>Festival Of The Arts</title>
 </head>
@@ -35,48 +36,60 @@
         .hovereffect p {
             color: white;
         }
+        
+        .hexIn:hover img {
+            background-color: gray;
+        }
+        
+        @media only screen and (max-width: 1199px) {
+            .container {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+        }
+        
+        @media screen and (min-width: 1200px) {
+            .container {
+                width: 54%;
+            }
+        }
     </style>
 
 
-    <div class="container" style="margin-top: -2%;">
+    <div class="container">
         <ul id="hexGrid">
             <li class="hex transform">
                 <a class="hexInNoHover" href="#">
-                    <h1>
-                        Hey
-                    </h1>
-                    <img src="img/logo/home.png" alt="" style="background-color: #4169E1; padding: 20%;" />
+                    <img src="img/logo/home.png" class="animate__animated animate__fadeInTopLeft" alt="" style="background-color: #4169E1; padding: 20%;" />
                 </a>
             </li>
             <li class="hex transform">
                 <a class="hexIn" href="#">
-                    <img src="img/logo/drama.png" alt="" style="padding: 15%;" />
-                    <h1>
-                        Hey
-                    </h1>
+                    <img src="img/logo/drama.png" class="animate__animated animate__fadeInTopRight" alt="" style="padding: 15%;" />
                 </a>
             </li>
             <li class="hex transform">
                 <a class="hexIn" href="#">
-                    <img src="img/logo/music.png" alt="" style="padding: 25%;" />
+                    <img src="img/logo/music.png" class="animate__animated animate__fadeInLeft" alt="" style="padding: 25%;" />
                 </a>
             </li>
             <li class="hex">
-                <img src="img/logo/tree.png" alt="" style="padding: 15%; background-color: transparent; " />
+                <img src="img/logo/tree.png" alt="" class="animate__animated" style="padding: 15%; background-color: transparent; " />
             </li>
             <li class="hex transform">
                 <a class="hexIn" href="#">
-                    <img src="img/logo/art.png" alt="" style="padding: 20%;" />
+                    <img src="img/logo/art.png" alt="" class="animate__animated animate__fadeInRight" style="padding: 20%;" />
                 </a>
             </li>
             <li class="hex transform">
                 <a class="hexIn" href="tech.html">
-                    <img src="img/logo/comp.png" alt="" style="padding: 10%;" />
+                    <img src="img/logo/comp.png" alt="" class="animate__animated animate__fadeInBottomLeft" style="padding: 10%;" />
                 </a>
             </li>
-            <li class="hex">
+            <li class="hex ">
                 <a class="hexIn" href="#">
-                    <img src="img/logo/coffeehouse.png" alt="" style="padding: 20%;" />
+                    <img class="animate__animated animate__fadeInBottomRight" src="img/logo/coffeehouse.png" alt="" style="padding: 20%;" />
                 </a>
             </li>
         </ul>
