@@ -18,9 +18,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <!--Loading Bar-->
-    <script src="nanobar.js"></script>
-
     <!--Animations-->
     <link rel="stylesheet" href="animate.css" />
 
@@ -30,54 +27,6 @@
 
 
 <body>
-    <nav class="navbar navbar-dark bg-dark fixed-top mt-2">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>  <span>Expand</span>
-         </button>
-        <a href="next" style="color: inherit; text-decoration: none;">
-            <span>
-                <span id="NextNavBar" class="pr-3" style="font-size:2em; color: rgba(255, 255, 255, 0.5);">Next</span>
-            <span style="height: 2em; "><img class="animated bounceOutRight infinite delay-2s slower filter" src="img/right-chevron.svg"  height="30px" style="margin-bottom: 10px;"></span></span>
-        </a>
-
-
-        <div class="collapse navbar-collapse mt-2" id="navbarNavDropdown">
-            <ul class="navbar-nav container flex-row animated zoomInDown faster ">
-                <li class="nav-item">
-                    <a class="nav-link" href="home.html">
-                        <img src="img/home.png">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="drama.html">
-
-                        <img src="img/drama.png">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="music.html">
-                        <img src="img/music.png">
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="art.html">
-                        <img src="img/art.png">
-                    </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="tech.html">
-                        <img src="img/comp.png">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sing.html">
-                        <img src="img/sing.png">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
     <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
@@ -267,29 +216,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-        var simplebar = new Nanobar();
-        simplebar.go(72);
-    </script>
-
-
-
-
-
 </body>
 
 </html>
