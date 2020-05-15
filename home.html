@@ -34,9 +34,13 @@
         body {
             background-color: #d3d3d3;
         }
+        
+        .wrapper:hover * {
+            filter: brightness(125%);
+        }
     </style>
 
-    <div class="wrapper">
+    <div id="wrap" class="wrapper">
         <div class="toggle" id="toggle" onclick="expand()">
             <i class="material-icons" id="add">add</i>
             <img src="img/logo/cursor.png" style="width: 30px; top: 10px; left: 60px" class="animated delay-1s bounceOut faster">
