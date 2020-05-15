@@ -75,6 +75,20 @@
         var open = false;
         var i = document.getElementById("menu").childNodes;
 
+        window.onload = function() {
+            document.getElementById("add").style.transform = 'rotate(45deg)';
+            document.getElementById("menu").style.transform = 'scale(' + zoom + ')';
+            open = true;
+
+            i[1].style.transform = 'translateY(-160px)';
+            i[3].style.transform = 'translate(140px, -80px)';
+            i[5].style.transform = 'translate(140px,80px)';
+            i[7].style.transform = 'translateY(160px)';
+            i[9].style.transform = 'translate(-140px,80px)';
+            i[11].style.transform = 'translate(-140px,-80px)';
+        }
+
+
         function expand() {
             var zoom = 1;
             console.log(window.innerWidth)
