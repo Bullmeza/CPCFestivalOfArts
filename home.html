@@ -21,6 +21,9 @@
     <!--Icon-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+    <!--Animations-->
+    <link rel="stylesheet" href="animate.css" />
+
     <title>Festival Of The Arts</title>
 </head>
 
@@ -36,16 +39,18 @@
     <div class="wrapper">
         <div class="toggle" id="toggle" onclick="expand()">
             <i class="material-icons" id="add">add</i>
+            <img src="img/logo/cursor.png" style="width: 30px; top: 10px; left: 60px" class="animated delay-1s bounceOut faster">
         </div>
     </div>
     <div class="menu" id="menu">
         <div class="item">
-            <a href="#">
+            <a href="home.html">
                 <img src="img/logo/home.png" class="icon">
+
             </a>
         </div>
         <div class="item">
-            <a href="#">
+            <a href="music.html">
                 <img src="img/logo/music.png" class="icon">
             </a>
         </div>
@@ -65,7 +70,7 @@
             </a>
         </div>
         <div class="item">
-            <a href="#">
+            <a href="art.html">
                 <img src="img/logo/art.png" class="icon">
             </a>
         </div>
@@ -123,6 +128,25 @@
 
             }
         }
+        window.onload = function() {
+            setTimeout(opening, 1000);
+        }
+
+        function opening() {
+            if (window.innerWidth > 799) {
+                zoom = 1.7;
+            }
+            document.getElementById("add").style.transform = 'rotate(45deg)';
+            document.getElementById("menu").style.transform = 'scale(' + zoom + ')';
+            open = true;
+
+            i[1].style.transform = 'translateY(-160px)';
+            i[3].style.transform = 'translate(140px, -80px)';
+            i[5].style.transform = 'translate(140px,80px)';
+            i[7].style.transform = 'translateY(160px)';
+            i[9].style.transform = 'translate(-140px,80px)';
+            i[11].style.transform = 'translate(-140px,-80px)';
+        }
     </script>
 
 
@@ -131,7 +155,7 @@
     </a>
 
     <footer class="footer fixed-bottom bg-dark " style="max-height: 6vh;">
-        <div class="container-fluid m-0 p-0 text-center  ">
+        <div class="container-fluid m-0 p-0 text-center">
             <a href="https://www.crestwood.on.ca/ ">
                 <div class="float-left p-2">
                     <img src="img/white_logo.png " height="40px " width="auto">
