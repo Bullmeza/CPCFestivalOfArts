@@ -109,3 +109,9 @@ a>img:hover {
     transform: scale(1.4);
     color: white;
 }
+
+.toggle>img {
+    position: relative;
+    width: 120%;
+    top: 37px;
+}
