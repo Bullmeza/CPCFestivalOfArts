@@ -61,6 +61,24 @@
                 display: none;
             }
         }
+        
+        @media (min-width: 800px) {
+            #crestwoodLogo {
+                width: auto;
+                height: 4vh;
+            }
+        }
+        
+        @media screen and (max-width: 799px) {
+            #crestwoodLogo {
+                margin: 3px;
+                height: 3.5vh;
+                width: auto;
+            }
+            .icon {
+                margin-top: -3px;
+            }
+        }
     </style>
 
     <div id="wrap" class="wrapper">
@@ -186,7 +204,7 @@
         <div class="container-fluid m-0 p-0 text-center">
             <a href="https://www.crestwood.on.ca/ ">
                 <div class="float-left p-2">
-                    <img src="img/white_logo.png " height="40px " width="auto">
+                    <img src="img/white_logo.png " id="crestwoodLogo">
                 </div>
             </a>
             <div id="motto" class="float-left text-center w-75 p-3 text-white ">
@@ -196,17 +214,17 @@
             </div>
             <a href="https://www.instagram.com/crestwoodpreparatory/?hl=en ">
                 <div class="float-right p-2 pt-3 filter ">
-                    <img src="img/logo/instagram-seeklogo.com.svg " width="28px ">
+                    <img src="img/logo/instagram-seeklogo.com.svg " width="28px" class="icon">
                 </div>
             </a>
             <a href="https://twitter.com/CrestwoodPrep?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor ">
                 <div class="float-right p-2 ">
-                    <img src="img/logo/Twitter_Logo_WhiteOnImage.svg " width="36px ">
+                    <img src="img/logo/Twitter_Logo_WhiteOnImage.svg " width="36px" class="icon">
                 </div>
             </a>
             <a href="https://www.facebook.com/crestwoodprep/ ">
                 <div class="float-right filter p-1 ">
-                    <img src="img/logo/fb.svg " width="38px ">
+                    <img src="img/logo/fb.svg " width="38px" class="icon">
                 </div>
             </a>
         </div>
