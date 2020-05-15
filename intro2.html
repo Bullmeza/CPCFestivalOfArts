@@ -38,35 +38,41 @@
         #next:hover {
             font-weight: bold;
         }
+        
+        @media (min-width: 800px) {
+            #skip {
+                font-size: 3em;
+            }
+        }
+        
+        @media screen and (max-width: 799px) {
+            #skip {
+                font-size: 1.5em;
+            }
+            body {
+                background-color: black;
+            }
+            #vid {
+                top: 27.5vh;
+            }
+        }
     </style>
 
-
-
-
-    <!-- <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/418521156" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>-->
-
-
-    <div class="embed-responsive embed-responsive-16by9">
+    <div class="embed-responsive embed-responsive-16by9" id="vid">
         <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/418521156" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         <div class="container-fluid" style="position: absolute; top:80%; visibility: visible;">
             <a href="home.html" style="color: inherit; text-decoration: none;">
-                <button id="Join" type="button" style="font-size:5em; background: #002d72; border-color: white; font-family:'Montserrat', sans-serif;;" class="btn btn-primary float-right">
-                    <h1 style="font-size:0.6em;" class="text-uppercase font-weight-bolder">Skip&rsaquo;</h1>
+                <button type="button" style="background: #002d72; border-color: white; font-family:'Montserrat', sans-serif;;" class="btn btn-primary float-right">
+                    <h1 id="skip" class="text-uppercase font-weight-bolder">Skip&rsaquo;</h1>
                 </button>
             </a>
         </div>
     </div>
 
 
-
-
-
     <script>
         window.onload = function() {
             window.setTimeout(next, 89000);
-            plyr.setup("#plyr-youtube");
         }
 
         function next() {
@@ -74,10 +80,6 @@
 
         }
     </script>
-
-
-
-
 
 </body>
 

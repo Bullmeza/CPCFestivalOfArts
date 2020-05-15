@@ -40,6 +40,18 @@
         #Join:hover {
             font-weight: bold;
         }
+        
+        @media (min-width: 800px) {
+            #JoinButton {
+                font-size: 3em;
+            }
+        }
+        
+        @media screen and (max-width: 799px) {
+            #JoinButton {
+                font-size: 1.5em;
+            }
+        }
     </style>
 
     <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
@@ -88,8 +100,8 @@
         </div>
         <div class="container mt-5 animated heartBeat delay-5s">
             <a href="intro2.html" style="color: inherit; text-decoration: none;">
-                <button id="Join" type="button" style="font-size:5em; background: #002d72; border-color: white; font-family:'Montserrat', sans-serif;;" class="btn btn-primary">
-                    <h1 style="font-size:0.6em;" class="text-uppercase font-weight-bolder">Join Us Now</h1>
+                <button id="Join" type="button" style="background: #002d72; border-color: white; font-family:'Montserrat', sans-serif;;" class="btn btn-primary">
+                    <h1 id="JoinButton" class="text-uppercase font-weight-bolder">Join Us Now</h1>
                 </button>
             </a>
         </div>
