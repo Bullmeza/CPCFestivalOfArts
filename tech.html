@@ -226,18 +226,24 @@
 
         function right() {
             if (current != i.length - 2) {
-                console.log(i[current]);
                 i[current].style.display = "none ";
                 current += 2;
+                i[current].style.display = "inherit ";
+            } else {
+                i[current].style.display = "none ";
+                current = 1;
                 i[current].style.display = "inherit ";
             }
         }
 
         function left() {
             if (current != 1) {
-                console.log(i[current]);
                 i[current].style.display = "none ";
                 current -= 2;
+                i[current].style.display = "inherit ";
+            } else {
+                i[current].style.display = "none ";
+                current = i.length - 2;
                 i[current].style.display = "inherit ";
             }
         }
