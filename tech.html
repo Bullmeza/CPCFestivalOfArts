@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 
+    <!--Animations-->
+    <link rel="stylesheet" href="animate.css" />
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -27,190 +30,218 @@
 
 
 <body>
-    <div class="container-fluid p-0">
-        <img src="img/tech/top.JPG" width="100%">
-    </div>
-    <div id="J1" class="jumbotron jumbotron-fluid text-white bg-dark mt-0" style="clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
-        <div class="container p-4">
-            <h1 class="display-4 font-weight-bold" id="T1">Gr. 8 Graphic Design</h1>
-            <p class="lead">The students learned how to photoshop and whatever</p>
-        </div>
-    </div>
+    <style>
+        #skip:hover {
+            color: rgba(255, 255, 255, 0.6)
+        }
+        
+        body {
+            background-color: #d3d3d3;
+            overflow: hidden;
+        }
+        
+        @media (min-width: 800px) {
+            #skip {
+                font-size: 3em;
+                bottom: 0;
+            }
+            #vid>iframe {
+                width: 95vw;
+                height: 100vh;
+                margin-left: 2.5vw;
+            }
+            #skipButton {
+                background: #002d72;
+                border-color: white;
+                font-family: 'Montserrat', sans-serif;
+                bottom: 0;
+                position: absolute;
+                right: 10vh;
+            }
+            .arrow {
+                width: 8%;
+                margin-left: 46%;
+            }
+            .title {
+                font-size: 4em;
+            }
+            .paragraph {
+                font-size: 1.5em;
+            }
+            .left_arrow {
+                left: 2vh;
+                top: 50vh;
+                width: 120px;
+                height: 120px;
+                position: fixed;
+                transform: rotate(90deg);
+                filter: invert(100%);
+            }
+            .right_arrow {
+                right: 2vh;
+                top: 50vh;
+                width: 120px;
+                height: 120px;
+                position: fixed;
+                transform: rotate(-90deg);
+                filter: invert(100%);
+            }
+        }
+        
+        @media screen and (max-width: 799px) {
+            #skip {
+                font-size: 1.5em;
+            }
+            #vid {
+                top: 27.5vh;
+            }
+            #vid>iframe {
+                width: 100vw;
+                height: 100vh;
+            }
+            #skipButton {
+                background: #002d72;
+                border-color: white;
+                font-family: 'Montserrat', sans-serif;
+                bottom: 33vh;
+                position: absolute;
+                right: 0;
+            }
+            .arrow {
+                width: 16%;
+                margin-left: 42%;
+            }
+            .left_arrow {
+                left: 0;
+                top: 55vh;
+                width: 50px;
+                height: 50px;
+                position: fixed;
+                transform: rotate(90deg);
+                filter: invert(100%);
+            }
+            .right_arrow {
+                right: 0;
+                top: 55vh;
+                width: 50px;
+                height: 50px;
+                position: fixed;
+                transform: rotate(-90deg);
+                filter: invert(100%);
+            }
+        }
+    </style>
 
-    <div class="container-fluid w-75 ">
-        <div id="Services" class="container-fluid p-3">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="hovereffect text-center">
-                        <img class="img-responsive" src="img/tech/graphic_design/1.jpg" alt="">
-                        <div class="overlay">
-                            <p class="font-weight-bolder">
-                                Cool Name
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="hovereffect text-center">
-                        <img class="img-responsive" src="img/tech/graphic_design/2.jpg" alt="">
-                        <div class="overlay">
-                            <p class="font-weight-bolder">
-                                Cool Name
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="hovereffect text-center">
-                        <img class="img-responsive" src="img/tech/graphic_design/3.jpg" alt="">
-                        <div class="overlay">
-                            <p class="font-weight-bolder">
-                                Cool Name
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="hovereffect text-center">
-                    <img class="img-responsive" src="img/tech/graphic_design/4.jpg" alt="">
-                    <div class="overlay">
-                        <p class="font-weight-bolder">
-                            Cool Name
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="hovereffect text-center">
-                    <img class="img-responsive" src="img/tech/graphic_design/5.jpg" alt="">
-                    <div class="overlay">
-                        <p class="font-weight-bolder">
-                            Cool Name
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="hovereffect text-center">
-                    <img class="img-responsive" src="img/tech/graphic_design/6.jpg" alt="">
-                    <div class="overlay">
-                        <p class="font-weight-bolder">
-                            Cool Name
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="hovereffect text-center">
-                    <img class="img-responsive" src="img/tech/graphic_design/7.png" alt="">
-                    <div class="overlay">
-                        <p class="font-weight-bolder">
-                            Cool Name
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="hovereffect text-center">
-                    <img class="img-responsive" src="img/tech/graphic_design/8.jpg" alt="">
-                    <div class="overlay">
-                        <p class="font-weight-bolder">
-                            Cool Name
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="hovereffect text-center">
-                    <img class="img-responsive" src="img/tech/graphic_design/9.jpg" alt="">
-                    <div class="overlay">
-                        <p class="font-weight-bolder">
-                            Cool Name
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <div id="vid" style="  background: black;">
+        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/418521156" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <div class="arrow animated bounce infinite delay-1s slower">
+            <a href="#J1">
+                <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+          </svg>
+            </a>
         </div>
     </div>
-
-    <div class="jumbotron jumbotron-fluid text-white bg-dark mt-0" style="clip-path: polygon(0 calc(100% - 10vh), 0 0, 100% 0, 100% 100%);">
-        <div class="container text-right p-4">
-            <h1 class="display-4 font-weight-bold ">Gr. 9 Photography</h1>
-            <p class="lead">The students learned how to photoshop and whatever The students learned how to photoshop and whatever The students learned how to photoshop and whatever The students learned how to photoshop and whatever
+    <div id="J1" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+        <div class="container p-2">
+            <h1 class="title">Gr. 8 Graphic Design</h1>
+            <p class="paragraph">The students learned how to photoshop and whateverThe students learned how to photoshop and whateverThe students learned how to photoshop and whateverThe students learned how to photoshop and whateverThe students learned how to photoshop and
+                whatever
             </p>
         </div>
     </div>
-    <div class="container-fluid w-75 ">
-        <div id="Services" class="container-fluid p-3">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="hovereffect text-center">
-                        <img class="img-responsive" src="img/tech/photography/1.jpg" alt="">
-                        <div class="overlay">
-                            <p class="font-weight-bolder">
-                                Cool Name
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="hovereffect text-center">
-                        <img class="img-responsive" src="img/tech/photography/2.jpg" alt="">
-                        <div class="overlay">
-                            <p class="font-weight-bolder">
-                                Cool Name
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="hovereffect text-center">
-                        <img class="img-responsive" src="" alt="">
-                        <div class="overlay">
-                            <p class="font-weight-bolder">
-                                Cool Name
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    <div class="container-fluid">
+        <div class="left_arrow" onclick="left()">
+            <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="right_arrow" onclick="right()">
+            <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="container" style="height: 70vh;">
+            <div id="slideshow" style="width: 100%; height: 50vh;">
+                <iframe style="width: 100%; height: 100%" src="https://www.powtoon.com/embed/f1JnSkwwwLs/" frameborder="0"></iframe>
+                <iframe style="width: 100%; height: 100%; display: none;" src="https://www.powtoon.com/embed/dFi4b7vdxie/" frameborder="0 "></iframe>
+                <iframe style="width: 100%; height: 100%; display: none;" src="https:/w/ww.powtoon.com/embed/b7AnY00Oopi/" frameborder="0 "></iframe>
+                <iframe style="width: 100%; height: 100%; display: none;" src="https://www.powtoon.com/embed/fzWjhr0Uaiq/" frameborder="0 "></iframe>
             </div>
         </div>
     </div>
 
-    <footer class="footer fixed-bottom bg-dark " style="max-height: 6vh;">
-        <div class="container-fluid m-0 p-0 text-center">
+
+
+
+    <footer id="navbar " class="footer fixed-bottom bg-dark " style="max-height: 6vh; display: none; ">
+        <div class="container-fluid m-0 p-0 text-center ">
             <a href="https://www.crestwood.on.ca/ ">
-                <div class="float-left p-2">
+                <div class="float-left p-2 ">
                     <img src="img/white_logo.png " id="crestwoodLogo">
                 </div>
             </a>
-            <div id="motto" class="float-left text-center w-75 p-3 text-white ">
+            <div id="motto " class="float-left text-center w-75 p-3 text-white ">
                 <h1 style="font-size: 1.5em; font-family: Georgia; ">
                     &#10240;&#10240;&#10240;&#10240;&#10240;Inspire Excellence &centerdot; Nurture Individuality
                 </h1>
             </div>
             <a href="https://www.instagram.com/crestwoodpreparatory/?hl=en ">
                 <div class="float-right p-2 pt-3 filter ">
-                    <img src="img/logo/instagram-seeklogo.com.svg " width="28px" class="icon">
+                    <img src="img/logo/instagram-seeklogo.com.svg " width="28px " class="icon ">
                 </div>
             </a>
             <a href="https://twitter.com/CrestwoodPrep?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor ">
                 <div class="float-right p-2 ">
-                    <img src="img/logo/Twitter_Logo_WhiteOnImage.svg " width="36px" class="icon">
+                    <img src="img/logo/Twitter_Logo_WhiteOnImage.svg " width="36px " class="icon ">
                 </div>
             </a>
             <a href="https://www.facebook.com/crestwoodprep/ ">
                 <div class="float-right filter p-1 ">
-                    <img src="img/logo/fb.svg " width="38px" class="icon">
+                    <img src="img/logo/fb.svg " width="38px " class="icon ">
                 </div>
             </a>
         </div>
     </footer>
+
+    <script>
+        window.onscroll = function() {
+            // console.log(window.scrollY);
+            if (window.scrollY < 200) {
+                document.getElementById("navbar ").style.display = "none ";
+            } else {
+                document.getElementById("navbar ").style.display = "inherit ";
+            }
+        }
+        var i = document.getElementById("slideshow").childNodes;
+
+        var current = 1;
+
+        for (var j = 1; j < i.length; j += 2) {
+            console.log(i);
+        }
+
+        function right() {
+            if (current != i.length - 2) {
+                console.log(i[current]);
+                i[current].style.display = "none ";
+                current += 2;
+                i[current].style.display = "inherit ";
+            }
+        }
+
+        function left() {
+            if (current != 1) {
+                console.log(i[current]);
+                i[current].style.display = "none ";
+                current -= 2;
+                i[current].style.display = "inherit ";
+            }
+        }
+    </script>
 
 </body>
 
