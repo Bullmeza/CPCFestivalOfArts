@@ -225,24 +225,23 @@
         var current = 0;
 
         function right() {
-
-            document.getElementById("frame").src = i[current + 1];
-            current += 1;
-            // } else {
-            //     document.getElementById("frame").src = i[0];
-            // }
+            if (current != i.length - 1) {
+                document.getElementById("frame").src = i[current + 1];
+                current += 1;
+            } else {
+                document.getElementById("frame").src = i[0];
+                current = 0;
+            }
 
         }
 
         function left() {
-            if (current != 1) {
-                i[current].style.display = "none ";
-                current -= 2;
-                i[current].style.display = "inherit ";
+            if (current != 0) {
+                document.getElementById("frame").src = i[current - 1];
+                current -= 1;
             } else {
-                i[current].style.display = "none ";
-                current = i.length - 2;
-                i[current].style.display = "inherit ";
+                document.getElementById("frame").src = i[i.length - 1];
+                current = i.length - 1;
             }
         }
     </script>
