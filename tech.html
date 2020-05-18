@@ -127,14 +127,14 @@
                 right: 0;
             }
             #up {
-                top: 150px;
+                bottom: -85vh;
                 right: 0;
             }
             #up_arrow {
                 width: 90px;
                 height: 90px;
                 left: -42.5px;
-                top: 25px;
+                top: 30px;
             }
         }
         
@@ -150,14 +150,14 @@
                 right: -40px;
             }
             #up {
-                top: 80px;
+                bottom: -88vh;
                 right: -40px;
             }
             #up_arrow {
                 width: 90px;
                 height: 90px;
                 left: -42.5px;
-                top: 25px;
+                top: 27.5px;
             }
         }
     </style>
@@ -244,7 +244,7 @@
         </div>
     </div>
 
-    <div id="up" class="wrapper">
+    <div id="up" class="wrapper animated fadeIn" style="display: none;">
         <div class="toggle" style="transform: rotate(180deg);">
             <div class="arrow animated bounce infinite delay-1s slower" id="up_arrow">
                 <a href="#vid">
@@ -308,7 +308,7 @@
 
 
 
-    <footer id="navbar " class="footer fixed-bottom bg-dark " style="max-height: 6vh; display: none; ">
+    <footer id="navbar" class="footer fixed-bottom bg-dark " style="max-height: 6vh; display: none; ">
         <div class="container-fluid m-0 p-0 text-center ">
             <a href="https://www.crestwood.on.ca/ ">
                 <div class="float-left p-2 ">
@@ -342,9 +342,11 @@
         window.onscroll = function() {
             // console.log(window.scrollY);
             if (window.scrollY < 200) {
-                document.getElementById("navbar ").style.display = "none ";
+                document.getElementById("navbar").style.display = "none";
+                document.getElementById("up").style.display = "none";
             } else {
-                document.getElementById("navbar ").style.display = "inherit ";
+                document.getElementById("navbar").style.display = "block";
+                document.getElementById("up").style.display = "block";
             }
         }
         var x = ["https://www.powtoon.com/embed/f1JnSkwwwLs/", "https://www.powtoon.com/embed/dFi4b7vdxie/", "https://www.powtoon.com/embed/b7AnY00Oopi/", "https://www.powtoon.com/embed/fzWjhr0Uaiq/", "https://www.powtoon.com/embed/br7Ve4FPse5/"]
