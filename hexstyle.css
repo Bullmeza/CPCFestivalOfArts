@@ -138,7 +138,8 @@ a>.material-icons {
 }
 
 .icon:hover {
-    opacity: 0.15;
+    opacity: 0.3;
+    filter: blur(2px);
 }
 
 .toggle>img {
@@ -159,12 +160,15 @@ a>.material-icons {
     font-weight: 900;
 }
 
+
+/* ACTIVE */
+
 .item_active {
-    border-bottom: 70px solid #fff000;
+    border-bottom: 70px solid #add8e6;
 }
 
 .item_active:before {
-    border-top: 70px solid #fff000;
+    border-top: 70px solid #add8e6;
 }
 
 .item_active>a>img,
@@ -172,5 +176,5 @@ a>.material-icons {
     position: relative;
     width: 100%;
     top: 15px;
-    background-color: #fff000;
+    background-color: #add8e6;
 }
