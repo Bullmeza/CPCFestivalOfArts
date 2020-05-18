@@ -26,7 +26,8 @@
     <link rel="icon" href="img/logo/tree_blue.png" type="image/gif">
     <link rel="shortcut icon" type="image/x-icon" href="img/logo/tree_blue.png" />
 
-
+    <!--Vimeo API-->
+    <script src="https://player.vimeo.com/api/player.js"></script>
 
 </head>
 
@@ -41,71 +42,12 @@
         #skip:hover {
             color: rgba(255, 255, 255, 0.6)
         }
-        
-        @media (min-width: 800px) {
-            #skip {
-                top: 0.4vh;
-                font-size: 3em;
-                position: relative;
-            }
-            #vid>iframe {
-                width: 90vw;
-                height: 80vh;
-                margin-left: 5vw;
-                margin-top: 10vh;
-            }
-            #skipButton {
-                background: #002d72;
-                border-color: white;
-                font-family: 'Montserrat', sans-serif;
-                bottom: 0;
-                right: 14vw;
-                position: absolute;
-            }
-            #start {
-                position: absolute;
-                top: 40vh;
-                width: 100%;
-                font-size: 5em;
-                text-align: center;
-            }
-        }
-        
-        @media (max-width: 799px) {
-            #skip {
-                top: 0.4vh;
-                font-size: 1.5em;
-                position: relative;
-            }
-            #vid {
-                top: 25vh;
-            }
-            #vid>iframe {
-                width: 100vw;
-                height: 100vh;
-            }
-            #skipButton {
-                background: #002d72;
-                border-color: white;
-                font-family: 'Montserrat', sans-serif;
-                bottom: 26vh;
-                position: absolute;
-                right: 0;
-            }
-            #start {
-                position: absolute;
-                top: 40vh;
-                width: 100%;
-                font-size: 2.2em;
-                text-align: center;
-            }
-        }
     </style>
 
     <h1 id="start" class='delay-2s animated fadeOut'>A Word From Our Assistant Headmaster...</h1>
 
     <div id="vid" class="animated fadeIn delay-3s">
-        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/418521156" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <iframe id="vimeo_vid" src="https://player.vimeo.com/video/418521156" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         <a href="home.html" style="color: inherit; text-decoration: none;">
             <button type="button" id="skipButton" class="btn btn-primary float-right">
                     <h1 id="skip" class="text-uppercase font-weight-bolder">Skip&rsaquo;</h1>
@@ -116,14 +58,15 @@
 
 
     <script>
-        window.onload = function() {
-            window.setTimeout(next, 99000);
-        }
+        $(document).ready(function() {
+            var iframe = $('#vimeo_vid');
+            var player = new Vimeo.Player(iframe);
 
-        function next() {
-            window.location.replace("home.html");
+            player.on('ended', function() {
+                window.location.replace("home.html");
+            });
 
-        }
+        });
     </script>
 
 </body>

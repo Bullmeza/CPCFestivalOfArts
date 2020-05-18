@@ -29,6 +29,36 @@
 </head>
 
 <body>
+
+    <style>
+        @media (min-width: 800px) {
+            .wrapper {
+                transform: scale(0.6);
+                top: 0;
+                right: 0;
+            }
+            .menu {
+                transform: scale(0.1);
+                top: 0;
+                right: 0;
+            }
+        }
+        
+        @media screen and (max-width: 799px) {
+            .wrapper {
+                transform: scale(0.4);
+                top: 60px;
+                right: -40px;
+            }
+            .menu {
+                transform: scale(0.1);
+                top: 60px;
+                right: -40px;
+            }
+        }
+    </style>
+
+
     <div style='padding:0;position:relative;z-index: -10;'><iframe src='https://vimeo.com/showcase/7137537/embed' allowfullscreen frameborder='0' style='position:absolute;top:0;left:0;width:100vw;height: 94vh; z-index: -10;' id="mov"></iframe></div>
 
 

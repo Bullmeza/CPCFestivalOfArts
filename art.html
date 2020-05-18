@@ -6,10 +6,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+
+    <link rel="stylesheet" type="text/css" href="hexnav.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!--Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 
 
     <!-- Optional JavaScript -->
@@ -18,21 +25,176 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+    <!--Animations-->
+    <link rel="stylesheet" href="animate.css" />
+
+
     <title>CPC's Virtual Festival of Arts, Music and Technology</title>
     <link rel="icon" href="img/logo/tree_blue.png" type="image/gif">
     <link rel="shortcut icon" type="image/x-icon" href="img/logo/tree_blue.png" />
 
+    <!--Vimeo API-->
+    <script src="https://player.vimeo.com/api/player.js"></script>
 </head>
 
 <style>
     body {
         overflow: hidden;
+        background-color: #d2d2d2;
+    }
+    
+    @media (min-width: 800px) {
+        .wrapper {
+            transform: scale(0.6);
+            top: 0;
+            right: 0;
+        }
+        .menu {
+            transform: scale(0.1);
+            top: 0;
+            right: 0;
+        }
+    }
+    
+    @media screen and (max-width: 799px) {
+        .wrapper {
+            transform: scale(0.4);
+            top: -20px;
+            right: -40px;
+        }
+        .menu {
+            transform: scale(0.1);
+            top: -20px;
+            right: -40px;
+        }
     }
 </style>
 
 <body>
-    <iframe class="embed-responsive-item" style="width: 100vw; height: 94vh;" src="https://www.artsteps.com/embed/5ebeeeda1a23554a778794fb" frameborder="0" allowfullscreen></iframe>
-    <footer class="footer fixed-bottom bg-dark " style="max-height: 6vh;">
+
+    <div id="vid" class="animated">
+        <iframe id="vimeo_vid" src="https://player.vimeo.com/video/418521156" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <button type="button" id="skipButton" class="btn btn-primary float-right" onclick="finished()">
+                    <h1 id="skip" class="text-uppercase font-weight-bolder">Skip&rsaquo;</h1>
+                </button>
+    </div>
+
+
+
+    <script>
+        $(document).ready(function() {
+            var iframe = $('#vimeo_vid');
+            var player = new Vimeo.Player(iframe);
+
+            player.on('ended', function() {
+                finished();
+            });
+
+        });
+
+        function finished() {
+            document.getElementById("vid").classList.add("fadeOut");
+            document.getElementById("vid").style.display = "none";
+            document.getElementById("art_step").style.display = "block";
+            document.getElementById("nav").style.display = "block";
+        }
+    </script>
+
+
+    <iframe id="art_step" class="animated fadeIn" style="width: 100vw; height: 94vh; display: none;" src="https://www.artsteps.com/embed/5ebeeeda1a23554a778794fb" frameborder="0" allowfullscreen></iframe>
+
+
+
+    <div id="wrap" class="wrapper">
+        <div class="toggle" id="toggle" onclick="expand()">
+            <i class="material-icons" id="add">add</i>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <div class="item">
+            <a href="home.html">
+                <img src="img/logo/home.png" class="icon">
+            </a>
+        </div>
+
+
+        <div class="item">
+            <a href="music.html">
+                <img src="img/logo/music.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="drama.html">
+                <img src="img/logo/drama.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="coffeehouse.html">
+                <img src="img/logo/coffeehouse.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="tech.html">
+                <img src="img/logo/comp.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="art.html">
+                <img src="img/logo/art.png" class="icon">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        let open = true;
+        let i = document.getElementById("menu").childNodes;
+
+        let zoom = 0.8;
+        let zoom_original = 0.4;
+        let translateX = "-42.5vw";
+        let translateY = "40vh";
+
+        if (window.innerWidth > 799) {
+            zoom = 1.2;
+            zoom_original = 0.6;
+            translateX = "-46vw";
+            translateY = "42.5vh";
+        }
+
+        function expand() {
+            if (!open) {
+                document.getElementById("add").style.transform = 'rotate(45deg)';
+
+                document.getElementById("wrap").style.transform = 'translate(' + translateX + ',' + translateY + ') scale(' + zoom + ')';
+                document.getElementById("menu").style.transform = 'translate(' + translateX + ',' + translateY + ') scale(' + zoom + ')';
+                open = true;
+
+                i[1].style.transform = 'translateY(-160px)';
+                i[3].style.transform = 'translate(140px, -80px)';
+                i[5].style.transform = 'translate(140px,80px)';
+                i[7].style.transform = 'translateY(160px)';
+                i[9].style.transform = 'translate(-140px,80px)';
+                i[11].style.transform = 'translate(-140px,-80px)';
+
+            } else {
+                document.getElementById("add").style.transform = 'rotate(0deg)';
+                document.getElementById("menu").style.transform = 'scale(0.1)'
+                document.getElementById("wrap").style.transform = 'scale(' + zoom_original + ')';
+                open = false;
+                i[1].style.transform = 'translateY(0)';
+                i[3].style.transform = 'translate(0)';
+                i[5].style.transform = 'translate(0)';
+                i[7].style.transform = 'translateY(0)';
+                i[9].style.transform = 'translate(0)';
+                i[11].style.transform = 'translate(0)';
+
+            }
+        }
+    </script>
+
+
+
+    <footer id="nav" class="footer fixed-bottom bg-dark animated fadeIn" style="max-height: 6vh; display: none;">
         <div class="container-fluid m-0 p-0 text-center">
             <a href="https://www.crestwood.on.ca/ ">
                 <div class="float-left p-2">

@@ -6,11 +6,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" type="text/css" href="hexstyle.css" />
+    <link rel="stylesheet" type="text/css" href="hexnav.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <!--Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
     <!--Animations-->
@@ -49,23 +53,6 @@
         }
         
         @media (min-width: 800px) {
-            #skip {
-                font-size: 3em;
-                bottom: 0;
-            }
-            #vid>iframe {
-                width: 95vw;
-                height: 100vh;
-                margin-left: 2.5vw;
-            }
-            #skipButton {
-                background: #002d72;
-                border-color: white;
-                font-family: 'Montserrat', sans-serif;
-                bottom: 0;
-                position: absolute;
-                right: 10vh;
-            }
             .arrow {
                 width: 8%;
                 margin-left: 46%;
@@ -97,24 +84,6 @@
         }
         
         @media screen and (max-width: 799px) {
-            #skip {
-                font-size: 1.5em;
-            }
-            #vid {
-                top: 27.5vh;
-            }
-            #vid>iframe {
-                width: 100vw;
-                height: 100vh;
-            }
-            #skipButton {
-                background: #002d72;
-                border-color: white;
-                font-family: 'Montserrat', sans-serif;
-                bottom: 33vh;
-                position: absolute;
-                right: 0;
-            }
             .arrow {
                 width: 16%;
                 margin-left: 42%;
@@ -144,9 +113,56 @@
                 font-size: 0.8em;
             }
         }
+        /* HEXNAV */
+        
+        @media (min-width: 800px) {
+            .wrapper {
+                transform: scale(0.6);
+                top: 0;
+                right: 0;
+            }
+            .menu {
+                transform: scale(0.1);
+                top: 0;
+                right: 0;
+            }
+            #up {
+                top: 150px;
+                right: 0;
+            }
+            #up_arrow {
+                width: 90px;
+                height: 90px;
+                left: -42.5px;
+                top: 25px;
+            }
+        }
+        
+        @media screen and (max-width: 799px) {
+            .wrapper {
+                transform: scale(0.4);
+                top: -20px;
+                right: -40px;
+            }
+            .menu {
+                transform: scale(0.1);
+                top: -20px;
+                right: -40px;
+            }
+            #up {
+                top: 80px;
+                right: -40px;
+            }
+            #up_arrow {
+                width: 90px;
+                height: 90px;
+                left: -42.5px;
+                top: 25px;
+            }
+        }
     </style>
 
-    <div id="vid" style="  background: black;">
+    <div id="vid" style="padding-bottom: 20vh;">
         <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/418521156" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         <div class="arrow animated bounce infinite delay-1s slower">
             <a href="#J1">
@@ -184,6 +200,110 @@
             </div>
         </div>
     </div>
+
+
+
+
+    <div id="wrap" class="wrapper">
+        <div class="toggle" id="toggle" onclick="expand()">
+            <i class="material-icons" id="add">add</i>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <div class="item">
+            <a href="home.html">
+                <img src="img/logo/home.png" class="icon">
+            </a>
+        </div>
+
+
+        <div class="item">
+            <a href="music.html">
+                <img src="img/logo/music.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="drama.html">
+                <img src="img/logo/drama.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="coffeehouse.html">
+                <img src="img/logo/coffeehouse.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="tech.html">
+                <img src="img/logo/comp.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="art.html">
+                <img src="img/logo/art.png" class="icon">
+            </a>
+        </div>
+    </div>
+
+    <div id="up" class="wrapper">
+        <div class="toggle" style="transform: rotate(180deg);">
+            <div class="arrow animated bounce infinite delay-1s slower" id="up_arrow">
+                <a href="#vid">
+                    <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+            <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+              </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let open = true;
+        let i = document.getElementById("menu").childNodes;
+
+        let zoom = 0.8;
+        let zoom_original = 0.4;
+        let translateX = "-42.5vw";
+        let translateY = "40vh";
+
+        if (window.innerWidth > 799) {
+            zoom = 1.2;
+            zoom_original = 0.6;
+            translateX = "-46vw";
+            translateY = "42.5vh";
+        }
+
+        function expand() {
+            if (!open) {
+                document.getElementById("add").style.transform = 'rotate(45deg)';
+
+                document.getElementById("wrap").style.transform = 'translate(' + translateX + ',' + translateY + ') scale(' + zoom + ')';
+                document.getElementById("menu").style.transform = 'translate(' + translateX + ',' + translateY + ') scale(' + zoom + ')';
+                open = true;
+
+                i[1].style.transform = 'translateY(-160px)';
+                i[3].style.transform = 'translate(140px, -80px)';
+                i[5].style.transform = 'translate(140px,80px)';
+                i[7].style.transform = 'translateY(160px)';
+                i[9].style.transform = 'translate(-140px,80px)';
+                i[11].style.transform = 'translate(-140px,-80px)';
+
+            } else {
+                document.getElementById("add").style.transform = 'rotate(0deg)';
+                document.getElementById("menu").style.transform = 'scale(0.1)'
+                document.getElementById("wrap").style.transform = 'scale(' + zoom_original + ')';
+                open = false;
+                i[1].style.transform = 'translateY(0)';
+                i[3].style.transform = 'translate(0)';
+                i[5].style.transform = 'translate(0)';
+                i[7].style.transform = 'translateY(0)';
+                i[9].style.transform = 'translate(0)';
+                i[11].style.transform = 'translate(0)';
+
+            }
+        }
+    </script>
 
 
 
@@ -227,15 +347,15 @@
                 document.getElementById("navbar ").style.display = "inherit ";
             }
         }
-        var i = ["https://www.powtoon.com/embed/f1JnSkwwwLs/", "https://www.powtoon.com/embed/dFi4b7vdxie/", "https://www.powtoon.com/embed/b7AnY00Oopi/", "https://www.powtoon.com/embed/fzWjhr0Uaiq/", "https://www.powtoon.com/embed/br7Ve4FPse5/"]
+        var x = ["https://www.powtoon.com/embed/f1JnSkwwwLs/", "https://www.powtoon.com/embed/dFi4b7vdxie/", "https://www.powtoon.com/embed/b7AnY00Oopi/", "https://www.powtoon.com/embed/fzWjhr0Uaiq/", "https://www.powtoon.com/embed/br7Ve4FPse5/"]
         var current = 0;
 
         function right() {
-            if (current != i.length - 1) {
-                document.getElementById("frame").src = i[current + 1];
+            if (current != x.length - 1) {
+                document.getElementById("frame").src = x[current + 1];
                 current += 1;
             } else {
-                document.getElementById("frame").src = i[0];
+                document.getElementById("frame").src = x[0];
                 current = 0;
             }
 
@@ -243,11 +363,11 @@
 
         function left() {
             if (current != 0) {
-                document.getElementById("frame").src = i[current - 1];
+                document.getElementById("frame").src = x[current - 1];
                 current -= 1;
             } else {
-                document.getElementById("frame").src = i[i.length - 1];
-                current = i.length - 1;
+                document.getElementById("frame").src = x[x.length - 1];
+                current = x.length - 1;
             }
         }
     </script>
