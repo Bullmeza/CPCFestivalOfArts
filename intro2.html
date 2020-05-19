@@ -34,25 +34,43 @@
 
 <body>
     <style>
-        body {
-            overflow: hidden;
-            background-color: #d3d3d3;
-        }
-        
         #skip:hover {
             color: rgba(255, 255, 255, 0.6)
+        }
+        
+        body {
+            background-color: #d3d3d3;
+            overflow: hidden;
+        }
+        
+        .left_arrow:hover {
+            filter: invert(80%);
+        }
+        
+        .right_arrow:hover {
+            filter: invert(80%);
+        }
+        
+        @media (min-width: 800px) {
+            .arrow {
+                width: 5%;
+                margin-left: 47.5%;
+                bottom: -7vh;
+            }
+        }
+        
+        @media screen and (max-width: 799px) {
+            .arrow {
+                width: 16%;
+                margin-left: 42%;
+            }
         }
     </style>
 
     <h1 id="start" class='delay-2s animated fadeOut'>A Word From Our Assistant Headmaster...</h1>
 
     <div class="vid animated fadeIn delay-3s">
-        <iframe id="vimeo_vid" src="https://player.vimeo.com/video/420386151?muted=1?autoplay=1&loop=0&autopause=0" frameborder="0" allow="autoplay; fullscreen" allow="fullscreen"></iframe>
-        <a href="home.html" style="color: inherit; text-decoration: none;">
-            <button type="button" id="skipButton" class="btn btn-primary float-right">
-                    <h1 id="skip" class="text-uppercase font-weight-bolder">Skip&rsaquo;</h1>
-                </button>
-        </a>
+        <iframe id="vimeo_vid" src="https://player.vimeo.com/video/420386151?autoplay=1&loop=0&autopause=0" frameborder="0" allow="autoplay; fullscreen" allow="fullscreen"></iframe>
     </div>
 
 

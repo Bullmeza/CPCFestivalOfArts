@@ -73,10 +73,9 @@ body {
         position: relative;
     }
     .vid>iframe {
-        width: 90vw;
-        height: 80vh;
-        margin-left: 5vw;
-        margin-top: 10vh;
+        width: 112vw;
+        height: 112vh;
+        margin-left: -6vw;
     }
     #skipButton {
         background: #002d72;

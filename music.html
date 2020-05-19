@@ -5,10 +5,21 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="hexnav.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 
+    <!--Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <!--Animations-->
+    <link rel="stylesheet" href="animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -19,6 +30,13 @@
     <link rel="icon" href="img/logo/tree_blue.png" type="image/gif">
     <link rel="shortcut icon" type="image/x-icon" href="img/logo/tree_blue.png" />
 
+    <script src="./audiojs/audio.min.js"></script>
+    <script>
+        audiojs.events.ready(function() {
+            audiojs.createAll();
+        });
+    </script>
+
 </head>
 
 <style>
@@ -28,7 +46,229 @@
 </style>
 
 <body>
+    <style>
+        .audiojs {
+            position: relative;
+            width: 100%;
+        }
+        
+        .rotate {
+            animation: turn 7s linear infinite;
+        }
+        
+        @keyframes turn {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        #skip:hover {
+            color: rgba(255, 255, 255, 0.6)
+        }
+        
+        body {
+            background-color: #d3d3d3;
+            overflow: hidden;
+        }
+        
+        .left_arrow:hover {
+            filter: invert(80%);
+        }
+        
+        .right_arrow:hover {
+            filter: invert(80%);
+        }
+        
+        @media (min-width: 800px) {
+            .arrow {
+                width: 5%;
+                margin-left: 47.5%;
+                bottom: -7vh;
+            }
+            .title {
+                font-size: 4em;
+            }
+            .paragraph {
+                font-size: 1.5em;
+            }
+            .left_arrow {
+                left: 1%;
+                top: 30%;
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                transform: rotate(90deg);
+                filter: invert(100%);
+            }
+            .right_arrow {
+                right: 1%;
+                top: 30%;
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                transform: rotate(-90deg);
+                filter: invert(100%);
+            }
+        }
+        
+        @media screen and (max-width: 799px) {
+            .arrow {
+                width: 16%;
+                margin-left: 42%;
+            }
+            .left_arrow {
+                left: 0;
+                top: 30%;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                transform: rotate(90deg);
+                filter: invert(100%);
+            }
+            .right_arrow {
+                right: 0;
+                top: 30%;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                transform: rotate(-90deg);
+                filter: invert(100%);
+            }
+            .title {
+                font-size: 2em;
+            }
+            .paragraph {
+                font-size: 0.8em;
+            }
+        }
+        /* HEXNAV */
+        
+        @media (min-width: 800px) {
+            .wrapper {
+                transform: scale(0.6);
+                top: 0;
+                right: 0;
+            }
+            .menu {
+                transform: scale(0.1);
+                top: 0;
+                right: 0;
+            }
+            #up {
+                bottom: -85vh;
+                right: 0;
+            }
+            #up_arrow {
+                width: 90px;
+                height: 90px;
+                left: -42.5px;
+                top: 30px;
+            }
+        }
+        
+        @media screen and (max-width: 799px) {
+            .wrapper {
+                transform: scale(0.4);
+                top: -20px;
+                right: -40px;
+            }
+            .menu {
+                transform: scale(0.1);
+                top: -20px;
+                right: -40px;
+            }
+            #up {
+                bottom: -88vh;
+                right: -40px;
+            }
+            #up_arrow {
+                width: 90px;
+                height: 90px;
+                left: -42.5px;
+                top: 27.5px;
+            }
+        }
+    </style>
+
+    <div class="vid" id="vid1" style="padding-bottom: 20vh;">
+        <iframe src="https://player.vimeo.com/video/420125842" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <div class="arrow animated bounce infinite delay-1s slower">
+            <a href="#title1">
+                <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+    <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+      </svg>
+            </a>
+        </div>
+    </div>
+
+    <div id="title1" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+        <div class="container p-2">
+            <h1 class="title">Casper's Theremin</h1>
+            <p class="paragraph">Casper is a grade 9 student at Crestwood Prep. He is an enthusiastic student with an insatiable thirst to learn everything Engineering related. In this piece below, we will see one of Casper's project, where he used some simple components
+                connected to the Arduino UNO to create a Theremin inspired instrument.
+            </p>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="position: relative;">
+        <div class="container-fluid w-75" style="height: 70vh;">
+            <div class="row">
+                <div class="col p-3">
+                    <iframe src="https://player.vimeo.com/video/420125842" style="width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="col p-3 contianer">
+                    <div style="width: 450px; height: auto; position: relative; padding: -20px;">
+                        <img src="img/player.png" style="height: 100%;width: 100%; position: relative; top: 0; z-index: 2; ">
+                        <img src="img/logo/ctreerecord.png" id="player1" style="width: 340px; height: 340px;  z-index: -1; border-radius: 50%; position: absolute; top: 0px; left: 5px;">
+                        <audio src="http://kolber.github.io/audiojs/demos/mp3/juicy.mp3" id="num2" preload="auto"></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="arrow animated bounce infinite delay-1s slower">
+            <a href="#title2">
+                <svg class="bi bi-chevron-double-down" color="black" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+          </svg>
+            </a>
+        </div>
+    </div>
+
+    <footer id="navbar " class="footer fixed-bottom bg-dark " style="max-height: 6vh; ">
+        <div class="container-fluid m-0 p-0 text-center ">
+            <a href="https://www.crestwood.on.ca/ ">
+                <div class="float-left p-2 ">
+                    <img src="img/white_logo.png " id="crestwoodLogo">
+                </div>
+            </a>
+            <div id="motto " class="float-left text-center w-75 p-3 text-white ">
+                <h1 style="font-size: 1.5em; font-family: Georgia; ">
+                    &#10240;&#10240;&#10240;&#10240;&#10240;Inspire Excellence &centerdot; Nurture Individuality
+                </h1>
+            </div>
+            <a href="https://www.instagram.com/crestwoodpreparatory/?hl=en ">
+                <div class="float-right p-2 pt-3 filter ">
+                    <img src="img/logo/instagram-seeklogo.com.svg " width="28px " class="nav_icon ">
+                </div>
+            </a>
+            <a href="https://twitter.com/CrestwoodPrep?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor ">
+                <div class="float-right p-2 ">
+                    <img src="img/logo/Twitter_Logo_WhiteOnImage.svg " width="36px " class="nav_icon">
+                </div>
+            </a>
+            <a href="https://www.facebook.com/crestwoodprep/ ">
+                <div class="float-right filter p-1 ">
+                    <img src="img/logo/fb.svg " width="38px " class="nav_icon">
+                </div>
+            </a>
+        </div>
+    </footer>
+
+
 
 </body>
+
 
 </html>
