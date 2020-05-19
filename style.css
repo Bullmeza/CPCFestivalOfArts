@@ -63,60 +63,42 @@ body {
 
 /* VIDS */
 
-@media (min-width: 800px) {
-    #skip {
-        top: 0.4vh;
-        font-size: 3em;
-        position: relative;
-    }
-    .vid {
-        position: relative;
-    }
-    .vid>iframe {
-        width: 112vw;
-        height: 112vh;
-        margin-left: -6vw;
-    }
-    #skipButton {
-        background: #002d72;
-        border-color: white;
-        font-family: 'Montserrat', sans-serif;
-        bottom: 0;
-        right: 14vw;
-        position: absolute;
-    }
-    #start {
+
+.video-background {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-background iframe {
+    /* height = 100 * (9 / 16) = 56.25 */
+    height: 56.25vw;
+  }
+      #start {
         position: absolute;
         top: 40vh;
         width: 100%;
-        font-size: 5em;
+        font-size: 2.2em;
         text-align: center;
     }
 }
-
-@media (max-width: 799px) {
-    #skip {
-        top: 0.4vh;
-        font-size: 1.5em;
-        position: relative;
-    }
-    .vid {
-        top: 25vh;
-        position: relative;
-    }
-    .vid>iframe {
-        width: 100vw;
-        height: 100vh;
-    }
-    #skipButton {
-        background: #002d72;
-        border-color: white;
-        font-family: 'Montserrat', sans-serif;
-        bottom: 26vh;
-        position: absolute;
-        right: 0;
-    }
-    #start {
+@media (max-aspect-ratio: 16/9) {
+  .video-background iframe {
+    /* width = 100 / (9 / 16) = 177.777777 */
+    width: 177.78vh;
+  }
+      #start {
         position: absolute;
         top: 40vh;
         width: 100%;
