@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!--Icons-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+	
+	<!--Animations-->
+    <link rel="stylesheet" href="animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
 
     <!-- Optional JavaScript -->
@@ -171,7 +175,7 @@
         </div>
     </div>
 
-    <!--SLIDESHOW 1-->
+    <!--Grade 7 Drama block-->
 
     <div id="title0" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
         <div class="container p-2">
@@ -208,7 +212,7 @@
         </div>
     </div>
 
-    <!--SLIDESHOW 2-->
+    <!--Grade 9 Drama Block-->
 
     <div id="title1" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
         <div class="container p-2">
@@ -236,7 +240,7 @@
             </div>
         </div>
         <div class="arrow animated bounce infinite delay-1s slower">
-            <a href="#title1">
+            <a href="#title3">
                 <svg class="bi bi-chevron-double-down" color="black" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
         <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
@@ -245,7 +249,26 @@
         </div>
     </div>
 
+    <!--DRAMA PHOTO Gallery block-->
 
+    <div id="title3" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+        <div class="container p-2">
+            <h1 class="title">Drama Productions Through the Years</h1>
+            <p class="paragraph"> PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER 
+            </p>
+        </div>
+    </div>
+
+<div class="container-fluid" style="position: relative;">
+<div class="container" style="height: 70vh;">
+            <div style="width: 100%; height: 50vh;">
+            </div>
+        </div>
+
+</div>
+
+
+	<!-- end of blocks -->
 
     <div id="wrap" class="wrapper">
         <div class="toggle" id="toggle" onclick="expand()">
@@ -284,6 +307,19 @@
             <a href="art.html">
                 <img src="img/logo/art.png" class="icon">
             </a>
+        </div>
+    </div>
+	
+	    <div id="up" class="wrapper animated fadeIn slow" style="display: none;">
+        <div class="toggle" style="transform: rotate(180deg);">
+            <div class="arrow" id="up_arrow">
+                <a href="#vid1">
+                    <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+            <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+              </svg>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -376,7 +412,7 @@
             } else {
                 document.getElementById("navbar").style.display = "none";
             }
-            if (window.location.hash == "" || window.location.hash == "#vid1") {
+            if (window.location.hash == "") {
                 document.getElementById("up").style.display = "none";
             } else {
                 document.getElementById("up").style.display = "block";
