@@ -69,7 +69,10 @@ body {
         font-size: 3em;
         position: relative;
     }
-    #vid>iframe {
+    .vid {
+        position: relative;
+    }
+    .vid>iframe {
         width: 90vw;
         height: 80vh;
         margin-left: 5vw;
@@ -98,10 +101,11 @@ body {
         font-size: 1.5em;
         position: relative;
     }
-    #vid {
+    .vid {
         top: 25vh;
+        position: relative;
     }
-    #vid>iframe {
+    .vid>iframe {
         width: 100vw;
         height: 100vh;
     }
