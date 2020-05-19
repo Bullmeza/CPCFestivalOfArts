@@ -81,11 +81,14 @@
 =======
     <div class="vid animated fadeIn delay-3s">
         <iframe id="vimeo_vid" src="https://player.vimeo.com/video/420386151?autoplay=1&loop=0&autopause=0" frameborder="0" allow="autoplay; fullscreen" allow="fullscreen"></iframe>
-        <div id="right_arrow" class="next animated" onmouseover="hover();">
-            <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+
+        <div id="right_arrow" class="next animated">
+            <a href="home.html">
+                <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
         <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
           </svg>
+            </a>
         </div>
 >>>>>>> Intro
     </div>
@@ -101,14 +104,6 @@
                 window.location.replace("home.html");
             });
         });
-
-        function hover() {
-            document.getElementById("right_arrow").classList.add("slideInRight");
-
-            setTimeout(function update() {
-                document.getElementById("right_arrow").classList.remove("slideInRight");
-            }, 800);
-        }
     </script>
 
 </body>
