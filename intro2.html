@@ -7,9 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="hexnav.css" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+    <!--Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
     <!-- Optional JavaScript -->
@@ -34,43 +40,28 @@
 
 <body>
     <style>
-        #skip:hover {
-            color: rgba(255, 255, 255, 0.6)
-        }
-        
         body {
             background-color: #d3d3d3;
             overflow: hidden;
         }
         
-        .left_arrow:hover {
-            filter: invert(80%);
-        }
-        
-        .right_arrow:hover {
-            filter: invert(80%);
-        }
-        
-        @media (min-width: 800px) {
-            .arrow {
-                width: 5%;
-                margin-left: 47.5%;
-                bottom: -7vh;
-            }
-        }
-        
-        @media screen and (max-width: 799px) {
-            .arrow {
-                width: 16%;
-                margin-left: 42%;
-            }
+        #right {
+            top: 45vh;
+            right: 0px;
         }
     </style>
-<!-- hi-->
+    <!-- hi-->
     <h1 id="start" class='delay-2s animated fadeOut'>A Word From Our Assistant Headmaster...</h1>
 
-    <div class="video-background">
+    <div class="video-background animated fadeIn delay-3s">
         <iframe id="vimeo_vid" src="https://player.vimeo.com/video/420434070?autoplay=1&loop=0&autopause=0" frameborder="0" allow="autoplay; fullscreen" allow="fullscreen"></iframe>
+        <a href="home.html">
+            <div id="right" class="wrapper">
+                <div class="toggle">
+                    <i class="material-icons" id="add">keyboard_arrow_right</i>
+                </div>
+            </div>
+        </a>
     </div>
 
 
@@ -83,7 +74,6 @@
             player.on('ended', function() {
                 window.location.replace("home.html");
             });
-
         });
     </script>
 
