@@ -30,7 +30,88 @@
 
 <body>
 
-    <style>
+<style>
+        #skip:hover {
+            color: rgba(255, 255, 255, 0.6)
+        }
+        
+        body {
+            background-color: #d3d3d3;
+            overflow: hidden;
+        }
+        
+        .left_arrow:hover {
+            filter: invert(80%);
+        }
+        
+        .right_arrow:hover {
+            filter: invert(80%);
+        }
+        
+        @media (min-width: 800px) {
+            .arrow {
+                width: 5%;
+                margin-left: 47.5%;
+                bottom: -7vh;
+            }
+            .title {
+                font-size: 4em;
+            }
+            .paragraph {
+                font-size: 1.5em;
+            }
+            .left_arrow {
+                left: 1%;
+                top: 30%;
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                transform: rotate(90deg);
+                filter: invert(100%);
+            }
+            .right_arrow {
+                right: 1%;
+                top: 30%;
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                transform: rotate(-90deg);
+                filter: invert(100%);
+            }
+        }
+        
+        @media screen and (max-width: 799px) {
+            .arrow {
+                width: 16%;
+                margin-left: 42%;
+            }
+            .left_arrow {
+                left: 0;
+                top: 30%;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                transform: rotate(90deg);
+                filter: invert(100%);
+            }
+            .right_arrow {
+                right: 0;
+                top: 30%;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                transform: rotate(-90deg);
+                filter: invert(100%);
+            }
+            .title {
+                font-size: 2em;
+            }
+            .paragraph {
+                font-size: 0.8em;
+            }
+        }
+        /* HEXNAV */
+        
         @media (min-width: 800px) {
             .wrapper {
                 transform: scale(0.6);
@@ -42,24 +123,128 @@
                 top: 0;
                 right: 0;
             }
+            #up {
+                bottom: -85vh;
+                right: 0;
+            }
+            #up_arrow {
+                width: 90px;
+                height: 90px;
+                left: -42.5px;
+                top: 30px;
+            }
         }
         
         @media screen and (max-width: 799px) {
             .wrapper {
                 transform: scale(0.4);
-                top: 60px;
+                top: -20px;
                 right: -40px;
             }
             .menu {
                 transform: scale(0.1);
-                top: 60px;
+                top: -20px;
                 right: -40px;
+            }
+            #up {
+                bottom: -88vh;
+                right: -40px;
+            }
+            #up_arrow {
+                width: 90px;
+                height: 90px;
+                left: -42.5px;
+                top: 27.5px;
             }
         }
     </style>
 
+<div class="vid" id="vid1" style="padding-bottom: 20vh;">
+        <iframe src="https://player.vimeo.com/video/418521156" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <div class="arrow animated bounce infinite delay-1s slower">
+            <a href="#title0">
+                <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+          </svg>
+            </a>
+        </div>
+    </div>
 
-    <div style='padding:0;position:relative;z-index: -10;'><iframe src='https://vimeo.com/showcase/7137537/embed' allowfullscreen frameborder='0' style='position:absolute;top:0;left:0;width:100vw;height: 94vh; z-index: -10;' id="mov"></iframe></div>
+    <!--SLIDESHOW 1-->
+
+    <div id="title0" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+        <div class="container p-2">
+            <h1 class="title">Gr. 7 Movement Projects</h1>
+            <p class="paragraph"> PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER 
+            </p>
+        </div>
+    </div>
+    <div class="container-fluid" style="position: relative;">
+        <div class="left_arrow" onclick="left(0)">
+            <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="right_arrow" onclick="right(0)">
+            <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="container" style="height: 70vh;">
+            <div style="width: 100%; height: 50vh;">
+                <iframe id="slideshow0" class="animate__animated animate__fast" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/419013856" frameborder="0"></iframe>
+            </div>
+        </div>
+        <div class="arrow animated bounce infinite delay-1s slower">
+            <a href="#title1">
+                <svg class="bi bi-chevron-double-down" color="black" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+          </svg>
+            </a>
+        </div>
+    </div>
+
+    <!--SLIDESHOW 2-->
+
+    <div id="title1" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+        <div class="container p-2">
+            <h1 class="title">Gr. 9 Monologues and Commercials</h1>
+            <p class="paragraph"> PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER 
+            </p>
+        </div>
+    </div>
+    <div class="container-fluid" style="position: relative;">
+        <div class="left_arrow" onclick="left(1)">
+            <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="right_arrow" onclick="right(1)">
+            <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="container" style="height: 70vh;">
+            <div style="width: 100%; height: 50vh;">
+                <iframe id="slideshow0" class="animate__animated animate__fast" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/419788442" frameborder="0"></iframe>
+            </div>
+        </div>
+        <div class="arrow animated bounce infinite delay-1s slower">
+            <a href="#title1">
+                <svg class="bi bi-chevron-double-down" color="black" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
+          </svg>
+            </a>
+        </div>
+    </div>
+
 
 
     <div id="wrap" class="wrapper">
@@ -183,6 +368,59 @@
             </a>
         </div>
     </footer>
+	
+	 <script>
+        window.onscroll = function() {
+            if (window.location.hash.includes("title")) {
+                document.getElementById("navbar").style.display = "block";
+            } else {
+                document.getElementById("navbar").style.display = "none";
+            }
+            if (window.location.hash == "" || window.location.hash == "#vid1") {
+                document.getElementById("up").style.display = "none";
+            } else {
+                document.getElementById("up").style.display = "block";
+            }
+        }
+        var slides = [
+            ["https://player.vimeo.com/video/419013856", "https://player.vimeo.com/video/419012817", "https://player.vimeo.com/video/419012227"],
+            ["https://player.vimeo.com/video/419788442", "https://player.vimeo.com/video/419014117", "https://player.vimeo.com/video/419013689", "https://player.vimeo.com/video/419013401", "https://player.vimeo.com/video/419013013", "https://player.vimeo.com/video/419012308", "https://player.vimeo.com/video/419012640", "https://player.vimeo.com/video/419012348", "https://player.vimeo.com/video/419014789"], <!-- these are the updated vimeo links -->
+            []
+        ];
+        var current = [0, 0, 0, 0, 0];
+
+        function right(num) {
+            document.getElementById("slideshow" + num).classList.add("animate__backOutRight");
+            setTimeout(function fade() {
+                document.getElementById("slideshow" + num).classList.remove("animate__backOutRight");
+            }, 800);
+            setTimeout(function updateRight() {
+                if (current[num] != slides[num].length - 1) {
+                    document.getElementById("slideshow" + num).src = slides[num][current[num] + 1];
+                    current[num] += 1;
+                } else {
+                    document.getElementById("slideshow" + num).src = slides[num][0];
+                    current[num] = 0;
+                }
+            }, 500);
+        }
+
+        function left(num) {
+            document.getElementById("slideshow" + num).classList.add("animate__backOutLeft");
+            setTimeout(function fade() {
+                document.getElementById("slideshow" + num).classList.remove("animate__backOutLeft");
+            }, 800);
+            setTimeout(function updateLeft() {
+                if (current[num] != 0) {
+                    document.getElementById("slideshow" + num).src = slides[num][current[num] - 1];
+                    current[num] -= 1;
+                } else {
+                    document.getElementById("slideshow" + num).src = slides[num][slides[num].length - 1];
+                    current[num] = slides[num].length - 1;
+                }
+            }, 500);
+        }
+    </script>
 
 </body>
 
