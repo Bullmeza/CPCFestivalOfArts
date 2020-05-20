@@ -6,8 +6,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" type="text/css" href="hexnav.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link rel="stylesheet" type="text/css" href="style/slideshow.css" />
+    <link rel="stylesheet" type="text/css" href="style/bottomnav.css" />
+    <link rel="stylesheet" type="text/css" href="style/hexnav.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <!--Animations-->
+    <link rel="stylesheet" href="style/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -17,9 +24,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
-    <!--Animations-->
-    <link rel="stylesheet" href="animate.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -43,103 +48,64 @@
     body {
         overflow: hidden;
     }
+    
+    .audiojs {
+        position: relative;
+        width: 100%;
+    }
+    
+    .rotate {
+        animation: turn 7s linear infinite;
+    }
+    
+    @keyframes turn {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    @media (min-width: 800px) {
+        #wrap {
+            transform: scale(0.6);
+            top: 0;
+            right: 0;
+        }
+        #menu {
+            transform: scale(0.1);
+            top: 0;
+            right: 0;
+        }
+    }
+    
+    @media (max-width: 799px) {
+        #wrap {
+            transform: scale(0.4);
+            top: -20px;
+            right: -40px;
+        }
+        #menu {
+            transform: scale(0.1);
+            top: -20px;
+            right: -40px;
+        }
+    }
 </style>
 
 <body>
-    <style>
-        .audiojs {
-            position: relative;
-            width: 100%;
-        }
-        
-        .rotate {
-            animation: turn 7s linear infinite;
-        }
-        
-        @keyframes turn {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        
-        #skip:hover {
-            color: rgba(255, 255, 255, 0.6)
-        }
-        
-        body {
-            background-color: #d3d3d3;
-            overflow: hidden;
-        }
-        
-        .left_arrow:hover {
-            filter: invert(80%);
-        }
-        
-        .right_arrow:hover {
-            filter: invert(80%);
-        }
-        /* HEXNAV */
-        
-        @media (min-width: 800px) {
-            .wrapper {
-                transform: scale(0.6);
-                top: 0;
-                right: 0;
-            }
-            .menu {
-                transform: scale(0.1);
-                top: 0;
-                right: 0;
-            }
-            #up {
-                bottom: -85vh;
-                right: 0;
-            }
-            #up_arrow {
-                width: 90px;
-                height: 90px;
-                left: -42.5px;
-                top: 30px;
-            }
-        }
-        
-        @media (max-width: 799px) {
-            .wrapper {
-                transform: scale(0.4);
-                top: -20px;
-                right: -40px;
-            }
-            .menu {
-                transform: scale(0.1);
-                top: -20px;
-                right: -40px;
-            }
-            #up {
-                bottom: -88vh;
-                right: -40px;
-            }
-            #up_arrow {
-                width: 90px;
-                height: 90px;
-                left: -42.5px;
-                top: 27.5px;
-            }
-        }
-    </style>
-
-    <div class="vid" id="vid1" style="padding-bottom: 20vh;">
-        <iframe src="https://player.vimeo.com/video/420125842" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        <div class="arrow animated bounce infinite delay-1s slower">
-            <a href="#title1">
-                <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-    <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-      </svg>
+    <div class="video-background" id="vid1">
+        <iframe src="https://player.vimeo.com/video/418521156" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <div class="bottom">
+            <a href="#title0">
+                <div class="wrapper">
+                    <div class="toggle">
+                        <i class="material-icons" id="add">keyboard_arrow_down</i>
+                    </div>
+                </div>
             </a>
         </div>
     </div>
 
-    <div id="title1" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+    <div id="title0" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
         <div class="container p-2">
             <h1 class="title">Casper's Theremin</h1>
             <p class="paragraph">Casper is a grade 9 student at Crestwood Prep. He is an enthusiastic student with an insatiable thirst to learn everything Engineering related. In this piece below, we will see one of Casper's project, where he used some simple components
@@ -163,45 +129,159 @@
                 </div>
             </div>
         </div>
-        <div class="arrow animated bounce infinite delay-1s slower">
-            <a href="#title2">
-                <svg class="bi bi-chevron-double-down" color="black" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-          </svg>
+        <div class="bottom">
+            <a href="#title0">
+                <div class="wrapper">
+                    <div class="toggle">
+                        <i class="material-icons" id="add">keyboard_arrow_down</i>
+                    </div>
+                </div>
             </a>
         </div>
     </div>
 
-    <footer id="navbar " class="footer fixed-bottom bg-dark " style="max-height: 6vh; ">
-        <div class="container-fluid m-0 p-0 text-center ">
+    <!--NAV-->
+    <div id="wrap" class="wrapper">
+        <div class="toggle" id="toggle" onclick="expand()">
+            <i class="material-icons" id="add">add</i>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <div class="item">
+            <a href="home.html">
+                <img src="img/logo/home.png" class="icon">
+            </a>
+        </div>
+
+
+        <div class="item">
+            <a href="music.html">
+                <img src="img/logo/music.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="drama.html">
+                <img src="img/logo/drama.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="coffeehouse.html">
+                <img src="img/logo/coffeehouse.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="tech.html">
+                <img src="img/logo/comp.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="art.html">
+                <img src="img/logo/art.png" class="icon">
+            </a>
+        </div>
+    </div>
+    <!-- <div id="up">
+        <a id="up_redicrect" href="#title6">
+            <div class="wrapper">
+                <div class="toggle">
+                    <i class="material-icons" id="add">keyboard_arrow_up</i>
+                </div>
+            </div>
+        </a>
+    </div> -->
+
+
+    <script>
+        let open = true;
+        let i = document.getElementById("menu").childNodes;
+
+        let zoom = 0.8;
+        let zoom_original = 0.4;
+        let translateX = "-42.5vw";
+        let translateY = "40vh";
+
+        if (window.innerWidth > 799) {
+            zoom = 1.2;
+            zoom_original = 0.6;
+            translateX = "-46vw";
+            translateY = "42.5vh";
+        }
+
+        function expand() {
+            if (!open) {
+                document.getElementById("add").style.transform = 'rotate(45deg)';
+
+                document.getElementById("wrap").style.transform = 'translate(' + translateX + ',' + translateY + ') scale(' + zoom + ')';
+                document.getElementById("menu").style.transform = 'translate(' + translateX + ',' + translateY + ') scale(' + zoom + ')';
+                open = true;
+
+                i[1].style.transform = 'translateY(-160px)';
+                i[3].style.transform = 'translate(140px, -80px)';
+                i[5].style.transform = 'translate(140px,80px)';
+                i[7].style.transform = 'translateY(160px)';
+                i[9].style.transform = 'translate(-140px,80px)';
+                i[11].style.transform = 'translate(-140px,-80px)';
+
+            } else {
+                document.getElementById("add").style.transform = 'rotate(0deg)';
+                document.getElementById("menu").style.transform = 'scale(0.1)'
+                document.getElementById("wrap").style.transform = 'scale(' + zoom_original + ')';
+                open = false;
+                i[1].style.transform = 'translateY(0)';
+                i[3].style.transform = 'translate(0)';
+                i[5].style.transform = 'translate(0)';
+                i[7].style.transform = 'translateY(0)';
+                i[9].style.transform = 'translate(0)';
+                i[11].style.transform = 'translate(0)';
+
+            }
+        }
+    </script>
+
+    <footer id="navbar" class="footer fixed-bottom bg-dark" style="max-height: 6vh; display: none;">
+        <div class="container-fluid m-0 p-0 text-center">
             <a href="https://www.crestwood.on.ca/ ">
-                <div class="float-left p-2 ">
-                    <img src="img/white_logo.png " id="crestwoodLogo">
+                <div class="float-left p-2">
+                    <img src="img/white_logo.png " id="crestwood_logo">
                 </div>
             </a>
-            <div id="motto " class="float-left text-center w-75 p-3 text-white ">
-                <h1 style="font-size: 1.5em; font-family: Georgia; ">
-                    &#10240;&#10240;&#10240;&#10240;&#10240;Inspire Excellence &centerdot; Nurture Individuality
+            <div id="motto" class="float-left text-center w-75 p-3 text-white ">
+                <h1 style="font-size: 2.75vh; font-family: Georgia; ">
+                    &#10240;&#10240;&#10240;&#10240;&#10240;&#10240;Inspire Excellence &centerdot; Nurture Individuality
                 </h1>
             </div>
             <a href="https://www.instagram.com/crestwoodpreparatory/?hl=en ">
-                <div class="float-right p-2 pt-3 filter ">
-                    <img src="img/logo/instagram-seeklogo.com.svg " width="28px " class="nav_icon ">
+                <div class="float-right filter ">
+                    <img src="img/logo/instagram.png" class="nav_icon">
                 </div>
             </a>
             <a href="https://twitter.com/CrestwoodPrep?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor ">
-                <div class="float-right p-2 ">
-                    <img src="img/logo/Twitter_Logo_WhiteOnImage.svg " width="36px " class="nav_icon">
+                <div class="float-right filter">
+                    <img src="img/logo/twitter.png " class="nav_icon">
                 </div>
             </a>
             <a href="https://www.facebook.com/crestwoodprep/ ">
-                <div class="float-right filter p-1 ">
-                    <img src="img/logo/fb.svg " width="38px " class="nav_icon">
+                <div class="float-right filter">
+                    <img src="img/logo/facebook.png " class="nav_icon">
+                </div>
+            </a>
+            <a href="https://www.youtube.com/channel/UCN87TNFRqdktIhuTMVZmwLQ">
+                <div class="float-right filter">
+                    <img src="img/logo/youtube.png" class="nav_icon">
                 </div>
             </a>
         </div>
     </footer>
+
+    <script>
+        window.onscroll = function() {
+            if (window.location.hash.includes("title")) {
+                document.getElementById("navbar").style.display = "block";
+            } else {
+                document.getElementById("navbar").style.display = "none";
+            }
+        }
+    </script>
 
 
 
