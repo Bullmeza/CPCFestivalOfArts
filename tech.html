@@ -358,24 +358,6 @@
             </div>
         </a>
     </div> -->
-    <script>
-        $(document).ready(function() {
-            var iframe = $('#vimeo_vid');
-            var player = new Vimeo.Player(iframe);
-
-            player.on('ended', function() {
-                finished();
-            });
-
-        });
-
-        function finished() {
-            document.getElementById("vid").classList.add("fadeOut");
-            document.getElementById("vid").style.display = "none";
-            document.getElementById("art_step").style.display = "block";
-            document.getElementById("nav").style.display = "block";
-        }
-    </script>
 
 
     <script>
