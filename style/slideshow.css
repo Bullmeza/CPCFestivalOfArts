@@ -39,10 +39,10 @@
 
 @media (min-aspect-ratio: 16/9) {
     .title {
-        font-size: 4em;
+        font-size: 3vw;
     }
     .paragraph {
-        font-size: 1.5em;
+        font-size: 1.25vw;
     }
     .right,
     .left,
@@ -65,10 +65,10 @@
 
 @media (max-aspect-ratio: 16/9) {
     .title {
-        font-size: 2em;
+        font-size: 4vh;
     }
     .paragraph {
-        font-size: 0.8em;
+        font-size: 1.75vh;
     }
     #up {
         bottom: 7vh;
