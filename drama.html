@@ -6,20 +6,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" type="text/css" href="style/slideshow.css" />
+    <link rel="stylesheet" type="text/css" href="style/bottomnav.css" />
+    <link rel="stylesheet" type="text/css" href="style/hexnav.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
 
-    <link rel="stylesheet" type="text/css" href="bottomnav.css" />
-    <link rel="stylesheet" type="text/css" href="hexnav.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!--Animations-->
+    <link rel="stylesheet" href="style/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!--Icons-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
-    <!--Animations-->
-    <link rel="stylesheet" href="animate.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <!--Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
     <!-- Optional JavaScript -->
@@ -34,244 +35,165 @@
 
 </head>
 
-<body>
 
+<body>
     <style>
-        #skip:hover {
-            color: rgba(255, 255, 255, 0.6)
-        }
-        
         body {
             background-color: #d3d3d3;
             overflow: hidden;
         }
-        
-        .left_arrow:hover {
-            filter: invert(80%);
-        }
-        
-        .right_arrow:hover {
-            filter: invert(80%);
-        }
-        
-        @media (min-width: 800px) {
-            .arrow {
-                width: 5%;
-                margin-left: 47.5%;
-                bottom: -7vh;
-            }
-            .title {
-                font-size: 4em;
-            }
-            .paragraph {
-                font-size: 1.5em;
-            }
-            .left_arrow {
-                left: 1%;
-                top: 30%;
-                width: 120px;
-                height: 120px;
-                position: absolute;
-                transform: rotate(90deg);
-                filter: invert(100%);
-            }
-            .right_arrow {
-                right: 1%;
-                top: 30%;
-                width: 120px;
-                height: 120px;
-                position: absolute;
-                transform: rotate(-90deg);
-                filter: invert(100%);
-            }
-        }
-        
-        @media screen and (max-width: 799px) {
-            .arrow {
-                width: 16%;
-                margin-left: 42%;
-            }
-            .left_arrow {
-                left: 0;
-                top: 30%;
-                width: 50px;
-                height: 50px;
-                position: absolute;
-                transform: rotate(90deg);
-                filter: invert(100%);
-            }
-            .right_arrow {
-                right: 0;
-                top: 30%;
-                width: 50px;
-                height: 50px;
-                position: absolute;
-                transform: rotate(-90deg);
-                filter: invert(100%);
-            }
-            .title {
-                font-size: 2em;
-            }
-            .paragraph {
-                font-size: 0.8em;
-            }
-        }
         /* HEXNAV */
         
         @media (min-width: 800px) {
-            .wrapper {
+            #wrap {
                 transform: scale(0.6);
                 top: 0;
                 right: 0;
             }
-            .menu {
+            #menu {
                 transform: scale(0.1);
                 top: 0;
                 right: 0;
             }
-            #up {
-                bottom: -85vh;
-                right: 0;
-            }
-            #up_arrow {
-                width: 90px;
-                height: 90px;
-                left: -42.5px;
-                top: 30px;
-            }
         }
         
-        @media screen and (max-width: 799px) {
-            .wrapper {
+        @media (max-width: 799px) {
+            #wrap {
                 transform: scale(0.4);
                 top: -20px;
                 right: -40px;
             }
-            .menu {
+            #menu {
                 transform: scale(0.1);
                 top: -20px;
                 right: -40px;
             }
-            #up {
-                bottom: -88vh;
-                right: -40px;
-            }
-            #up_arrow {
-                width: 90px;
-                height: 90px;
-                left: -42.5px;
-                top: 27.5px;
-            }
         }
     </style>
 
-    <div class="vid" id="vid1" style="padding-bottom: 20vh;">
-        <iframe src="https://player.vimeo.com/video/418521156" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        <div class="arrow animated bounce infinite delay-1s slower">
+    <div class="video-background" id="vid1">
+        <iframe src="https://player.vimeo.com/video/420434070?autoplay=1&loop=0&autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <div class="bottom">
             <a href="#title0">
-                <svg class="bi bi-chevron-double-down" color="black" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-          </svg>
+                <div class="wrapper">
+                    <div class="toggle">
+                        <i class="material-icons" id="add">keyboard_arrow_down</i>
+                    </div>
+                </div>
             </a>
         </div>
     </div>
-
     <!--Grade 7 Drama block-->
 
-    <div id="title0" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+    <div id="title0" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:25vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
         <div class="container p-2">
             <h1 class="title">Gr. 7 Movement Projects</h1>
-            <p class="paragraph"> PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER
+            <p class="paragraph"> PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER
             </p>
         </div>
     </div>
     <div class="container-fluid" style="position: relative;">
-        <div class="left_arrow" onclick="left(0)">
-            <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-          </svg>
-        </div>
-        <div class="right_arrow" onclick="right(0)">
-            <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-          </svg>
-        </div>
         <div class="container" style="height: 70vh;">
-            <div style="width: 100%; height: 50vh;">
+            <div style="width: 100%; height: 60vh;">
                 <iframe id="slideshow0" class="animate__animated animate__fast" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/419013856" frameborder="0"></iframe>
             </div>
-        </div>
-        <div class="arrow animated bounce infinite delay-1s slower">
-            <a href="#title1">
-                <svg class="bi bi-chevron-double-down" color="black" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-          </svg>
-            </a>
+            <div class="bottom">
+                <a href="#title1">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="add">keyboard_arrow_down</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="left" onclick="left(0)">
+                <div class="wrapper">
+                    <div class="toggle">
+                        <i class="material-icons" id="add">keyboard_arrow_left</i>
+                    </div>
+                </div>
+            </div>
+            <div class="right" onclick="right(0)">
+                <div class="wrapper">
+                    <div class="toggle">
+                        <i class="material-icons" id="add">keyboard_arrow_right</i>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+
 
     <!--Grade 9 Drama Block-->
 
-    <div id="title1" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+
+    <div id="title1" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:25vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
         <div class="container p-2">
             <h1 class="title">Gr. 9 Monologues and Commercials</h1>
-            <p class="paragraph"> PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER
+            <p class="paragraph"> PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER 
             </p>
         </div>
     </div>
+
     <div class="container-fluid" style="position: relative;">
-        <div class="left_arrow" onclick="left(1)">
-            <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-          </svg>
-        </div>
-        <div class="right_arrow" onclick="right(1)">
-            <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-          </svg>
-        </div>
         <div class="container" style="height: 70vh;">
-            <div style="width: 100%; height: 50vh;">
-                <iframe id="slideshow1" class="animate__animated animate__fast" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/419788442" frameborder="0"></iframe>
+            <div style="width: 100%; height: 60vh;">
+                <iframe id="slideshow1" class="animate__animated" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/419788442" frameborder="0"></iframe>
             </div>
-        </div>
-        <div class="arrow animated bounce infinite delay-1s slower">
-            <a href="#title3">
-                <svg class="bi bi-chevron-double-down" color="black" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-        <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-          </svg>
-            </a>
+            <div class="bottom">
+                <a href="#title6">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="add">keyboard_arrow_down</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="left" onclick="left(1)">
+                <div class="wrapper">
+                    <div class="toggle">
+                        <i class="material-icons" id="add">keyboard_arrow_left</i>
+                    </div>
+                </div>
+            </div>
+            <div class="right" onclick="right(1)">
+                <div class="wrapper">
+                    <div class="toggle">
+                        <i class="material-icons" id="add">keyboard_arrow_right</i>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!--DRAMA PHOTO Gallery block-->
 
-    <div id="title3" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+    <!--DRAMA PHOTO SLIDE SHOWS-->
+    <div id="title6" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
         <div class="container p-2">
-            <h1 class="title">Drama Productions Through the Years</h1>
-            <p class="paragraph"> PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER
-            </p>
+            <h1 class="title">Drama at Crestood Prep</h1>
         </div>
     </div>
-
     <div class="container-fluid" style="position: relative;">
         <div class="container" style="height: 70vh;">
             <div style="width: 100%; height: 50vh;">
+                <p> drama photos slideshow goes here </p>
+            </div>
+            <div class="bottom">
+                <a href="#vid1">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="add">keyboard_arrow_up</i>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
-
     </div>
 
 
-    <!-- end of blocks -->
 
+    <!--NAV-->
     <div id="wrap" class="wrapper">
         <div class="toggle" id="toggle" onclick="expand()">
             <i class="material-icons" id="add">add</i>
@@ -283,6 +205,8 @@
                 <img src="img/logo/home.png" class="icon">
             </a>
         </div>
+
+
         <div class="item">
             <a href="music.html">
                 <img src="img/logo/music.png" class="icon">
@@ -309,19 +233,15 @@
             </a>
         </div>
     </div>
-
-    <div id="up" class="wrapper animated fadeIn slow" style="display: none;">
-        <div class="toggle" style="transform: rotate(180deg);">
-            <div class="arrow" id="up_arrow">
-                <a href="#vid1">
-                    <svg class="bi bi-chevron-double-down" color="white" width="100%" height="100%" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 01.708 0L8 12.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-            <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 01.708 0L8 8.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"/>
-              </svg>
-                </a>
+    <!-- <div id="up">
+        <a id="up_redicrect" href="#title6">
+            <div class="wrapper">
+                <div class="toggle">
+                    <i class="material-icons" id="add">keyboard_arrow_up</i>
+                </div>
             </div>
-        </div>
-    </div>
+        </a>
+    </div> -->
 
 
     <script>
@@ -330,8 +250,8 @@
 
         let zoom = 0.8;
         let zoom_original = 0.4;
-        let translateX = "-40vw";
-        let translateY = "30vh";
+        let translateX = "-42.5vw";
+        let translateY = "40vh";
 
         if (window.innerWidth > 799) {
             zoom = 1.2;
@@ -374,8 +294,7 @@
 
 
 
-
-    <footer class="footer fixed-bottom bg-dark animated fadeIn slow" style="max-height: 6vh; display: none;">
+    <footer id="navbar" class="footer fixed-bottom bg-dark" style="max-height: 6vh; display: none;">
         <div class="container-fluid m-0 p-0 text-center">
             <a href="https://www.crestwood.on.ca/ ">
                 <div class="float-left p-2">
@@ -383,28 +302,28 @@
                 </div>
             </a>
             <div id="motto" class="float-left text-center w-75 p-3 text-white ">
-                <h1 style="font-size: 1.5em; font-family: Georgia; ">
-                    &#10240;&#10240;&#10240;&#10240;&#10240;Inspire Excellence &centerdot; Nurture Individuality
+                <h1 style="font-size: 2.75vh; font-family: Georgia; ">
+                    &#10240;&#10240;&#10240;&#10240;&#10240;&#10240;Inspire Excellence &centerdot; Nurture Individuality
                 </h1>
             </div>
             <a href="https://www.instagram.com/crestwoodpreparatory/?hl=en ">
                 <div class="float-right filter ">
-                    <img src="img/logo/instagram.png" class="icon">
+                    <img src="img/logo/instagram.png" class="nav_icon">
                 </div>
             </a>
             <a href="https://twitter.com/CrestwoodPrep?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor ">
                 <div class="float-right filter">
-                    <img src="img/logo/twitter.png " class="icon">
+                    <img src="img/logo/twitter.png " class="nav_icon">
                 </div>
             </a>
             <a href="https://www.facebook.com/crestwoodprep/ ">
                 <div class="float-right filter">
-                    <img src="img/logo/facebook.png " class="icon">
+                    <img src="img/logo/facebook.png " class="nav_icon">
                 </div>
             </a>
             <a href="https://www.youtube.com/channel/UCN87TNFRqdktIhuTMVZmwLQ">
                 <div class="float-right filter">
-                    <img src="img/logo/youtube.png" class="icon">
+                    <img src="img/logo/youtube.png" class="nav_icon">
                 </div>
             </a>
         </div>
@@ -416,11 +335,6 @@
                 document.getElementById("navbar").style.display = "block";
             } else {
                 document.getElementById("navbar").style.display = "none";
-            }
-            if (window.location.hash == "") {
-                document.getElementById("up").style.display = "none";
-            } else {
-                document.getElementById("up").style.display = "block";
             }
         }
         var slides = [
