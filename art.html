@@ -6,17 +6,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" type="text/css" href="style/slideshow.css" />
+    <link rel="stylesheet" type="text/css" href="style/bottomnav.css" />
+    <link rel="stylesheet" type="text/css" href="style/hexnav.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
 
-
-    <link rel="stylesheet" type="text/css" href="hexnav.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!--Animations-->
+    <link rel="stylesheet" href="style/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+
     <!--Icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
 
 
     <!-- Optional JavaScript -->
@@ -25,86 +29,137 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <!--Animations-->
-    <link rel="stylesheet" href="animate.css" />
-
-
     <title>CPC's Virtual Festival of Arts, Music and Technology</title>
     <link rel="icon" href="img/logo/tree_blue.png" type="image/gif">
     <link rel="shortcut icon" type="image/x-icon" href="img/logo/tree_blue.png" />
 
-    <!--Vimeo API-->
-    <script src="https://player.vimeo.com/api/player.js"></script>
 </head>
 
-<style>
-    body {
-        overflow: hidden;
-        background-color: #d2d2d2;
-    }
-    
-    @media (min-width: 800px) {
-        .wrapper {
-            transform: scale(0.6);
-            top: 0;
-            right: 0;
-        }
-        .menu {
-            transform: scale(0.1);
-            top: 0;
-            right: 0;
-        }
-    }
-    
-    @media screen and (max-width: 799px) {
-        .wrapper {
-            transform: scale(0.4);
-            top: -20px;
-            right: -40px;
-        }
-        .menu {
-            transform: scale(0.1);
-            top: -20px;
-            right: -40px;
-        }
-    }
-</style>
 
 <body>
+    <style>
+        body {
+            background-color: #d3d3d3;
+            overflow: hidden;
+        }
+        /* HEXNAV */
+        
+        @media (min-width: 800px) {
+            #wrap {
+                transform: scale(0.6);
+                top: 0;
+                right: 0;
+            }
+            #menu {
+                transform: scale(0.1);
+                top: 0;
+                right: 0;
+            }
+        }
+        
+        @media (max-width: 799px) {
+            #wrap {
+                transform: scale(0.4);
+                top: -20px;
+                right: -40px;
+            }
+            #menu {
+                transform: scale(0.1);
+                top: -20px;
+                right: -40px;
+            }
+        }
+    </style>
 
-    <div id="vid" class="vid animated">
-        <iframe id="vimeo_vid" src="https://player.vimeo.com/video/418521156" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        <button type="button" id="skipButton" class="btn btn-primary float-right" onclick="finished()">
-                    <h1 id="skip" class="text-uppercase font-weight-bolder">Skip&rsaquo;</h1>
-        </button>
+    <div class="video-background" id="vid1">
+        <iframe src="https://player.vimeo.com/video/420434070?autoplay=1&loop=0&autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <div class="bottom">
+            <a href="#title0">
+                <div class="wrapper">
+                    <div class="toggle">
+                        <i class="material-icons" id="add">keyboard_arrow_down</i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!--Art block intro-->
+
+    <div id="title0" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+        <div class="container p-2">
+            <h1 class="title">The Arts @ CPC</h1>
+            <p class="paragraph"> placeholder place holder placeholder place holderplaceholder place holderplaceholder place holderplaceholder place holderplaceholder place holder
+            </p>
+        </div>
+    </div>
+    <div class="container-fluid" style="position: relative;">
+        <div class="container" style="height: 70vh;">
+            <div style="width: 100%; height: 50vh;">
+                <iframe style="width: 100%; height: 100%" src="https://player.vimeo.com/video/420140290" frameborder="0"></iframe>
+            </div>
+            <div class="bottom">
+                <a href="#title1">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="add">keyboard_arrow_down</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+           
+        </div>
+    </div>
+	
+	    <!--digital art block artstep-->
+    <div id="title1" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:18vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+        <div class="container p-2">
+            <h1 class="title">Virtual Digital Art Gallery</h1>
+        </div>
+    </div>
+    <div class="container-fluid" style="position: relative;">
+        <div class="container" style="height: 82vh;">
+            <div style="width: 100%; height: 65vh;">
+                <iframe style="width: 100%; height: 100%" src="https://www.artsteps.com/embed/5ebeeeda1a23554a778794fb" frameborder="0"></iframe>
+            </div>
+            <div class="bottom">
+                <a href="#title6">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="add">keyboard_arrow_down</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--ART PHOTO SLIDE SHOWS-->
+    <div id="title6" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+        <div class="container p-2">
+            <h1 class="title">Art at Crestood Prep</h1>
+        </div>
+    </div>
+    <div class="container-fluid" style="position: relative;">
+        <div class="container" style="height: 70vh;">
+            <div style="width: 100%; height: 50vh;">
+                <p> art photos slideshow goes here </p>
+            </div>
+            <div class="bottom">
+                <a href="#vid1">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="add">keyboard_arrow_up</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 
 
 
-    <script>
-        $(document).ready(function() {
-            var iframe = $('#vimeo_vid');
-            var player = new Vimeo.Player(iframe);
-
-            player.on('ended', function() {
-                finished();
-            });
-
-        });
-
-        function finished() {
-            document.getElementById("vid").classList.add("fadeOut");
-            document.getElementById("vid").style.display = "none";
-            document.getElementById("art_step").style.display = "block";
-            document.getElementById("nav").style.display = "block";
-        }
-    </script>
-
-
-    <iframe id="art_step" class="animated fadeIn" style="width: 100vw; height: 94vh; display: none;" src="https://www.artsteps.com/embed/5ebeeeda1a23554a778794fb" frameborder="0" allowfullscreen></iframe>
-
-
-
+    <!--NAV-->
     <div id="wrap" class="wrapper">
         <div class="toggle" id="toggle" onclick="expand()">
             <i class="material-icons" id="add">add</i>
@@ -144,6 +199,16 @@
             </a>
         </div>
     </div>
+    <!-- <div id="up">
+        <a id="up_redicrect" href="#title6">
+            <div class="wrapper">
+                <div class="toggle">
+                    <i class="material-icons" id="add">keyboard_arrow_up</i>
+                </div>
+            </div>
+        </a>
+    </div> -->
+
 
     <script>
         let open = true;
@@ -194,35 +259,89 @@
 
 
 
-    <footer id="nav" class="footer fixed-bottom bg-dark animated fadeIn" style="max-height: 6vh; display: none;">
+
+    <footer id="navbar" class="footer fixed-bottom bg-dark" style="max-height: 6vh; display: none;">
         <div class="container-fluid m-0 p-0 text-center">
             <a href="https://www.crestwood.on.ca/ ">
                 <div class="float-left p-2">
-                    <img src="img/white_logo.png " id="crestwoodLogo">
+                    <img src="img/white_logo.png " id="crestwood_logo">
                 </div>
             </a>
             <div id="motto" class="float-left text-center w-75 p-3 text-white ">
-                <h1 style="font-size: 1.5em; font-family: Georgia; ">
-                    &#10240;&#10240;&#10240;&#10240;&#10240;Inspire Excellence &centerdot; Nurture Individuality
+                <h1 style="font-size: 2.75vh; font-family: Georgia; ">
+                    &#10240;&#10240;&#10240;&#10240;&#10240;&#10240;Inspire Excellence &centerdot; Nurture Individuality
                 </h1>
             </div>
             <a href="https://www.instagram.com/crestwoodpreparatory/?hl=en ">
-                <div class="float-right p-2 pt-3 filter ">
-                    <img src="img/logo/instagram-seeklogo.com.svg " width="28px" class="icon">
+                <div class="float-right filter ">
+                    <img src="img/logo/instagram.png" class="nav_icon">
                 </div>
             </a>
             <a href="https://twitter.com/CrestwoodPrep?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor ">
-                <div class="float-right p-2 ">
-                    <img src="img/logo/Twitter_Logo_WhiteOnImage.svg " width="36px" class="icon">
+                <div class="float-right filter">
+                    <img src="img/logo/twitter.png " class="nav_icon">
                 </div>
             </a>
             <a href="https://www.facebook.com/crestwoodprep/ ">
-                <div class="float-right filter p-1 ">
-                    <img src="img/logo/fb.svg " width="38px" class="icon">
+                <div class="float-right filter">
+                    <img src="img/logo/facebook.png " class="nav_icon">
+                </div>
+            </a>
+            <a href="https://www.youtube.com/channel/UCN87TNFRqdktIhuTMVZmwLQ">
+                <div class="float-right filter">
+                    <img src="img/logo/youtube.png" class="nav_icon">
                 </div>
             </a>
         </div>
     </footer>
+
+    <script>
+        window.onscroll = function() {
+            if (window.location.hash.includes("title")) {
+                document.getElementById("navbar").style.display = "block";
+            } else {
+                document.getElementById("navbar").style.display = "none";
+            }
+        }
+        var slides = [
+            ["https://www.powtoon.com/embed/f1JnSkwwwLs/", "https://www.powtoon.com/embed/dFi4b7vdxie/", "https://www.powtoon.com/embed/b7AnY00Oopi/", "https://www.powtoon.com/embed/fzWjhr0Uaiq/", "https://www.powtoon.com/embed/br7Ve4FPse5/"],
+            ["https://player.vimeo.com/video/419028014", "https://player.vimeo.com/video/419028130", "https://player.vimeo.com/video/419027901", "https://player.vimeo.com/video/419027812", "https://player.vimeo.com/video/419027777", "https://player.vimeo.com/video/420045590", "https://player.vimeo.com/video/420045437", "https://player.vimeo.com/video/420045246", "https://player.vimeo.com/video/420044984", "https://player.vimeo.com/video/420045167"],
+            []
+        ];
+        var current = [0, 0, 0, 0, 0];
+
+        function right(num) {
+            document.getElementById("slideshow" + num).classList.add("animate__backOutRight");
+            setTimeout(function fade() {
+                document.getElementById("slideshow" + num).classList.remove("animate__backOutRight");
+            }, 800);
+            setTimeout(function updateRight() {
+                if (current[num] != slides[num].length - 1) {
+                    document.getElementById("slideshow" + num).src = slides[num][current[num] + 1];
+                    current[num] += 1;
+                } else {
+                    document.getElementById("slideshow" + num).src = slides[num][0];
+                    current[num] = 0;
+                }
+            }, 500);
+        }
+
+        function left(num) {
+            document.getElementById("slideshow" + num).classList.add("animate__backOutLeft");
+            setTimeout(function fade() {
+                document.getElementById("slideshow" + num).classList.remove("animate__backOutLeft");
+            }, 800);
+            setTimeout(function updateLeft() {
+                if (current[num] != 0) {
+                    document.getElementById("slideshow" + num).src = slides[num][current[num] - 1];
+                    current[num] -= 1;
+                } else {
+                    document.getElementById("slideshow" + num).src = slides[num][slides[num].length - 1];
+                    current[num] = slides[num].length - 1;
+                }
+            }, 500);
+        }
+    </script>
 
 </body>
 
