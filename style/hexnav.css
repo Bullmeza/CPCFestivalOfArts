@@ -95,7 +95,8 @@
     user-select: none;
 }
 
-.item>a>img {
+.item>a>img,
+.item>a {
     position: relative;
     width: 100%;
     top: 15px;
