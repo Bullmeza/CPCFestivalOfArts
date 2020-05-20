@@ -23,11 +23,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
-    <!-- Optional JavaScript -->
+ <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	
+	    <script src="./audiojs/audio.min.js"></script>
+    <script>
+        audiojs.events.ready(function() {
+            audiojs.createAll();
+        });
+    </script>
 
     <title>CPC's Virtual Festival of Arts, Music and Technology</title>
     <link rel="icon" href="img/logo/tree_blue.png" type="image/gif">
@@ -224,12 +231,49 @@
             </div>
         </div>
     </div>
+	
+	   <!-- Crestwood Voices Amazing Grace-->
+
+
+    <div id="title5" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+        <div class="container p-2">
+            <h1 class="title">Amazing Grace</h1>
+            <p class="paragraph">placeholder
+            </p>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="position: relative;">
+        <div class="container-fluid w-75" style="height: 70vh;">
+            <div class="row">
+                <div class="col p-3">
+                    <iframe src="https://player.vimeo.com/video/420843677" style="width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="col p-3 contianer">
+                    <div style="width: 450px; height: auto; position: relative; padding: -20px;">
+                        <img src="img/player.png" style="height: 100%;width: 100%; position: relative; top: 0; z-index: 2; ">
+                        <img src="img/logo/ctreerecord.png" id="player1" style="width: 340px; height: 340px;  z-index: -1; border-radius: 50%; position: absolute; top: 0px; left: 5px;">
+                        <audio src="audio/amazinggrace.mp3" id="num2" preload="auto"></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#title1">
+                <div class="wrapper">
+                    <div class="toggle">
+                        <i class="material-icons" id="add">keyboard_arrow_down</i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
 
 
 
    <!--Amy & Andrianna-->
 
-    <div id="title5" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+    <div id="title6" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
         <div class="container p-2">
             <h1 class="title">prom dress</h1>
             <p class="paragraph">What a dynamic duo! Amy McCulloch and Andrianna Ellinidis are both Grade 8 students here at Crestwood. Other than being prefects and rocking at the rock band together, they also found some time to do some virtual duet. This is a recent recording done by the pair, covering the song <i>prom dress</i> by <i>mxmtoon</i>.
