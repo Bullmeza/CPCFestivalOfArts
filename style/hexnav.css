@@ -66,7 +66,8 @@
     box-sizing: initial;
 }
 
-#add {
+#add,
+#char {
     font-size: 100px;
     color: white;
     position: relative;
@@ -80,13 +81,21 @@
     user-select: none;
 }
 
-a>.material-icons {
-    color: #d2d2d2;
-    font-size: 60px;
+.arrow_icon {
+    font-size: 100px;
+    color: white;
+    position: relative;
+    top: 20px;
+    right: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.item>a>img,
-.item>a {
+.item>a>img {
     position: relative;
     width: 100%;
     top: 15px;
@@ -101,4 +110,23 @@ a>.material-icons {
     position: relative;
     width: 120%;
     top: 37px;
+}
+
+
+/* ACTIVE */
+
+.item_active {
+    border-bottom: 70px solid #add8e6;
+}
+
+.item_active:before {
+    border-top: 70px solid #add8e6;
+}
+
+.item_active>a>img,
+.item_active>a {
+    position: relative;
+    width: 100%;
+    top: 15px;
+    background-color: transparent;
 }

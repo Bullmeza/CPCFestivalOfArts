@@ -1,6 +1,7 @@
 .right:hover,
 .left:hover,
-.bottom:hover {
+.bottom:hover,
+.up:hover {
     filter: invert(80%);
 }
 
@@ -28,6 +29,14 @@
     position: absolute;
 }
 
+.up {
+    width: 160px;
+    height: 140px;
+    bottom: calc(8vh + 80px);
+    right: 0;
+    position: absolute;
+}
+
 @media (min-aspect-ratio: 16/9) {
     .title {
         font-size: 4em;
@@ -37,7 +46,8 @@
     }
     .right,
     .left,
-    .bottom {
+    .bottom,
+    .up {
         transform: scale(0.6);
     }
     #up {
@@ -54,11 +64,6 @@
 /* PHONE */
 
 @media (max-aspect-ratio: 16/9) {
-    .right,
-    .left,
-    .bottom {
-        transform: scale(0.4);
-    }
     .title {
         font-size: 2em;
     }
@@ -66,13 +71,21 @@
         font-size: 0.8em;
     }
     #up {
-        bottom: -88vh;
+        bottom: 7vh;
+        right: -40px;
+        position: fixed;
+        width: 160px;
+        height: 140px;
+        transform: scale(0.6);
+    }
+    .bottom,
+    .up,
+    .right {
+        transform: scale(0.4);
         right: -40px;
     }
-    #up_arrow {
-        width: 90px;
-        height: 90px;
-        left: -42.5px;
-        top: 27.5px;
+    .left {
+        transform: scale(0.4);
+        left: -40px;
     }
 }
