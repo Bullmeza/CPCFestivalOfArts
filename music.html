@@ -92,13 +92,16 @@
 </style>
 
 <body>
+
+<!-- intro-->
+
     <div class="video-background" id="vid1">
         <iframe src="https://player.vimeo.com/video/418521156?autoplay=1&loop=0&autopause=0"" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         <div class="bottom">
             <a href="#title0">
                 <div class="wrapper">
                     <div class="toggle">
-                        <i class="material-icons" id="add">keyboard_arrow_down</i>
+                        <i class="material-icons" id="char">keyboard_arrow_down</i>
                     </div>
                 </div>
             </a>
@@ -128,11 +131,20 @@
                 </div>
             </div>
         </div>
+		<div class="up">
+                <a href="#vid1">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_up</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
         <div class="bottom">
             <a href="#title1">
                 <div class="wrapper">
                     <div class="toggle">
-                        <i class="material-icons" id="add">keyboard_arrow_down</i>
+                        <i class="material-icons" id="char">keyboard_arrow_down</i>
                     </div>
                 </div>
             </a>
@@ -164,11 +176,20 @@
                 </div>
             </div>
         </div>
+		<div class="up">
+                <a href="#title0">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_up</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
         <div class="bottom">
             <a href="#title2">
                 <div class="wrapper">
                     <div class="toggle">
-                        <i class="material-icons" id="add">keyboard_arrow_down</i>
+                        <i class="material-icons" id="char">keyboard_arrow_down</i>
                     </div>
                 </div>
             </a>
@@ -199,11 +220,20 @@
                 </div>
             </div>
         </div>
+		<div class="up">
+                <a href="#title1">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_up</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
         <div class="bottom">
             <a href="#title3">
                 <div class="wrapper">
                     <div class="toggle">
-                        <i class="material-icons" id="add">keyboard_arrow_down</i>
+                        <i class="material-icons" id="char">keyboard_arrow_down</i>
                     </div>
                 </div>
             </a>
@@ -234,11 +264,20 @@
                 </div>
             </div>
         </div>
+				<div class="up">
+                <a href="#title2">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_up</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
         <div class="bottom">
             <a href="#title4">
                 <div class="wrapper">
                     <div class="toggle">
-                        <i class="material-icons" id="add">keyboard_arrow_down</i>
+                        <i class="material-icons" id="char">keyboard_arrow_down</i>
                     </div>
                 </div>
             </a>
@@ -269,11 +308,20 @@
                 </div>
             </div>
         </div>
+				<div class="up">
+                <a href="#title3">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_up</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
         <div class="bottom">
             <a href="#title6">
                 <div class="wrapper">
                     <div class="toggle">
-                        <i class="material-icons" id="add">keyboard_arrow_down</i>
+                        <i class="material-icons" id="char">keyboard_arrow_down</i>
                     </div>
                 </div>
             </a>
@@ -296,7 +344,7 @@
                 <a href="#vid1">
                     <div class="wrapper">
                         <div class="toggle">
-                            <i class="material-icons" id="add">keyboard_arrow_up</i>
+                            <i class="material-icons" id="char">keyboard_arrow_up</i>
                         </div>
                     </div>
                 </a>
@@ -318,7 +366,7 @@
         </div>
 
 
-        <div class="item">
+        <div class="item item_active">
             <a href="music.html">
                 <img src="img/logo/music.png" class="icon">
             </a>
@@ -356,7 +404,7 @@
 
 
     <script>
-        let open = true;
+        let open = false;
         let i = document.getElementById("menu").childNodes;
 
         let zoom = 0.8;
