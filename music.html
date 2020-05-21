@@ -1,53 +1,69 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+            shrink-to-fit=no">
 
 
-    <link rel="stylesheet" type="text/css" href="style/slideshow.css" />
-    <link rel="stylesheet" type="text/css" href="style/bottomnav.css" />
-    <link rel="stylesheet" type="text/css" href="style/hexnav.css" />
-    <link rel="stylesheet" type="text/css" href="style/style.css" />
-    <!--Animations-->
-    <link rel="stylesheet" href="style/animate.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+        <link rel="stylesheet" type="text/css" href="style/slideshow.css" />
+        <link rel="stylesheet" type="text/css" href="style/bottomnav.css" />
+        <link rel="stylesheet" type="text/css" href="style/hexnav.css" />
+        <link rel="stylesheet" type="text/css" href="style/style.css" />
+        <!--Animations-->
+        <link rel="stylesheet" href="style/animate.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+            />
 
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous">
 
 
-    <!--Icons-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!--Icons-->
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
 
-    <title>CPC's Virtual Festival of Arts, Music and Technology</title>
-    <link rel="icon" href="img/logo/tree_blue.png" type="image/gif">
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo/tree_blue.png" />
+        <title>CPC's Virtual Festival of Arts, Music and Technology</title>
+        <link rel="icon" href="img/logo/tree_blue.png" type="image/gif">
+        <link rel="shortcut icon" type="image/x-icon"
+            href="img/logo/tree_blue.png" />
 
-    <script src="./audiojs/audio.min.js"></script>
-    <script>
+        <script src="./audiojs/audio.min.js"></script>
+        <script>
         audiojs.events.ready(function() {
             audiojs.createAll();
         });
     </script>
-	        <script src="https://player.vimeo.com/api/player.js"></script>
+        <script src="https://player.vimeo.com/api/player.js"></script>
         <script src="pause.js"></script>
 
 
-</head>
+    </head>
 
-<style>
+    <style>
     body {
         overflow: hidden;
     }
@@ -93,48 +109,62 @@
         }
     }
 </style>
+    <body>
 
-<body>
+        <!-- intro-->
 
-<!-- intro-->
-
-    <div class="video-background" id="vid1">
-        <iframe class="vimeo" src="https://player.vimeo.com/video/420909626?autoplay=1&loop=0&autopause=0"" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        <div class="bottom" onclick="pause()">
-            <a href="#title0">
-                <div class="wrapper">
-                    <div class="toggle">
-                        <i class="material-icons" id="char">keyboard_arrow_down</i>
+        <div class="video-background" id="vid1">
+            <iframe class="vimeo"
+                src="https://player.vimeo.com/video/420909626?autoplay=1&loop=0&autopause=0"
+                frameborder="0"
+                allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <div class="bottom" onclick="pause()">
+                <a href="#title0">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_down</i>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
-    </div>
-<!--grade 8 hard rock blues-->
-    <div id="title0" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
-        <div class="container p-2">
-            <h1 class="title">Grade 8 Hard Rock Blues</h1>
-            <p class="paragraph">Grade 8 Music class recorded Hard Rock Blues based on the 12 bar blues often found in jazz.
-            </p>
+        <!--grade 8 hard rock blues-->
+        <div id="title0" class="jumbotron text-white bg-dark mt-0 pt-0"
+            style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
+            calc(100% - 10vh));">
+            <div class="container p-2">
+                <h1 class="title">Grade 8 Hard Rock Blues</h1>
+                <p class="paragraph">Grade 8 Music class recorded Hard Rock
+                    Blues based on the 12 bar blues often found in jazz.
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div class="container-fluid" style="position: relative;">
-        <div class="container-fluid w-75" style="height: 70vh;">
-            <div class="row">
-                <div class="col p-3">
-                    <iframe class = "vimeo" src="https://player.vimeo.com/video/420909100" style="width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <div class="col p-3 contianer">
-                    <div style="width: 450px; height: auto; position: relative; padding: -20px;">
-                        <img src="img/player.png" style="height: 100%;width: 100%; position: relative; top: 0; z-index: 2; ">
-                        <img src="img/logo/ctreerecord.png" id="player1" style="width: 340px; height: 340px;  z-index: -1; border-radius: 50%; position: absolute; top: 0px; left: 5px;">
-                        <audio src="audio/8blues.mp3" id="num2" preload="auto"></audio>
+        <div class="container-fluid" style="position: relative;">
+            <div class="container-fluid w-75" style="height: 70vh;">
+                <div class="row">
+                    <div class="col p-3">
+                        <iframe class="vimeo"
+                            src="https://player.vimeo.com/video/420909100"
+                            style="width: 100%; height: 100%;" frameborder="0"
+                            allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class="col p-3 contianer">
+                        <div style="width: 450px; height: auto; position:
+                            relative; padding: -20px;">
+                            <img src="img/player.png" style="height: 100%;width:
+                                100%; position: relative; top: 0; z-index: 2;">
+                            <img src="img/logo/ctreerecord.png"
+                                class="audio_player" style="width: 340px;
+                                height: 340px; z-index: -1; border-radius: 50%;
+                                position: absolute; top: 0px; left: 5px;">
+                            <audio src="audio/8blues.mp3" id="num2"
+                                preload="auto"></audio>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-		<div class="up" onclick="pause()">
+            <div class="up" onclick="pause()">
                 <a href="#vid1">
                     <div class="wrapper">
                         <div class="toggle">
@@ -143,42 +173,57 @@
                     </div>
                 </a>
             </div>
-        <div class="bottom" onclick="pause()">
-            <a href="#title1">
-                <div class="wrapper">
-                    <div class="toggle">
-                        <i class="material-icons" id="char">keyboard_arrow_down</i>
+            <div class="bottom" onclick="pause()">
+                <a href="#title1">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_down</i>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
-    </div>
 
-	<!--grade 9/10 Eye of the tiger-->
-    <div id="title1" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
-        <div class="container p-2">
-            <h1 class="title">Grade 9/10 Eye of the Tiger</h1>
-            <p class="paragraph">Grade 9/10 music class records the instrumental version of Eye of the Tiger made popular by the film Rocky III. Originally recorded in 1986 by the Survivors. This version was arranged by Gerald Sebesky.
-            </p>
+        <!--grade 9/10 Eye of the tiger-->
+        <div id="title1" class="jumbotron text-white bg-dark mt-0 pt-0"
+            style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
+            calc(100% - 10vh));">
+            <div class="container p-2">
+                <h1 class="title">Grade 9/10 Eye of the Tiger</h1>
+                <p class="paragraph">Grade 9/10 music class records the
+                    instrumental version of Eye of the Tiger made popular by the
+                    film Rocky III. Originally recorded in 1986 by the
+                    Survivors. This version was arranged by Gerald Sebesky.
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div class="container-fluid" style="position: relative;">
-        <div class="container-fluid w-75" style="height: 70vh;">
-            <div class="row">
-                <div class="col p-3">
-                    <iframe class="vimeo" src="https://player.vimeo.com/video/420909214" style="width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <div class="col p-3 contianer">
-                    <div style="width: 450px; height: auto; position: relative; padding: -20px;">
-                        <img src="img/player.png" style="height: 100%;width: 100%; position: relative; top: 0; z-index: 2; ">
-                        <img src="img/logo/ctreerecord.png" id="player1" style="width: 340px; height: 340px;  z-index: -1; border-radius: 50%; position: absolute; top: 0px; left: 5px;">
-                        <audio src="audio/910eye.mp3" id="num2" preload="auto"></audio>
+        <div class="container-fluid" style="position: relative;">
+            <div class="container-fluid w-75" style="height: 70vh;">
+                <div class="row">
+                    <div class="col p-3">
+                        <iframe class="vimeo"
+                            src="https://player.vimeo.com/video/420909214"
+                            style="width: 100%; height: 100%;" frameborder="0"
+                            allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class="col p-3 contianer">
+                        <div style="width: 450px; height: auto; position:
+                            relative; padding: -20px;">
+                            <img src="img/player.png" style="height: 100%;width:
+                                100%; position: relative; top: 0; z-index: 2;">
+                            <img src="img/logo/ctreerecord.png"
+                                class="audio_player"
+                                style="width: 340px; height: 340px; z-index: -1;
+                                border-radius: 50%; position: absolute; top:
+                                0px; left: 5px;">
+                            <audio src="audio/910eye.mp3" id="num2"
+                                preload="auto"></audio>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-		<div class="up" onclick="pause()">
+            <div class="up" onclick="pause()">
                 <a href="#title0">
                     <div class="wrapper">
                         <div class="toggle">
@@ -187,41 +232,55 @@
                     </div>
                 </a>
             </div>
-        <div class="bottom" onclick="pause()">
-            <a href="#title2">
-                <div class="wrapper">
-                    <div class="toggle">
-                        <i class="material-icons" id="char">keyboard_arrow_down</i>
+            <div class="bottom" onclick="pause()">
+                <a href="#title2">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_down</i>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
-    </div>
-<!--grade 9 10 sweet caroline-->
-    <div id="title2" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
-        <div class="container p-2">
-            <h1 class="title">Grade 9/10 Sweet Caroline</h1>
-            <p class="paragraph">Grade 9/10 music class' recording of Sweet Caroline, a classic originally recorded by Neil Diamond in 1969.
-            </p>
+        <!--grade 9 10 sweet caroline-->
+        <div id="title2" class="jumbotron text-white bg-dark mt-0 pt-0"
+            style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
+            calc(100% - 10vh));">
+            <div class="container p-2">
+                <h1 class="title">Grade 9/10 Sweet Caroline</h1>
+                <p class="paragraph">Grade 9/10 music class' recording of Sweet
+                    Caroline, a classic originally recorded by Neil Diamond in
+                    1969.
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div class="container-fluid" style="position: relative;">
-        <div class="container-fluid w-75" style="height: 70vh;">
-            <div class="row">
-                <div class="col p-3">
-                    <iframe class="vimeo" src="https://player.vimeo.com/video/420909305" style="width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <div class="col p-3 contianer">
-                    <div style="width: 450px; height: auto; position: relative; padding: -20px;">
-                        <img src="img/player.png" style="height: 100%;width: 100%; position: relative; top: 0; z-index: 2; ">
-                        <img src="img/logo/ctreerecord.png" id="player1" style="width: 340px; height: 340px;  z-index: -1; border-radius: 50%; position: absolute; top: 0px; left: 5px;">
-                        <audio src="audio/910caroline.mp3" id="num2" preload="auto"></audio>
+        <div class="container-fluid" style="position: relative;">
+            <div class="container-fluid w-75" style="height: 70vh;">
+                <div class="row">
+                    <div class="col p-3">
+                        <iframe class="vimeo"
+                            src="https://player.vimeo.com/video/420909305"
+                            style="width: 100%; height: 100%;" frameborder="0"
+                            allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class="col p-3 contianer">
+                        <div style="width: 450px; height: auto; position:
+                            relative; padding: -20px;">
+                            <img src="img/player.png" style="height: 100%;width:
+                                100%; position: relative; top: 0; z-index: 2;">
+                            <img src="img/logo/ctreerecord.png"
+                                class="audio_player"
+                                style="width: 340px; height: 340px; z-index: -1;
+                                border-radius: 50%; position: absolute; top:
+                                0px; left: 5px;">
+                            <audio src="audio/910caroline.mp3" id="num2"
+                                preload="auto"></audio>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-		<div class="up" onclick="pause()">
+            <div class="up" onclick="pause()">
                 <a href="#title1">
                     <div class="wrapper">
                         <div class="toggle">
@@ -230,44 +289,57 @@
                     </div>
                 </a>
             </div>
-        <div class="bottom" onclick="pause()">
-            <a href="#title3">
-                <div class="wrapper">
-                    <div class="toggle">
-                        <i class="material-icons" id="char">keyboard_arrow_down</i>
+            <div class="bottom" onclick="pause()">
+                <a href="#title3">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_down</i>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
-    </div>
-	
 
-	
-	<!--grade =11/12 avengers-->W
-    <div id="title3" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
-        <div class="container p-2">
-            <h1 class="title">Grade 11/12 Avengers Mix</h1>
-            <p class="paragraph">Grade 11/12 class records the theme song of Avengers arranged by Michael Brown.
-            </p>
+
+
+        <!--grade =11/12 avengers-->W
+        <div id="title3" class="jumbotron text-white bg-dark mt-0 pt-0"
+            style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
+            calc(100% - 10vh));">
+            <div class="container p-2">
+                <h1 class="title">Grade 11/12 Avengers Mix</h1>
+                <p class="paragraph">Grade 11/12 class records the theme song of
+                    Avengers arranged by Michael Brown.
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div class="container-fluid" style="position: relative;">
-        <div class="container-fluid w-75" style="height: 70vh;">
-            <div class="row">
-                <div class="col p-3">
-                    <iframe class="vimeo" src="https://player.vimeo.com/video/420909374" style="width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <div class="col p-3 contianer">
-                    <div style="width: 450px; height: auto; position: relative; padding: -20px;">
-                        <img src="img/player.png" style="height: 100%;width: 100%; position: relative; top: 0; z-index: 2; ">
-                        <img src="img/logo/ctreerecord.png" id="player1" style="width: 340px; height: 340px;  z-index: -1; border-radius: 50%; position: absolute; top: 0px; left: 5px;">
-                        <audio src="audio/1112avengers.mp3" id="num2" preload="auto"></audio>
+        <div class="container-fluid" style="position: relative;">
+            <div class="container-fluid w-75" style="height: 70vh;">
+                <div class="row">
+                    <div class="col p-3">
+                        <iframe class="vimeo"
+                            src="https://player.vimeo.com/video/420909374"
+                            style="width: 100%; height: 100%;" frameborder="0"
+                            allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class="col p-3 contianer">
+                        <div style="width: 450px; height: auto; position:
+                            relative; padding: -20px;">
+                            <img src="img/player.png" style="height: 100%;width:
+                                100%; position: relative; top: 0; z-index: 2;">
+                            <img src="img/logo/ctreerecord.png"
+                                class="audio_player"
+                                style="width: 340px; height: 340px; z-index: -1;
+                                border-radius: 50%; position: absolute; top:
+                                0px; left: 5px;">
+                            <audio src="audio/1112avengers.mp3" id="num2"
+                                preload="auto"></audio>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-				<div class="up" onclick="pause()">
+            <div class="up" onclick="pause()">
                 <a href="#title2">
                     <div class="wrapper">
                         <div class="toggle">
@@ -276,42 +348,56 @@
                     </div>
                 </a>
             </div>
-        <div class="bottom" onclick="pause()">
-            <a href="#title4">
-                <div class="wrapper">
-                    <div class="toggle">
-                        <i class="material-icons" id="char">keyboard_arrow_down</i>
+            <div class="bottom" onclick="pause()">
+                <a href="#title4">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_down</i>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
-    </div>
-	
-		<!--grade =11/12 mercy-->
-    <div id="title4" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
-        <div class="container p-2">
-            <h1 class="title">Grade 11/12 Mercy, Mercy, Mercy</h1>
-            <p class="paragraph">Grade 11/12 music class records Mercy Mercy Mercy originally recorded in 1966 composition by Joel Zawinul.
-            </p>
-        </div>
-    </div>
 
-    <div class="container-fluid" style="position: relative;">
-        <div class="container-fluid w-75" style="height: 70vh;">
-            <div class="row">
-                <div class="col p-3">
-                    <iframe  class="vimeo" src="https://player.vimeo.com/video/420909523" style="width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <div class="col p-3 contianer">
-                    <div style="width: 450px; height: auto; position: relative; padding: -20px;">
-                        <img src="img/player.png" style="height: 100%;width: 100%; position: relative; top: 0; z-index: 2; ">
-                        <img src="img/logo/ctreerecord.png" id="player1" style="width: 340px; height: 340px;  z-index: -1; border-radius: 50%; position: absolute; top: 0px; left: 5px;">
-                        <audio src="audio/1112mercy.mp3" id="num2" preload="auto"></audio>
+        <!--grade =11/12 mercy-->
+        <div id="title4" class="jumbotron text-white bg-dark mt-0 pt-0"
+            style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
+            calc(100% - 10vh));">
+            <div class="container p-2">
+                <h1 class="title">Grade 11/12 Mercy, Mercy, Mercy</h1>
+                <p class="paragraph">Grade 11/12 music class records Mercy Mercy
+                    Mercy originally recorded in 1966 composition by Joel
+                    Zawinul.
+                </p>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="position: relative;">
+            <div class="container-fluid w-75" style="height: 70vh;">
+                <div class="row">
+                    <div class="col p-3">
+                        <iframe class="vimeo"
+                            src="https://player.vimeo.com/video/420909523"
+                            style="width: 100%; height: 100%;" frameborder="0"
+                            allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class="col p-3 contianer">
+                        <div style="width: 450px; height: auto; position:
+                            relative; padding: -20px;">
+                            <img src="img/player.png" style="height: 100%;width:
+                                100%; position: relative; top: 0; z-index: 2;">
+                            <img src="img/logo/ctreerecord.png"
+                                class="audio_player"
+                                style="width: 340px; height: 340px; z-index: -1;
+                                border-radius: 50%; position: absolute; top:
+                                0px; left: 5px;">
+                            <audio src="audio/1112mercy.mp3" id="num2"
+                                preload="auto"></audio>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-				<div class="up" onclick="pause()">
+            <div class="up" onclick="pause()">
                 <a href="#title3">
                     <div class="wrapper">
                         <div class="toggle">
@@ -320,82 +406,84 @@
                     </div>
                 </a>
             </div>
-        <div class="bottom" onclick="pause()">
-            <a href="#title6">
-                <div class="wrapper">
-                    <div class="toggle">
-                        <i class="material-icons" id="char">keyboard_arrow_down</i>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-	
-	
-	    <!--MUSIC PHOTO SLIDE SHOWS-->
-    <div id="title6" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
-        <div class="container p-2">
-            <h1 class="title">Music at Crestood Prep</h1>
-        </div>
-    </div>
-    <div class="container-fluid" style="position: relative;">
-        <div class="container" style="height: 70vh;">
-            <div style="width: 100%; height: 50vh;">
-                <p> music photos slideshow goes here </p>
-            </div>
             <div class="bottom" onclick="pause()">
-                <a href="#vid1">
+                <a href="#title6">
                     <div class="wrapper">
                         <div class="toggle">
-                            <i class="material-icons" id="char">keyboard_arrow_up</i>
+                            <i class="material-icons" id="char">keyboard_arrow_down</i>
                         </div>
                     </div>
                 </a>
             </div>
         </div>
-    </div>
-	
-    <!--NAV-->
-    <div id="wrap" class="wrapper">
-        <div class="toggle" id="toggle" onclick="expand()">
-            <i class="material-icons" id="add">add</i>
-        </div>
-    </div>
-    <div class="menu" id="menu">
-        <div class="item">
-            <a href="home.html">
-                <img src="img/logo/home.png" class="icon">
-            </a>
-        </div>
 
 
-        <div class="item item_active">
-            <a href="music.html">
-                <img src="img/logo/music.png" class="icon">
-            </a>
+        <!--MUSIC PHOTO SLIDE SHOWS-->
+        <div id="title6" class="jumbotron text-white bg-dark mt-0 pt-0"
+            style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
+            calc(100% - 10vh));">
+            <div class="container p-2">
+                <h1 class="title">Music at Crestood Prep</h1>
+            </div>
         </div>
-        <div class="item">
-            <a href="drama.html">
-                <img src="img/logo/drama.png" class="icon">
-            </a>
+        <div class="container-fluid" style="position: relative;">
+            <div class="container" style="height: 70vh;">
+                <div style="width: 100%; height: 50vh;">
+                    <p> music photos slideshow goes here </p>
+                </div>
+                <div class="bottom" onclick="pause()">
+                    <a href="#vid1">
+                        <div class="wrapper">
+                            <div class="toggle">
+                                <i class="material-icons" id="char">keyboard_arrow_up</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="item">
-            <a href="coffeehouse.html">
-                <img src="img/logo/coffeehouse.png" class="icon">
-            </a>
+
+        <!--NAV-->
+        <div id="wrap" class="wrapper">
+            <div class="toggle" id="toggle" onclick="expand()">
+                <i class="material-icons" id="add">add</i>
+            </div>
         </div>
-        <div class="item">
-            <a href="tech.html">
-                <img src="img/logo/comp.png" class="icon">
-            </a>
+        <div class="menu" id="menu">
+            <div class="item">
+                <a href="home.html">
+                    <img src="img/logo/home.png" class="icon">
+                </a>
+            </div>
+
+
+            <div class="item item_active">
+                <a href="music.html">
+                    <img src="img/logo/music.png" class="icon">
+                </a>
+            </div>
+            <div class="item">
+                <a href="drama.html">
+                    <img src="img/logo/drama.png" class="icon">
+                </a>
+            </div>
+            <div class="item">
+                <a href="coffeehouse.html">
+                    <img src="img/logo/coffeehouse.png" class="icon">
+                </a>
+            </div>
+            <div class="item">
+                <a href="tech.html">
+                    <img src="img/logo/comp.png" class="icon">
+                </a>
+            </div>
+            <div class="item">
+                <a href="art.html">
+                    <img src="img/logo/art.png" class="icon">
+                </a>
+            </div>
         </div>
-        <div class="item">
-            <a href="art.html">
-                <img src="img/logo/art.png" class="icon">
-            </a>
-        </div>
-    </div>
-    <!-- <div id="up">
+        <!-- <div id="up">
         <a id="up_redicrect" href="#title6">
             <div class="wrapper">
                 <div class="toggle">
@@ -404,9 +492,7 @@
             </div>
         </a>
     </div> -->
-
-
-    <script>
+        <script>
         let open = false;
         let i = document.getElementById("menu").childNodes;
 
@@ -452,48 +538,52 @@
             }
         }
     </script>
-
-    <footer id="navbar" class="footer fixed-bottom bg-dark" style="max-height: 6vh; display: none;">
-        <div class="container-fluid m-0 p-0 text-center">
-            <a href="https://www.crestwood.on.ca/ ">
-                <div class="float-left p-2">
-                    <img src="img/white_logo.png " id="crestwood_logo">
+        <footer id="navbar" class="footer fixed-bottom bg-dark"
+            style="max-height: 6vh; display: none;">
+            <div class="container-fluid m-0 p-0 text-center">
+                <a href="https://www.crestwood.on.ca/">
+                    <div class="float-left p-2">
+                        <img src="img/white_logo.png" id="crestwood_logo">
+                    </div>
+                </a>
+                <div id="motto" class="float-left text-center w-75 p-3
+                    text-white">
+                    <h1 style="font-size: 2.75vh; font-family: Georgia;">
+                        &#10240;&#10240;&#10240;&#10240;&#10240;&#10240;Inspire
+                        Excellence &centerdot; Nurture Individuality
+                    </h1>
                 </div>
-            </a>
-            <div id="motto" class="float-left text-center w-75 p-3 text-white ">
-                <h1 style="font-size: 2.75vh; font-family: Georgia; ">
-                    &#10240;&#10240;&#10240;&#10240;&#10240;&#10240;Inspire Excellence &centerdot; Nurture Individuality
-                </h1>
+                <a href="https://www.instagram.com/crestwoodpreparatory/?hl=en">
+                    <div class="float-right filter">
+                        <img src="img/logo/instagram.png" class="nav_icon">
+                    </div>
+                </a>
+                <a
+                    href="https://twitter.com/CrestwoodPrep?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                    <div class="float-right filter">
+                        <img src="img/logo/twitter.png" class="nav_icon">
+                    </div>
+                </a>
+                <a href="https://www.facebook.com/crestwoodprep/">
+                    <div class="float-right filter">
+                        <img src="img/logo/facebook.png" class="nav_icon">
+                    </div>
+                </a>
+                <a
+                    href="https://www.youtube.com/channel/UCN87TNFRqdktIhuTMVZmwLQ">
+                    <div class="float-right filter">
+                        <img src="img/logo/youtube.png" class="nav_icon">
+                    </div>
+                </a>
+                <a href="credits.html">
+                    <div class="float-right filter">
+                        <img src="img/logo/star.png" class="nav_icon">
+                    </div>
+                </a>
             </div>
-            <a href="https://www.instagram.com/crestwoodpreparatory/?hl=en ">
-                <div class="float-right filter ">
-                    <img src="img/logo/instagram.png" class="nav_icon">
-                </div>
-            </a>
-            <a href="https://twitter.com/CrestwoodPrep?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor ">
-                <div class="float-right filter">
-                    <img src="img/logo/twitter.png " class="nav_icon">
-                </div>
-            </a>
-            <a href="https://www.facebook.com/crestwoodprep/ ">
-                <div class="float-right filter">
-                    <img src="img/logo/facebook.png " class="nav_icon">
-                </div>
-            </a>
-            <a href="https://www.youtube.com/channel/UCN87TNFRqdktIhuTMVZmwLQ">
-                <div class="float-right filter">
-                    <img src="img/logo/youtube.png" class="nav_icon">
-                </div>
-            </a>
-			            <a href="credits.html">
-                <div class="float-right filter">
-                    <img src="img/logo/star.png" class="nav_icon">
-                </div>
-            </a>
-        </div>
-    </footer>
+        </footer>
 
-    <script>
+        <script>
         window.onscroll = function() {
             if (window.location.hash.includes("title")) {
                 document.getElementById("navbar").style.display = "block";
@@ -502,10 +592,7 @@
             }
         }
     </script>
-
-
-
-</body>
+    </body>
 
 
 </html>
