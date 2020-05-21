@@ -32,6 +32,11 @@
     <title>CPC's Virtual Festival of Arts, Music and Technology</title>
     <link rel="icon" href="img/logo/tree_blue.png" type="image/gif">
     <link rel="shortcut icon" type="image/x-icon" href="img/logo/tree_blue.png" />
+	
+	        <script src="https://player.vimeo.com/api/player.js"></script>
+        <script src="pause.js"></script>
+		
+		
 
 </head>
 
@@ -72,8 +77,8 @@
     </style>
 
     <div class="video-background" id="vid1">
-        <iframe src="https://player.vimeo.com/video/420840030?autoplay=1&loop=0&autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        <div class="bottom">
+        <iframe class="vimeo" src="https://player.vimeo.com/video/420840030?autoplay=1&loop=0&autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <div class="bottom" onclick="pause()">
             <a href="#title0">
                 <div class="wrapper">
                     <div class="toggle">
@@ -95,9 +100,9 @@
     <div class="container-fluid" style="position: relative;">
         <div class="container" style="height: 70vh;">
             <div style="width: 100%; height: 60vh;">
-                <iframe id="slideshow0" class="animate__animated animate__fast" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/419013856" frameborder="0";fullscreen" allowfullscreen></iframe>
+                <iframe id="slideshow0" class="animate__animated animate__fast vimeo" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/419013856" frameborder="0";fullscreen" allowfullscreen></iframe>
             </div>
-							<div class="up">
+							<div class="up" onclick="pause()">
                 <a href="#vid1">
                     <div class="wrapper">
                         <div class="toggle">
@@ -106,7 +111,7 @@
                     </div>
                 </a>
             </div>
-            <div class="bottom">
+            <div class="bottom" onclick="pause()">
                 <a href="#title1">
                     <div class="wrapper">
                         <div class="toggle">
@@ -148,9 +153,9 @@
     <div class="container-fluid" style="position: relative;">
         <div class="container" style="height: 70vh;">
             <div style="width: 100%; height: 60vh;">
-                <iframe id="slideshow1" class="animate__animated" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/419788442" frameborder="0";fullscreen" allowfullscreen></iframe>
+                <iframe id="slideshow1" class="animate__animated vimeo" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/419788442" frameborder="0";fullscreen" allowfullscreen></iframe>
             </div>
-            <div class="bottom">
+            <div class="bottom" onclick="pause()">
                 <a href="#title6">
                     <div class="wrapper">
                         <div class="toggle">
@@ -159,7 +164,7 @@
                     </div>
                 </a>
             </div>
-							<div class="up">
+							<div class="up" onclick="pause()">
                 <a href="#title0">
                     <div class="wrapper">
                         <div class="toggle">
@@ -197,7 +202,7 @@
             <div style="width: 100%; height: 50vh;">
                 <p> drama photos slideshow goes here </p>
             </div>
-            <div class="bottom">
+            <div class="bottom" onclick="pause()">
                 <a href="#vid1">
                     <div class="wrapper">
                         <div class="toggle">
