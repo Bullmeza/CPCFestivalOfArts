@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="style/slideshow.css" />
+    <link rel="stylesheet" type="text/css" href="style/bottomnav.css" />
+    <link rel="stylesheet" type="text/css" href="style/hexnav.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+
+    <!--Animations-->
+    <link rel="stylesheet" href="style/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <!--Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/froogaloop.js"></script>
+<script src="https://github.com/vimeo/player-api/blob/master/javascript/froogaloop.js"></script>
+<script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+
+    <title>CPC's Virtual Festival of Arts, Music and Technology</title>
+    <link rel="icon" href="img/logo/tree_blue.png" type="image/gif">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/tree_blue.png" />
+
+</head>
+
+
+<body>
+    <style>
+        body {
+            background-color: #d3d3d3;
+            overflow: hidden;
+        }
+        /* HEXNAV */
+        
+        @media (min-width: 800px) {
+            #wrap {
+                transform: scale(0.6);
+                top: 0;
+                right: 0;
+            }
+            #menu {
+                transform: scale(0.1);
+                top: 0;
+                right: 0;
+            }
+        }
+        
+        @media (max-width: 799px) {
+            #wrap {
+                transform: scale(0.4);
+                top: -20px;
+                right: -40px;
+            }
+            #menu {
+                transform: scale(0.1);
+                top: -20px;
+                right: -40px;
+            }
+        }
+    </style>
+
+    <div class="video-background" id="vid1">
+        <iframe id="video" src="https://player.vimeo.com/video/420840030?autoplay=1&loop=0&autopause=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <div class="bottom">
+            <a href="#title0">
+                <div class="wrapper">
+                    <div class="toggle">
+                        <i class="material-icons" id="char">keyboard_arrow_down</i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!--Grade 7 Drama block-->
+
+    <div id="title0" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:25vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+        <div class="container p-2">
+            <h1 class="title">Gr. 7 Movement Projects</h1>
+            <p class="paragraph"> The Grade 7 Drama students at Crestwood Prep chose either to do a Mannequin Challenge or the Frozen Tableau Picture Task. Here are some entertaining ones!
+            </p>
+        </div>
+    </div>
+    <div class="container-fluid" style="position: relative;">
+        <div class="container" style="height: 70vh;">
+            <div style="width: 100%; height: 60vh;">
+                <iframe id="slideshow0" class="animate__animated animate__fast" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/419013856" frameborder="0";fullscreen" allowfullscreen></iframe>
+            </div>
+							<div class="up">
+                <a href="#vid1">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_up</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="bottom">
+                <a href="#title1">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_down</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="left" onclick="left(0)">
+                <div class="wrapper">
+                    <div class="toggle">
+                        <i class="material-icons" id="char">keyboard_arrow_left</i>
+                    </div>
+                </div>
+            </div>
+            <div class="right" onclick="right(0)">
+                <div class="wrapper">
+                    <div class="toggle">
+                        <i class="material-icons" id="char">keyboard_arrow_right</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Grade 9 Drama Block-->
+
+
+    <div id="title1" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:25vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+        <div class="container p-2">
+            <h1 class="title">Gr. 9 Monologues and Commercials</h1>
+            <p class="paragraph"> The Grade 9 Drama students at Crestwood Prep chose either to do a Monologue asking for help, or create a commercial. Here are some of the good ones!
+            </p>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="position: relative;">
+        <div class="container" style="height: 70vh;">
+            <div style="width: 100%; height: 60vh;">
+                <iframe id="slideshow1" class="animate__animated" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/419788442" frameborder="0";fullscreen" allowfullscreen></iframe>
+            </div>
+            <div class="bottom">
+                <a href="#title6">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_down</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+							<div class="up">
+                <a href="#title0">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_up</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="left" onclick="left(1)">
+                <div class="wrapper">
+                    <div class="toggle">
+                        <i class="material-icons" id="char">keyboard_arrow_left</i>
+                    </div>
+                </div>
+            </div>
+            <div class="right" onclick="right(1)">
+                <div class="wrapper">
+                    <div class="toggle">
+                        <i class="material-icons" id="char">keyboard_arrow_right</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--DRAMA PHOTO SLIDE SHOWS-->
+    <div id="title6" class="jumbotron text-white bg-dark mt-0 pt-0" style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 10vh));">
+        <div class="container p-2">
+            <h1 class="title">Drama at Crestood Prep</h1>
+        </div>
+    </div>
+    <div class="container-fluid" style="position: relative;">
+        <div class="container" style="height: 70vh;">
+            <div style="width: 100%; height: 50vh;">
+                <p> drama photos slideshow goes here </p>
+            </div>
+            <div class="bottom">
+                <a href="#vid1">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_up</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--NAV-->
+    <div id="wrap" class="wrapper">
+        <div class="toggle" id="toggle" onclick="expand()">
+            <i class="material-icons" id="add">add</i>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <div class="item">
+            <a href="home.html">
+                <img src="img/logo/home.png" class="icon">
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="music.html">
+                <img src="img/logo/music.png" class="icon">
+            </a>
+        </div>
+        <div class="item item_active">
+            <a href="drama.html">
+                <img src="img/logo/drama.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="coffeehouse.html">
+                <img src="img/logo/coffeehouse.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="tech.html">
+                <img src="img/logo/comp.png" class="icon">
+            </a>
+        </div>
+        <div class="item">
+            <a href="art.html">
+                <img src="img/logo/art.png" class="icon">
+            </a>
+        </div>
+    </div>
+    <!-- <div id="up">
+        <a id="up_redicrect" href="#title6">
+            <div class="wrapper">
+                <div class="toggle">
+                    <i class="material-icons" id="add">keyboard_arrow_up</i>
+                </div>
+            </div>
+        </a>
+    </div> -->
+
+
+    <script>
+        let open = false;
+        let i = document.getElementById("menu").childNodes;
+
+        let zoom = 0.8;
+        let zoom_original = 0.4;
+        let translateX = "-42.5vw";
+        let translateY = "40vh";
+
+        if (window.innerWidth > 799) {
+            zoom = 1.2;
+            zoom_original = 0.6;
+            translateX = "-46vw";
+            translateY = "42.5vh";
+        }
+
+        function expand() {
+            if (!open) {
+                document.getElementById("add").style.transform = 'rotate(45deg)';
+
+                document.getElementById("wrap").style.transform = 'translate(' + translateX + ',' + translateY + ') scale(' + zoom + ')';
+                document.getElementById("menu").style.transform = 'translate(' + translateX + ',' + translateY + ') scale(' + zoom + ')';
+                open = true;
+
+                i[1].style.transform = 'translateY(-160px)';
+                i[3].style.transform = 'translate(140px, -80px)';
+                i[5].style.transform = 'translate(140px,80px)';
+                i[7].style.transform = 'translateY(160px)';
+                i[9].style.transform = 'translate(-140px,80px)';
+                i[11].style.transform = 'translate(-140px,-80px)';
+
+            } else {
+                document.getElementById("add").style.transform = 'rotate(0deg)';
+                document.getElementById("menu").style.transform = 'scale(0.1)'
+                document.getElementById("wrap").style.transform = 'scale(' + zoom_original + ')';
+                open = false;
+                i[1].style.transform = 'translateY(0)';
+                i[3].style.transform = 'translate(0)';
+                i[5].style.transform = 'translate(0)';
+                i[7].style.transform = 'translateY(0)';
+                i[9].style.transform = 'translate(0)';
+                i[11].style.transform = 'translate(0)';
+
+            }
+        }
+    </script>
+
+
+
+
+    <footer id="navbar" class="footer fixed-bottom bg-dark" style="max-height: 6vh; display: none;">
+        <div class="container-fluid m-0 p-0 text-center">
+            <a href="https://www.crestwood.on.ca/ ">
+                <div class="float-left p-2">
+                    <img src="img/white_logo.png " id="crestwood_logo">
+                </div>
+            </a>
+            <div id="motto" class="float-left text-center w-75 p-3 text-white ">
+                <h1 style="font-size: 2.75vh; font-family: Georgia; ">
+                    &#10240;&#10240;&#10240;&#10240;&#10240;&#10240;Inspire Excellence &centerdot; Nurture Individuality
+                </h1>
+            </div>
+            <a href="https://www.instagram.com/crestwoodpreparatory/?hl=en ">
+                <div class="float-right filter ">
+                    <img src="img/logo/instagram.png" class="nav_icon">
+                </div>
+            </a>
+            <a href="https://twitter.com/CrestwoodPrep?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor ">
+                <div class="float-right filter">
+                    <img src="img/logo/twitter.png " class="nav_icon">
+                </div>
+            </a>
+            <a href="https://www.facebook.com/crestwoodprep/ ">
+                <div class="float-right filter">
+                    <img src="img/logo/facebook.png " class="nav_icon">
+                </div>
+            </a>
+            <a href="https://www.youtube.com/channel/UCN87TNFRqdktIhuTMVZmwLQ">
+                <div class="float-right filter">
+                    <img src="img/logo/youtube.png" class="nav_icon">
+                </div>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        window.onscroll = function() {
+            if (window.location.hash.includes("title")) {
+                document.getElementById("navbar").style.display = "block";
+            } else {
+                document.getElementById("navbar").style.display = "none";
+            }
+        }
+        var slides = [
+            ["https://player.vimeo.com/video/419013856", "https://player.vimeo.com/video/419012817", "https://player.vimeo.com/video/419012227"],
+            ["https://player.vimeo.com/video/419788442", "https://player.vimeo.com/video/419014117", "https://player.vimeo.com/video/419013689", "https://player.vimeo.com/video/419013401", "https://player.vimeo.com/video/419013013", "https://player.vimeo.com/video/419012308", "https://player.vimeo.com/video/419012640", "https://player.vimeo.com/video/419012348", "https://player.vimeo.com/video/419014789"], <!-- these are the updated vimeo links -->
+            []
+        ];
+        var current = [0, 0, 0, 0, 0];
+
+        function right(num) {
+            document.getElementById("slideshow" + num).classList.add("animate__backOutRight");
+            setTimeout(function fade() {
+                document.getElementById("slideshow" + num).classList.remove("animate__backOutRight");
+            }, 800);
+            setTimeout(function updateRight() {
+                if (current[num] != slides[num].length - 1) {
+                    document.getElementById("slideshow" + num).src = slides[num][current[num] + 1];
+                    current[num] += 1;
+                } else {
+                    document.getElementById("slideshow" + num).src = slides[num][0];
+                    current[num] = 0;
+                }
+            }, 500);
+        }
+
+        function left(num) {
+            document.getElementById("slideshow" + num).classList.add("animate__backOutLeft");
+            setTimeout(function fade() {
+                document.getElementById("slideshow" + num).classList.remove("animate__backOutLeft");
+            }, 800);
+            setTimeout(function updateLeft() {
+                if (current[num] != 0) {
+                    document.getElementById("slideshow" + num).src = slides[num][current[num] - 1];
+                    current[num] -= 1;
+                } else {
+                    document.getElementById("slideshow" + num).src = slides[num][slides[num].length - 1];
+                    current[num] = slides[num].length - 1;
+                }
+            }, 500);
+        }
+    </script>
+	
+	<script>
+	var players = []
+$('.inner').each(function() {
+  players.push({
+    player: new Vimeo.Player($(this).find("iframe").get(0)),
+    top: $(this).position().top,
+    status: "paused"
+  })
+});
+var viewportHeight = $(window).height();
+
+$(window).on('scroll', function() {
+  var scrollPos = $(window).scrollTop();
+  for (var i = 0; i < players.length; i++) {
+    var elementFromTop = players[i].top - scrollPos;
+    var status = (elementFromTop > 0 && elementFromTop < players[i].top + viewportHeight) ? "play" : "pause";
+    if (players[i].status != status) {
+      players[i].status = status;
+      players[i].player[status]();
+      console.log(i, status);
+    }
+  }
+});
+</script>
+
+</body>
+
+</html>

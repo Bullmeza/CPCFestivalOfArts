@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -5,15 +6,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" type="text/css" href="hexnav.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style/slideshow.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="stylesheet" type="text/css" href="style/hexnav.css" />
+
+    <!--Animations-->
+    <link rel="stylesheet" href="style/animate.css" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!--Icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -25,39 +29,44 @@
     <link rel="icon" href="img/logo/tree_blue.png" type="image/gif">
     <link rel="shortcut icon" type="image/x-icon" href="img/logo/tree_blue.png" />
 
-</head>
-<body>
-<h1> Website Credit goes here</h1>
+    <!--Vimeo API-->
+    <script src="https://player.vimeo.com/api/player.js"></script>
 
-<footer id="nav" class="footer fixed-bottom bg-dark animated fadeIn" style="max-height: 6vh; display: none;">
-        <div class="container-fluid m-0 p-0 text-center">
-            <a href="https://www.crestwood.on.ca/ ">
-                <div class="float-left p-2">
-                    <img src="img/white_logo.png " id="crestwoodLogo">
+</head>
+
+
+<body>
+    <style>
+        body {
+            background-color: #d3d3d3;
+            overflow: hidden;
+        }
+    </style>
+
+    <div class="video-background animated fadeIn">
+        <iframe id="vimeo_vid" src="https://player.vimeo.com/video/421240693?autoplay=1&loop=0&autopause=0" frameborder="0" allow="autoplay; fullscreen" allow="fullscreen"></iframe>
+        <a href="home.html">
+            <div class="wrapper right">
+                <div class="toggle">
+                    <i class="material-icons" id="add">keyboard_arrow_right</i>
                 </div>
-            </a>
-            <div id="motto" class="float-left text-center w-75 p-3 text-white ">
-                <h1 style="font-size: 1.5em; font-family: Georgia; ">
-                    &#10240;&#10240;&#10240;&#10240;&#10240;Inspire Excellence &centerdot; Nurture Individuality
-                </h1>
             </div>
-            <a href="https://www.instagram.com/crestwoodpreparatory/?hl=en ">
-                <div class="float-right p-2 pt-3 filter ">
-                    <img src="img/logo/instagram-seeklogo.com.svg " width="28px" class="icon">
-                </div>
-            </a>
-            <a href="https://twitter.com/CrestwoodPrep?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor ">
-                <div class="float-right p-2 ">
-                    <img src="img/logo/Twitter_Logo_WhiteOnImage.svg " width="36px" class="icon">
-                </div>
-            </a>
-            <a href="https://www.facebook.com/crestwoodprep/ ">
-                <div class="float-right filter p-1 ">
-                    <img src="img/logo/fb.svg " width="38px" class="icon">
-                </div>
-            </a>
-        </div>
-    </footer>
+        </a>
+    </div>
+
+
+
+    <script>
+        $(document).ready(function() {
+            var iframe = $('#vimeo_vid');
+            var player = new Vimeo.Player(iframe);
+
+            player.on('ended', function() {
+                window.location.replace("home.html");
+            });
+        });
+    </script>
 
 </body>
+
 </html>
