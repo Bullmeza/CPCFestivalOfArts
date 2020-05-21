@@ -18,7 +18,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <script src="pause.js"></script>
+		
+		
     <!--Icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
@@ -78,9 +81,9 @@
     </style>
     <!--intro vid-->
 
-    <div class="video-background" id="vid1">
+    <div class="video-background vimeo" id="vid1">
         <iframe src="https://player.vimeo.com/video/420125842?autoplay=1&loop=0&autopause=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        <div class="bottom">
+        <div class="bottom" onclick="pause()">
             <a href="#titlea">
                 <div class="wrapper">
                     <div class="toggle">
@@ -107,9 +110,9 @@
     <div class="container-fluid" style="position: relative;">
         <div class="container" style="height: 70vh;">
             <div style="width: 100%; height: 50vh;">
-                <iframe id="slideshow1" class="animate__animated" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/420907155" frameborder="0";fullscreen" allowfullscreen></iframe>
+                <iframe id="slideshow1" class="vimeo" class="animate__animated" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/420907155" frameborder="0";fullscreen" allowfullscreen></iframe>
             </div>
-			            <div class="up">
+			            <div class="up" onclick="pause()">
                 <a href="#vid1">
                     <div class="wrapper">
                         <div class="toggle">
@@ -118,7 +121,7 @@
                     </div>
                 </a>
             </div>
-            <div class="bottom">
+            <div class="bottom" onclick="pause()">
                 <a href="#title0">
                     <div class="wrapper">
                         <div class="toggle">
@@ -142,9 +145,9 @@
     <div class="container-fluid" style="position: relative;">
         <div class="container" style="height: 70vh;">
             <div style="width: 100%; height: 50vh;">
-                <iframe id="slideshow0" class="animate__animated animate__fast" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/420088206" frameborder="0";fullscreen" allowfullscreen></iframe>
+                <iframe id="slideshow0" class="animate__animated animate__fast vimeo" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/420088206" frameborder="0";fullscreen" allowfullscreen></iframe>
             </div>
-			            <div class="up">
+			            <div class="up" onclick="pause()">
                 <a href="#titlea">
                     <div class="wrapper">
                         <div class="toggle">
@@ -153,7 +156,7 @@
                     </div>
                 </a>
             </div>
-            <div class="bottom">
+            <div class="bottom" onclick="pause()">
                 <a href="#title1">
                     <div class="wrapper">
                         <div class="toggle">
@@ -181,9 +184,9 @@
     <div class="container-fluid" style="position: relative;">
         <div class="container" style="height: 70vh;">
             <div style="width: 100%; height: 50vh;">
-                <iframe id="slideshow1" class="animate__animated" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/420140290" frameborder="0";fullscreen" allowfullscreen></iframe>
+                <iframe id="slideshow1" class="animate__animated vimeo" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/420140290" frameborder="0";fullscreen" allowfullscreen></iframe>
             </div>
-			<div class="up">
+			<div class="up" onclick="pause()">
                 <a href="#title0">
                     <div class="wrapper">
                         <div class="toggle">
@@ -192,7 +195,7 @@
                     </div>
                 </a>
             </div>
-            <div class="bottom">
+            <div class="bottom" onclick="pause()">
                 <a href="#title2">
                     <div class="wrapper">
                         <div class="toggle">
@@ -218,9 +221,9 @@
     <div class="container-fluid" style="position: relative;">
         <div class="container" style="height: 70vh;">
             <div style="width: 100%; height: 50vh;">
-                <iframe id="slideshow1" class="animate__animated" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/420904416" frameborder="0";fullscreen" allowfullscreen></iframe>
+                <iframe id="slideshow1" class="animate__animated vimeo" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/420904416" frameborder="0";fullscreen" allowfullscreen></iframe>
             </div>
-			            <div class="up">
+			            <div class="up" onclick="pause()">
                 <a href="#title1">
                     <div class="wrapper">
                         <div class="toggle">
@@ -229,7 +232,7 @@
                     </div>
                 </a>
             </div>
-            <div class="bottom">
+            <div class="bottom" onclick="pause()">
                 <a href="#titleb">
                     <div class="wrapper">
                         <div class="toggle">
@@ -254,7 +257,7 @@
         <div class="container-fluid w-75" style="height: 75vh;">
             <div class="row">
                 <div class="col p-3">
-                    <iframe src="https://player.vimeo.com/video/420843677" style="width: 100%; height: 100%;" frameborder="0"></iframe>
+                    <iframe class="vimeo"src="https://player.vimeo.com/video/420843677" style="width: 100%; height: 100%;" frameborder="0"></iframe>
                 </div>
                 <div class="col p-3 contianer">
                     <div style="width: 450px; height: auto; position: relative; padding: -20px;">
@@ -265,7 +268,7 @@
                 </div>
             </div>
         </div>
-		            <div class="up">
+		            <div class="up" onclick="pause()">
                 <a href="#title2">
                     <div class="wrapper">
                         <div class="toggle">
@@ -274,7 +277,7 @@
                     </div>
                 </a>
             </div>
-        <div class="bottom">
+        <div class="bottom" onclick="pause()">
             <a href="#title3">
                 <div class="wrapper">
                     <div class="toggle">
@@ -299,9 +302,9 @@
     <div class="container-fluid" style="position: relative;">
         <div class="container" style="height: 70vh;">
             <div style="width: 100%; height: 50vh;">
-                <iframe id="slideshow1" class="animate__animated" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/420883498 " frameborder="0";fullscreen" allowfullscreen></iframe>
+                <iframe id="slideshow1" class="animate__animated vimeo" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/420883498 " frameborder="0";fullscreen" allowfullscreen></iframe>
             </div>
-			            <div class="up">
+			            <div class="up" onclick="pause()">
                 <a href="#titleb">
                     <div class="wrapper">
                         <div class="toggle">
@@ -310,7 +313,7 @@
                     </div>
                 </a>
             </div>
-            <div class="bottom">
+            <div class="bottom" onclick="pause()">
                 <a href="#title4">
                     <div class="wrapper">
                         <div class="toggle">
@@ -336,9 +339,9 @@
     <div class="container-fluid" style="position: relative;">
         <div class="container" style="height: 70vh;">
             <div style="width: 100%; height: 50vh;">
-                <iframe id="slideshow1" class="animate__animated" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/420423716" frameborder="0";fullscreen" allowfullscreen></iframe>
+                <iframe id="slideshow1" class="animate__animated vimeo" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/420423716" frameborder="0";fullscreen" allowfullscreen></iframe>
             </div>
-			            <div class="up">
+			            <div class="up" onclick="pause()">
                 <a href="#title3">
                     <div class="wrapper">
                         <div class="toggle">
@@ -347,7 +350,7 @@
                     </div>
                 </a>
             </div>
-            <div class="bottom">
+            <div class="bottom" onclick="pause()">
                 <a href="#title5">
                     <div class="wrapper">
                         <div class="toggle">
@@ -374,7 +377,7 @@
         <div class="container-fluid w-75" style="height: 75vh;">
             <div class="row">
                 <div class="col p-3">
-                    <iframe src="https://player.vimeo.com/video/420843677" style="width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <iframe class="vimeo" src="https://player.vimeo.com/video/420843677" style="width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
                 <div class="col p-3 contianer">
                     <div style="width: 450px; height: auto; position: relative; padding: -20px;">
@@ -385,7 +388,7 @@
                 </div>
             </div>
         </div>
-		            <div class="up">
+		            <div class="up" onclick="pause()">
                 <a href="#title4">
                     <div class="wrapper">
                         <div class="toggle">
@@ -394,7 +397,7 @@
                     </div>
                 </a>
             </div>
-        <div class="bottom">
+        <div class="bottom" onclick="pause()">
             <a href="#title6">
                 <div class="wrapper">
                     <div class="toggle">
@@ -420,9 +423,9 @@
     <div class="container-fluid" style="position: relative;">
         <div class="container" style="height: 70vh;">
             <div style="width: 100%; height: 50vh;">
-                <iframe id="slideshow1" class="animate__animated" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/421080953" frameborder="0";fullscreen" allowfullscreen></iframe>
+                <iframe id="slideshow1" class="vimeo animate__animated" style="width: 100%; height: 100%" src="https://player.vimeo.com/video/421080953" frameborder="0";fullscreen" allowfullscreen></iframe>
             </div>
-            <div class="bottom">
+            <div class="bottom" onclick="pause()">
                 <a href="#vid1">
                     <div class="wrapper">
                         <div class="toggle">
