@@ -179,3 +179,12 @@ a>.material-icons {
     top: 15px;
     background-color: #add8e6;
 }
+
+@media (max-width: 799px) {
+   .wrapper{
+       transform: scale(0.85);
+   }
+   .item{
+    transform: scale(0.6);
+   }
+}
