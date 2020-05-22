@@ -38,12 +38,6 @@
 }
 
 @media (min-aspect-ratio: 16/9) {
-    .title {
-        font-size: 3vw;
-    }
-    .paragraph {
-        font-size: 1.25vw;
-    }
     .right,
     .left,
     .bottom,
@@ -64,12 +58,6 @@
 /* PHONE */
 
 @media (max-aspect-ratio: 16/9) {
-    .title {
-        font-size: 4vh;
-    }
-    .paragraph {
-        font-size: 1.75vh;
-    }
     #up {
         bottom: 7vh;
         right: -40px;
@@ -88,4 +76,35 @@
         transform: scale(0.4);
         left: -40px;
     }
+    .left,
+    .right{
+        bottom: 40vh;
+    }
 }
+
+  
+  @media (max-width:800px) {
+    .title {
+        font-size: 30px;
+    }
+    .paragraph {
+        font-size: 15px;
+    }
+  }
+  
+  @media (min-width:1000px) {
+    .title {
+        font-size: 50px;
+    }
+    .paragraph {
+        font-size: 20px;
+    }
+  }
+  @media (min-width:1200px) {
+    .title {
+        font-size: 50px;
+    }
+    .paragraph {
+        font-size: 22.5px;
+    }
+  }
