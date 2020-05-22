@@ -1,8 +1,17 @@
 .right:hover,
 .left:hover,
 .bottom:hover,
-.up:hover {
+.up:hover,
+#right:hover {
     filter: invert(80%);
+}
+
+#right {
+    width: 160px;
+    height: 140px;
+    right: 0;
+    bottom: 50vh;
+    position: absolute;
 }
 
 .right {
@@ -79,6 +88,14 @@
     .left,
     .right{
         bottom: 40vh;
+    }
+    #right {
+        transform: scale(0.5);
+        width: 160px;
+        height: 140px;
+        right: calc(50vw  - 80px);
+        bottom: 40vh;
+        position: absolute;
     }
 }
 
