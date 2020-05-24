@@ -74,6 +74,9 @@ body {
 @media (min-aspect-ratio: 16/9) {
     .video-background iframe {
         height: 56.25vw;
+        margin-top: -5vh;
+        position: absolute;
+        background-color: black;
     }
     #start {
         position: absolute;
@@ -83,18 +86,7 @@ body {
         text-align: center;
     }
 }
-@media (min-aspect-ratio: 16/9) {
-    .video-credits iframe {
-        height: 56.25vw;
-    }
-    #start {
-        position: absolute;
-        top: 40vh;
-        width: 100%;
-        font-size: 4em;
-        text-align: center;
-    }
-}
+
 
 /* PHONE */
 
@@ -111,15 +103,3 @@ body {
     }
 }
 
-@media (max-aspect-ratio: 16/9) {
-    .video-credits iframe {
-        width: 90vh;
-    }
-    #start {
-        position: absolute;
-        top: 40vh;
-        width: 100%;
-        font-size: 2.2em;
-        text-align: center;
-    }
-}
