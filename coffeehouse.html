@@ -115,10 +115,12 @@
 
         <div class="video-background vimeo" id="vid1">
             <iframe
+                class="vimeo"
+                id="intro_vid"
                 src="https://player.vimeo.com/video/420125842?autoplay=1&loop=0&autopause=0"
                 frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             <div class="bottom" onclick="pause()">
-                <a href="#titlea">
+                <a href="#title0">
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_down</i>
@@ -132,7 +134,7 @@
         <!--Sierra-->
 
 
-        <div id="titlea" class="jumbotron text-white bg-dark mt-0 pt-0"
+        <div id="title0" class="jumbotron text-white bg-dark mt-0 pt-0"
             style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
             calc(100% - 10vh));">
             <div class="container p-2">
@@ -147,58 +149,14 @@
         <div class="container-fluid" style="position: relative;">
             <div class="container" style="height: 70vh;">
                 <div style="width: 100%; height: 50vh;">
-                    <iframe id="slideshow1" class="vimeo"
-                        class="animate__animated" style="width: 100%; height:
+                    <iframe id="slideshow1"
+                        class="vimeo" style="width: 100%;
+                        height:
                         100%" src="https://player.vimeo.com/video/420907155"
-                        frameborder="0" ;fullscreen" allowfullscreen></iframe>
+                        frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="up" onclick="pause()">
                     <a href="#vid1">
-                        <div class="wrapper">
-                            <div class="toggle">
-                                <i class="material-icons" id="char">keyboard_arrow_up</i>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="bottom" onclick="pause()">
-                    <a href="#title0">
-                        <div class="wrapper">
-                            <div class="toggle">
-                                <i class="material-icons" id="char">keyboard_arrow_down</i>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!--Casper's theremin 1-->
-
-        <div id="title0" class="jumbotron text-white bg-dark mt-0 pt-0"
-            style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
-            calc(100% - 10vh));">
-            <div class="container p-2">
-                <h1 class="title">Casper's Theremin</h1>
-                <p class="paragraph">Casper is a grade 9 student at Crestwood
-                    Prep. He is an enthusiastic student with an insatiable
-                    thirst to learn everything Engineering related. In this
-                    piece below, we will see one of Casper's project, where he
-                    used some simple components connected to the Arduino UNO to
-                    create a Theremin inspired instrument.
-                </p>
-            </div>
-        </div>
-        <div class="container-fluid" style="position: relative;">
-            <div class="container" style="height: 70vh;">
-                <div style="width: 100%; height: 50vh;">
-                    <iframe id="slideshow0" class="animate__animated
-                        animate__fast vimeo" style="width: 100%; height: 100%"
-                        src="https://player.vimeo.com/video/420088206"
-                        frameborder="0" ;fullscreen" allowfullscreen></iframe>
-                </div>
-                <div class="up" onclick="pause()">
-                    <a href="#titlea">
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_up</i>
@@ -218,32 +176,29 @@
             </div>
         </div>
 
-
-
-        <!--CPC Rockband-->
-
+        <!--Casper's theremin 1-->
 
         <div id="title1" class="jumbotron text-white bg-dark mt-0 pt-0"
             style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
             calc(100% - 10vh));">
             <div class="container p-2">
-                <h1 class="title">Crestwood Prep's Rock Band</h1>
-                <p class="paragraph">Distance is no obstacle for a group of
-                    passionate and eager musicians. In this video below, you
-                    will get to see Crestwood’s first virtual rock band jam
-                    session led by our very own Mr. Major. Check out their
-                    rendition of <i>Wish You Were Here</i> by <i>Pink Flyod</i>!
+                <h1 class="title">Casper's Theremin</h1>
+                <p class="paragraph">Casper is a grade 9 student at Crestwood
+                    Prep. He is an enthusiastic student with an insatiable
+                    thirst to learn everything Engineering related. In this
+                    piece below, we will see one of Casper's project, where he
+                    used some simple components connected to the Arduino UNO to
+                    create a Theremin inspired instrument.
                 </p>
             </div>
         </div>
-
         <div class="container-fluid" style="position: relative;">
             <div class="container" style="height: 70vh;">
                 <div style="width: 100%; height: 50vh;">
-                    <iframe id="slideshow1" class="animate__animated vimeo"
-                        style="width: 100%; height: 100%"
-                        src="https://player.vimeo.com/video/420140290"
-                        frameborder="0" ;fullscreen" allowfullscreen></iframe>
+                    <iframe id="slideshow0" class="vimeo" style="width: 100%;
+                        height: 100%"
+                        src="https://player.vimeo.com/video/420088206"
+                        frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="up" onclick="pause()">
                     <a href="#title0">
@@ -266,10 +221,58 @@
             </div>
         </div>
 
-        <!--Evan Prosserman-->
+
+
+        <!--CPC Rockband-->
 
 
         <div id="title2" class="jumbotron text-white bg-dark mt-0 pt-0"
+            style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
+            calc(100% - 10vh));">
+            <div class="container p-2">
+                <h1 class="title">Crestwood Prep's Rock Band</h1>
+                <p class="paragraph">Distance is no obstacle for a group of
+                    passionate and eager musicians. In this video below, you
+                    will get to see Crestwood’s first virtual rock band jam
+                    session led by our very own Mr. Major. Check out their
+                    rendition of <i>Wish You Were Here</i> by <i>Pink Flyod</i>!
+                </p>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="position: relative;">
+            <div class="container" style="height: 70vh;">
+                <div style="width: 100%; height: 50vh;">
+                    <iframe id="slideshow1" class="vimeo"
+                        style="width: 100%; height: 100%"
+                        src="https://player.vimeo.com/video/420140290"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="up" onclick="pause()">
+                    <a href="#title1">
+                        <div class="wrapper">
+                            <div class="toggle">
+                                <i class="material-icons" id="char">keyboard_arrow_up</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bottom" onclick="pause()">
+                    <a href="#title3">
+                        <div class="wrapper">
+                            <div class="toggle">
+                                <i class="material-icons" id="char">keyboard_arrow_down</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--Evan Prosserman-->
+
+
+        <div id="title3" class="jumbotron text-white bg-dark mt-0 pt-0"
             style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
             calc(100% - 10vh));">
             <div class="container p-2">
@@ -286,13 +289,13 @@
         <div class="container-fluid" style="position: relative;">
             <div class="container" style="height: 70vh;">
                 <div style="width: 100%; height: 50vh;">
-                    <iframe id="slideshow1" class="animate__animated vimeo"
+                    <iframe id="slideshow1" class="vimeo"
                         style="width: 100%; height: 100%"
                         src="https://player.vimeo.com/video/420904416"
-                        frameborder="0" ;fullscreen" allowfullscreen></iframe>
+                        frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="up" onclick="pause()">
-                    <a href="#title1">
+                    <a href="#title2">
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_up</i>
@@ -301,7 +304,7 @@
                     </a>
                 </div>
                 <div class="bottom" onclick="pause()">
-                    <a href="#titleb">
+                    <a href="#title4">
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_down</i>
@@ -313,7 +316,7 @@
         </div>
 
         <!--Lean on Me Herbert Major-->
-        <div id="titleb" class="jumbotron text-white bg-dark mt-0 pt-0"
+        <div id="title4" class="jumbotron text-white bg-dark mt-0 pt-0"
             style="height:25vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
             calc(100% - 10vh));">
             <div class="container p-2">
@@ -347,7 +350,7 @@
                 </div>
             </div>
             <div class="up" onclick="pause()">
-                <a href="#title2">
+                <a href="#title3">
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_up</i>
@@ -356,7 +359,7 @@
                 </a>
             </div>
             <div class="bottom" onclick="pause()">
-                <a href="#title3">
+                <a href="#title5">
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_down</i>
@@ -369,7 +372,7 @@
         <!--Steve Lazar-->
 
 
-        <div id="title3" class="jumbotron text-white bg-dark mt-0 pt-0"
+        <div id="title5" class="jumbotron text-white bg-dark mt-0 pt-0"
             style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
             calc(100% - 10vh));">
             <div class="container p-2">
@@ -387,10 +390,10 @@
                         style="width: 100%; height: 100%"
                         src="https://player.vimeo.com/video/420883498"
                         frameborder="0"
-                        ;fullscreen" allowfullscreen></iframe>
+                        allowfullscreen></iframe>
                 </div>
                 <div class="up" onclick="pause()">
-                    <a href="#titleb">
+                    <a href="#title4">
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_up</i>
@@ -399,7 +402,7 @@
                     </a>
                 </div>
                 <div class="bottom" onclick="pause()">
-                    <a href="#title4">
+                    <a href="#title6">
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_down</i>
@@ -413,7 +416,7 @@
         <!-- Jay Lu-->
 
 
-        <div id="title4" class="jumbotron text-white bg-dark mt-0 pt-0"
+        <div id="title6" class="jumbotron text-white bg-dark mt-0 pt-0"
             style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
             calc(100% - 10vh));">
             <div class="container p-2">
@@ -438,7 +441,7 @@
                         frameborder="0" ;fullscreen" allowfullscreen></iframe>
                 </div>
                 <div class="up" onclick="pause()">
-                    <a href="#title3">
+                    <a href="#title5">
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_up</i>
@@ -447,7 +450,7 @@
                     </a>
                 </div>
                 <div class="bottom" onclick="pause()">
-                    <a href="#title5">
+                    <a href="#title7">
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_down</i>
@@ -461,7 +464,7 @@
         <!-- Crestwood Voices Amazing Grace-->
 
 
-        <div id="title5" class="jumbotron text-white bg-dark mt-0 pt-0"
+        <div id="title7" class="jumbotron text-white bg-dark mt-0 pt-0"
             style="height:25vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
             calc(100% - 10vh));">
             <div class="container p-2">
@@ -498,7 +501,7 @@
                 </div>
             </div>
             <div class="up" onclick="pause()">
-                <a href="#title4">
+                <a href="#title6">
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_up</i>
@@ -507,7 +510,7 @@
                 </a>
             </div>
             <div class="bottom" onclick="pause()">
-                <a href="#title6">
+                <a href="#title8">
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_down</i>
@@ -521,7 +524,7 @@
 
         <!--Amy & Andrianna-->
 
-        <div id="title6" class="jumbotron text-white bg-dark mt-0 pt-0"
+        <div id="title8" class="jumbotron text-white bg-dark mt-0 pt-0"
             style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
             calc(100% - 10vh));">
             <div class="container p-2">
@@ -542,7 +545,7 @@
                     <iframe id="slideshow1" class="vimeo animate__animated"
                         style="width: 100%; height: 100%"
                         src="https://player.vimeo.com/video/421080953"
-                        frameborder="0" ;fullscreen" allowfullscreen></iframe>
+                        frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="bottom" onclick="pause()">
                     <a href="#vid1">
@@ -706,44 +709,6 @@
             } else {
                 document.getElementById("navbar").style.display = "none";
             }
-        }
-        var slides = [
-            ["https://www.powtoon.com/embed/f1JnSkwwwLs/", "https://www.powtoon.com/embed/dFi4b7vdxie/", "https://www.powtoon.com/embed/b7AnY00Oopi/", "https://www.powtoon.com/embed/fzWjhr0Uaiq/", "https://www.powtoon.com/embed/br7Ve4FPse5/"],
-            ["https://player.vimeo.com/video/419028014", "https://player.vimeo.com/video/419028130", "https://player.vimeo.com/video/419027901", "https://player.vimeo.com/video/419027812", "https://player.vimeo.com/video/419027777", "https://player.vimeo.com/video/420045590", "https://player.vimeo.com/video/420045437", "https://player.vimeo.com/video/420045246", "https://player.vimeo.com/video/420044984", "https://player.vimeo.com/video/420045167"],
-            []
-        ];
-        var current = [0, 0, 0, 0, 0];
-
-        function right(num) {
-            document.getElementById("slideshow" + num).classList.add("animate__backOutRight");
-            setTimeout(function fade() {
-                document.getElementById("slideshow" + num).classList.remove("animate__backOutRight");
-            }, 800);
-            setTimeout(function updateRight() {
-                if (current[num] != slides[num].length - 1) {
-                    document.getElementById("slideshow" + num).src = slides[num][current[num] + 1];
-                    current[num] += 1;
-                } else {
-                    document.getElementById("slideshow" + num).src = slides[num][0];
-                    current[num] = 0;
-                }
-            }, 500);
-        }
-
-        function left(num) {
-            document.getElementById("slideshow" + num).classList.add("animate__backOutLeft");
-            setTimeout(function fade() {
-                document.getElementById("slideshow" + num).classList.remove("animate__backOutLeft");
-            }, 800);
-            setTimeout(function updateLeft() {
-                if (current[num] != 0) {
-                    document.getElementById("slideshow" + num).src = slides[num][current[num] - 1];
-                    current[num] -= 1;
-                } else {
-                    document.getElementById("slideshow" + num).src = slides[num][slides[num].length - 1];
-                    current[num] = slides[num].length - 1;
-                }
-            }, 500);
         }
     </script>
     </body>

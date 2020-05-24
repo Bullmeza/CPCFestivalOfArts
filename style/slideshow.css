@@ -9,9 +9,10 @@
 #right {
     width: 160px;
     height: 140px;
-    right: 0;
-    bottom: 50vh;
+    left: calc(50vw - 80px);
+    bottom: 20vh;
     position: absolute;
+    transform: scale(0.6);
 }
 
 .right {
@@ -90,7 +91,7 @@
         bottom: 40vh;
     }
     #right {
-        transform: scale(0.5);
+        transform: scale(0.4);
         width: 160px;
         height: 140px;
         right: calc(50vw  - 80px);

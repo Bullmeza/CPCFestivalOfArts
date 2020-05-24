@@ -5,3 +5,12 @@ function pause() {
     }
 }
 
+$(document).ready(function () {
+    var iframe = $('#intro_vid');
+    var player = new Vimeo.Player(iframe);
+
+    player.on('ended', function () {
+        window.location.replace("#title0");
+    });
+});
+
