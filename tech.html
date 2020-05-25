@@ -147,14 +147,14 @@
                         </div>
                     </a>
                 </div>
-                <div class="left" onclick="left(0)">
+                <div class="left" onclick="left(5)">
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_left</i>
                         </div>
                     </div>
                 </div>
-                <div class="right" onclick="right(0)">
+                <div class="right" onclick="right(5)">
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_right</i>
@@ -412,7 +412,7 @@
         </div>
         <div class="container-fluid" style="position: relative;">
             <div class="container" style="height: 85vh;">
-                <div class="container" style="height: 65vh;
+                <div class="container" id="img_slideshow0" style="height: 65vh;
                     background-attachment: relative;
                     background-size: cover;
                     background-position: 50% 50%;
@@ -427,14 +427,14 @@
                         </div>
                     </a>
                 </div>
-                <div class="left" onclick="left(4)">
+                <div class="left" onclick="left_img(0)">
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_left</i>
                         </div>
                     </div>
                 </div>
-                <div class="right" onclick="right(4)">
+                <div class="right" onclick="right_img(0)">
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_right</i>
@@ -628,8 +628,54 @@
                     document.getElementById("slideshow" + num).src = slides[num][slides[num].length - 1];
                     current[num] = slides[num].length - 1;
                 }
-            }, 500);
+            }, 300);
         }
+    </script>
+        <script>
+        var slides_img = [
+            ["img/intro/2.JPG","img/intro/3.JPG","img/intro/4.JPG","img/intro/5.JPG"]
+        ];
+        var current_img = [0, 0, 0, 0, 0];
+
+        var auto = setInterval("right_img(0)", 3000);
+        
+
+        function right_img(num) {
+            clearInterval(auto);
+            document.getElementById("img_slideshow" + num).classList.add("animate__backOutRight");
+            setTimeout(function fade() {
+                document.getElementById("img_slideshow" + num).classList.remove("animate__backOutRight");
+            }, 800);
+            setTimeout(function updateRight_img() {
+                if (current_img[num] != slides_img[num].length - 1) {
+                    document.getElementById("img_slideshow" + num).style.backgroundImage = "url('" + slides_img[num][current_img[num] + 1] + "')";
+                    current_img[num] += 1;
+                } else {
+                    document.getElementById("img_slideshow" + num).style.backgroundImage = "url('" + slides_img[num][0] + "')";
+                    current_img[num] = 0;
+                }
+            }, 20);
+            auto = setInterval("right_img(0)", 6000);
+        }
+
+        function left_img(num) {
+            clearInterval(auto);
+            document.getElementById("img_slideshow" + num).classList.add("animate__backOutLeft");
+            setTimeout(function fade() {
+                document.getElementById("img_slideshow" + num).classList.remove("animate__backOutLeft");
+            }, 800);
+            setTimeout(function updateLeft_img() {
+                if (current_img[num] != 0) {
+                    document.getElementById("img_slideshow" + num).style.backgroundImage = "url('" + slides_img[num][current_img[num] - 1] + "')";
+                    current_img[num] -= 1;
+                } else {
+                    document.getElementById("img_slideshow" + num).style.backgroundImage = "url('" + slides_img[num][slides_img[num].length - 1] + "')";
+                    current_img[num] = slides_img[num].length - 1;
+                }
+            }, 20);
+            auto = setInterval("left_img(0)", 6000);
+        }
+        
     </script>
     </body>
 
