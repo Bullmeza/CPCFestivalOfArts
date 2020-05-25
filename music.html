@@ -73,15 +73,7 @@
         width: 100%;
     }
     
-    .rotate {
-        animation: turn 7s linear infinite;
-    }
-    
-    @keyframes turn {
-        to {
-            transform: rotate(360deg);
-        }
-    }
+
     
     @media (min-width: 800px) {
         #wrap {
@@ -93,6 +85,15 @@
             transform: scale(0.1);
             top: 0;
             right: 0;
+        }
+        .rotate {
+        animation: turn 7s linear infinite;
+      }
+    
+     @keyframes turn {
+        to {
+            transform: rotate(360deg);
+            }
         }
     }
     
@@ -107,6 +108,19 @@
             top: -20px;
             right: -40px;
         }
+        .rotate {
+        animation: turn 7s linear infinite;
+      }
+    
+     @keyframes turn {
+        to {
+            transform: rotate(360deg) scale(0.5);
+            }
+     }
+     .player_div{
+         transform: scale(0.5) translate(-35%,-50%);
+     }
+
     }
 </style>
     <body>
@@ -152,7 +166,7 @@
                     </div>
                     <div class="col p-3 contianer">
                         <div style="width: 450px; height: auto; position:
-                            relative; padding: -20px;">
+                            relative; padding: -20px;" class="player_div">
                             <img src="img/player.png" style="height: 100%;width:
                                 100%; position: relative; top: 0; z-index: 2;">
                             <img src="img/logo/ctreerecord.png"
@@ -210,7 +224,7 @@
                     </div>
                     <div class="col p-3 contianer">
                         <div style="width: 450px; height: auto; position:
-                            relative; padding: -20px;">
+                            relative; padding: -20px;" class="player_div">
                             <img src="img/player.png" style="height: 100%;width:
                                 100%; position: relative; top: 0; z-index: 2;">
                             <img src="img/logo/ctreerecord.png"
@@ -267,7 +281,7 @@
                     </div>
                     <div class="col p-3 contianer">
                         <div style="width: 450px; height: auto; position:
-                            relative; padding: -20px;">
+                            relative; padding: -20px;" class="player_div">
                             <img src="img/player.png" style="height: 100%;width:
                                 100%; position: relative; top: 0; z-index: 2;">
                             <img src="img/logo/ctreerecord.png"
@@ -303,7 +317,7 @@
 
 
 
-        <!--grade =11/12 avengers-->W
+        <!--grade =11/12 avengers-->
         <div id="title3" class="jumbotron text-white bg-dark mt-0 pt-0"
             style="height:30vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
             calc(100% - 10vh));">
@@ -326,7 +340,7 @@
                     </div>
                     <div class="col p-3 contianer">
                         <div style="width: 450px; height: auto; position:
-                            relative; padding: -20px;">
+                            relative; padding: -20px;" class="player_div">
                             <img src="img/player.png" style="height: 100%;width:
                                 100%; position: relative; top: 0; z-index: 2;">
                             <img src="img/logo/ctreerecord.png"
@@ -384,7 +398,7 @@
                     </div>
                     <div class="col p-3 contianer">
                         <div style="width: 450px; height: auto; position:
-                            relative; padding: -20px;">
+                            relative; padding: -20px;" class="player_div">
                             <img src="img/player.png" style="height: 100%;width:
                                 100%; position: relative; top: 0; z-index: 2;">
                             <img src="img/logo/ctreerecord.png"
