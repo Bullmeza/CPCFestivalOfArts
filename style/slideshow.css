@@ -94,8 +94,8 @@
         transform: scale(0.4);
         width: 160px;
         height: 140px;
-        right: calc(50vw + 56px);
-        bottom: 30vh;
+        right: calc(50vw + 80px);
+        bottom: 25vh;
         position: absolute;
     }
     .up {
