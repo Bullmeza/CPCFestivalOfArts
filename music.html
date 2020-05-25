@@ -448,7 +448,7 @@
                     background-attachment: relative;
                     background-size: cover;
                     background-position: 50% 50%;
-                    background-image: url(img/intro/1.JPG);">
+                    background-image: url(img/music/1.JPG);">
                 </div>
                 <div class="up" onclick="pause()">
                     <a href="#title4">
@@ -633,6 +633,53 @@
                 document.getElementById("navbar").style.display = "none";
             }
         }
+    </script>
+	
+	<script>
+        var slides_img = [
+            ["img/music/2.JPG","img/music/3.JPG","img/music/4.JPG","img/music/5.JPG","img/music/6.JPG","img/music/7.JPG","img/music/8.JPG","img/music/9.JPG","img/music/10.JPG","img/music/11.JPG","img/music/12.JPG","img/music/13.JPG","img/music/14.JPG","img/music/15.JPG","img/music/16.JPG","img/music/17.JPG","img/music/18.JPG","img/music/19.JPG","img/music/20.JPG","img/music/21.JPG","img/music/22.JPG"]
+        ];
+        var current_img = [0, 0, 0, 0, 0];
+
+        var auto = setInterval("right_img(0)", 3000);
+        
+
+        function right_img(num) {
+            clearInterval(auto);
+            document.getElementById("img_slideshow" + num).classList.add("animate__backOutRight");
+            setTimeout(function fade() {
+                document.getElementById("img_slideshow" + num).classList.remove("animate__backOutRight");
+            }, 800);
+            setTimeout(function updateRight_img() {
+                if (current_img[num] != slides_img[num].length - 1) {
+                    document.getElementById("img_slideshow" + num).style.backgroundImage = "url('" + slides_img[num][current_img[num] + 1] + "')";
+                    current_img[num] += 1;
+                } else {
+                    document.getElementById("img_slideshow" + num).style.backgroundImage = "url('" + slides_img[num][0] + "')";
+                    current_img[num] = 0;
+                }
+            }, 20);
+            auto = setInterval("right_img(0)", 6000);
+        }
+
+        function left_img(num) {
+            clearInterval(auto);
+            document.getElementById("img_slideshow" + num).classList.add("animate__backOutLeft");
+            setTimeout(function fade() {
+                document.getElementById("img_slideshow" + num).classList.remove("animate__backOutLeft");
+            }, 800);
+            setTimeout(function updateLeft_img() {
+                if (current_img[num] != 0) {
+                    document.getElementById("img_slideshow" + num).style.backgroundImage = "url('" + slides_img[num][current_img[num] - 1] + "')";
+                    current_img[num] -= 1;
+                } else {
+                    document.getElementById("img_slideshow" + num).style.backgroundImage = "url('" + slides_img[num][slides_img[num].length - 1] + "')";
+                    current_img[num] = slides_img[num].length - 1;
+                }
+            }, 20);
+            auto = setInterval("left_img(0)", 6000);
+        }
+        
     </script>
     </body>
 
