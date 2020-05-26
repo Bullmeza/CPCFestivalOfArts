@@ -13,9 +13,6 @@
         <link rel="stylesheet" type="text/css" href="style/style.css" />
         <!--Animations-->
         <link rel="stylesheet" href="style/animate.css" />
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-            />
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet"
@@ -46,15 +43,14 @@
             crossorigin="anonymous"></script>
 
         <script src="./audiojs/audio.min.js"></script>
-		
+
         <script>
         audiojs.events.ready(function() {
             audiojs.createAll();
         });
 		</script>
-		
-		<!-- Autopause -->
-		<script src="https://player.vimeo.com/api/player.js"></script>
+        <!-- Autopause -->
+        <script src="https://player.vimeo.com/api/player.js"></script>
         <script src="pause.js"></script>
 
 
@@ -207,7 +203,7 @@
         <div class="container-fluid" style="position: relative;">
             <div class="container" style="height: 70vh;">
                 <div style="width: 100%; height: 50vh;">
-                    <iframe id="slideshow0" class="vimeo" style="width: 100%;
+                    <iframe class="vimeo" style="width: 100%;
                         height: 100%"
                         src="https://player.vimeo.com/video/420088206"
                         frameborder="0" allowfullscreen></iframe>
@@ -253,7 +249,7 @@
         <div class="container-fluid" style="position: relative;">
             <div class="container" style="height: 70vh;">
                 <div style="width: 100%; height: 50vh;">
-                    <iframe id="slideshow1" class="vimeo animate__animated"
+                    <iframe class="vimeo animate__animated"
                         style="width: 100%; height: 100%"
                         src="https://player.vimeo.com/video/421080953"
                         frameborder="0" allowfullscreen></iframe>
@@ -577,10 +573,10 @@
                 </a>
             </div>
         </div
-		
-		
-		
-		<!-- Poetry in Voice-->
+
+
+
+        <!-- Poetry in Voice-->
 
 
         <div id="title9" class="jumbotron text-white bg-dark mt-0 pt-0"
@@ -637,13 +633,14 @@
         </div>
 
 
-    <!--Kyle Gerudo-->
+        <!--Kyle Gerudo-->
         <div id="title10" class="jumbotron text-white bg-dark mt-0 pt-0"
             style="height:25vh;clip-path: polygon(0 100%, 0 0, 100% 0, 100%
             calc(100% - 10vh));">
             <div class="container p-2">
                 <h1 class="title">Gerudo Valley</h1>
-                <p class="paragraph">Kype Yep Grade 9 student at CPC performs Gerudo Valley by Koji Kondo.
+                <p class="paragraph">Kype Yep Grade 9 student at CPC performs
+                    Gerudo Valley by Koji Kondo.
                 </p>
             </div>
         </div>
@@ -671,7 +668,7 @@
                     </div>
                 </div>
             </div>
-			            <div class="up" onclick="pause()">
+            <div class="up" onclick="pause()">
                 <a href="#title9">
                     <div class="wrapper">
                         <div class="toggle">
@@ -680,15 +677,15 @@
                     </div>
                 </a>
             </div>
-                <div class="bottom" onclick="pause()">
-                    <a href="#vid1">
-                        <div class="wrapper">
-                            <div class="toggle">
-                                <i class="material-icons" id="char">keyboard_capslock</i>
-                            </div>
+            <div class="bottom" onclick="pause()">
+                <a href="#vid1">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_capslock</i>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
+            </div>
         </div>
 
 
@@ -790,7 +787,7 @@
             }
         }
     </script>
-	       <script>
+        <script>
         window.onscroll = function() {
             if (window.location.hash.includes("title")) {
                 document.getElementById("navbar").style.display = "block";
