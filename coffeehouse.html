@@ -66,55 +66,66 @@
             href="img/logo/tree_blue.png" />
 
 
+ <style>
+    body {
+        overflow: hidden;
+    }
+    
+    .audiojs {
+        position: relative;
+        width: 100%;
+    }
+    
 
-        <style>
-                body {
-                    background-color: #d3d3d3;
-                    overflow: hidden;
-                    margin: 0;
-                    padding: 0;
-                }
-                .audiojs {
-                position: relative;
-                width: 100%;
-                 }
-                .rotate {
-                animation: turn 7s linear infinite;
-                 }
-            
-                @keyframes turn {
-                     to {
-                    transform: rotate(360deg);
-                 }
-                }
-                /* HEXNAV */
-                
-                @media (min-width: 800px) {
-                    #wrap {
-                        transform: scale(0.6);
-                        top: 0;
-                        right: 0;
-                    }
-                    #menu {
-                        transform: scale(0.1);
-                        top: 0;
-                        right: 0;
-                    }
-                }
-                
-                @media (max-width: 799px) {
-                    #wrap {
-                        transform: scale(0.4);
-                        top: -20px;
-                        right: -40px;
-                    }
-                    #menu {
-                        transform: scale(0.1);
-                        top: -20px;
-                        right: -40px;
-                    }
-                }
-            </style>
+    
+    @media (min-width: 800px) {
+        #wrap {
+            transform: scale(0.6);
+            top: 0;
+            right: 0;
+        }
+        #menu {
+            transform: scale(0.1);
+            top: 0;
+            right: 0;
+        }
+        .rotate {
+        animation: turn 7s linear infinite;
+      }
+    
+     @keyframes turn {
+        to {
+            transform: rotate(360deg);
+            }
+        }
+    }
+    
+    @media (max-width: 799px) {
+        #wrap {
+            transform: scale(0.4);
+            top: -20px;
+            right: -40px;
+        }
+        #menu {
+            transform: scale(0.1);
+            top: -20px;
+            right: -40px;
+        }
+        .rotate {
+        animation: turn 7s linear infinite;
+      }
+    
+     @keyframes turn {
+        to {
+            transform: rotate(360deg) scale(0.5);
+            }
+     }
+     .player_div{
+         transform: scale(0.5) translate(-35%,-50%);
+     }
+
+    }
+</style>
     </head>
 
 
@@ -381,19 +392,21 @@
         </div>
 
         <div class="container-fluid" style="position: relative;">
-            <div class="container-fluid w-75" style="height: 75vh;">
+            <div class="container-fluid w-75" style="height: 70vh;">
                 <div class="row">
                     <div class="col p-3">
                         <iframe class="vimeo"
                             src="https://player.vimeo.com/video/422508275"
-                            style="width: 100%; height: 100%;" frameborder="0"></iframe>
+                            style="width: 100%; height: 100%;" frameborder="0"
+                            allow="autoplay; fullscreen" allowfullscreen></iframe>
                     </div>
                     <div class="col p-3 contianer">
                         <div style="width: 450px; height: auto; position:
-                            relative; padding: -20px;">
+                            relative; padding: -20px;" class="player_div">
                             <img src="img/player.png" style="height: 100%;width:
                                 100%; position: relative; top: 0; z-index: 2;">
-                            <img src="img/logo/ctreerecord.png" id="player1"
+                            <img src="img/logo/ctreerecord.png"
+                                class="audio_player"
                                 style="width: 340px; height: 340px; z-index: -1;
                                 border-radius: 50%; position: absolute; top:
                                 0px; left: 5px;">
