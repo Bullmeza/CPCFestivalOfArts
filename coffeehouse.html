@@ -23,8 +23,7 @@
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
             crossorigin="anonymous">
 
-        <script src="https://player.vimeo.com/api/player.js"></script>
-        <script src="pause.js"></script>
+
 
 
         <!--Icons-->
@@ -47,11 +46,24 @@
             crossorigin="anonymous"></script>
 
         <script src="./audiojs/audio.min.js"></script>
+		
         <script>
         audiojs.events.ready(function() {
             audiojs.createAll();
         });
-    </script>
+		</script>
+		
+		<!-- Autopause -->
+		<script src="https://player.vimeo.com/api/player.js"></script>
+        <script src="pause.js"></script>
+
+
+
+
+
+
+
+
         <title>CPC's Virtual Festival of Arts, Music and Technology</title>
         <link rel="icon" href="img/logo/tree_blue.png" type="image/gif">
         <link rel="shortcut icon" type="image/x-icon"
@@ -582,46 +594,45 @@
         </div>
 
         <div class="container-fluid" style="position: relative;">
-            <div class="container-fluid w-75" style="height: 75vh;">
-                <div class="row">
-                    <div class="col p-3">
-                        <iframe class="vimeo"
-                            src="https://player.vimeo.com/video/420843677"
-                            style="width: 100%; height: 100%;" frameborder="0"
-                            allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    </div>
-                    <div class="col p-3 contianer">
-                        <div style="width: 450px; height: auto; position:
-                            relative; padding: -20px;">
-                            <img src="img/player.png" style="height: 100%;width:
-                                100%; position: relative; top: 0; z-index: 2;">
-                            <img src="img/logo/ctreerecord.png"
-                                class="audio_player" style="width: 340px;
-                                height: 340px; z-index: -1; border-radius: 50%;
-                                position: absolute; top: 0px; left: 5px;">
-                            <audio src="audio/amazinggrace.mp3" id="num2"
-                                preload="auto"></audio>
+            <div class="container" style="height: 70vh;">
+                <div style="width: 100%; height: 60vh;">
+                    <iframe id="slideshow0" class="animate__animated vimeo"
+                        style="width: 100%; height: 100%"
+                        src="https://player.vimeo.com/video/422886022"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="bottom" onclick="pause()">
+                    <a href="#title10">
+                        <div class="wrapper">
+                            <div class="toggle">
+                                <i class="material-icons" id="char">keyboard_arrow_down</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="up" onclick="pause()">
+                    <a href="#title7">
+                        <div class="wrapper">
+                            <div class="toggle">
+                                <i class="material-icons" id="char">keyboard_arrow_up</i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="left" onclick="left(0)">
+                    <div class="wrapper">
+                        <div class="toggle">
+                            <i class="material-icons" id="char">keyboard_arrow_left</i>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="up" onclick="pause()">
-                <a href="#title7">
+                <div class="right" onclick="right(0)">
                     <div class="wrapper">
                         <div class="toggle">
-                            <i class="material-icons" id="char">keyboard_arrow_up</i>
+                            <i class="material-icons" id="char">keyboard_arrow_right</i>
                         </div>
                     </div>
-                </a>
-            </div>
-            <div class="bottom" onclick="pause()">
-                <a href="#title10">
-                    <div class="wrapper">
-                        <div class="toggle">
-                            <i class="material-icons" id="char">keyboard_arrow_down</i>
-                        </div>
-                    </div>
-                </a>
+                </div>
             </div>
         </div>
 
@@ -777,6 +788,53 @@
                 i[11].style.transform = 'translate(0)';
 
             }
+        }
+    </script>
+	       <script>
+        window.onscroll = function() {
+            if (window.location.hash.includes("title")) {
+                document.getElementById("navbar").style.display = "block";
+            } else {
+                document.getElementById("navbar").style.display = "none";
+            }
+        }
+        var slides = [
+            ["https://player.vimeo.com/video/422886022","https://player.vimeo.com/video/422855469", "https://player.vimeo.com/video/422855309", "https://player.vimeo.com/video/422855051", "https://player.vimeo.com/video/422854405", "https://player.vimeo.com/video/422855888", "https://player.vimeo.com/video/422854182", "https://player.vimeo.com/video/422855740"],
+            [], 
+            []
+        ];
+        var current = [0, 0, 0, 0, 0];
+
+        function right(num) {
+            document.getElementById("slideshow" + num).classList.add("animate__backOutRight");
+            setTimeout(function fade() {
+                document.getElementById("slideshow" + num).classList.remove("animate__backOutRight");
+            }, 800);
+            setTimeout(function updateRight() {
+                if (current[num] != slides[num].length - 1) {
+                    document.getElementById("slideshow" + num).src = slides[num][current[num] + 1];
+                    current[num] += 1;
+                } else {
+                    document.getElementById("slideshow" + num).src = slides[num][0];
+                    current[num] = 0;
+                }
+            }, 500);
+        }
+
+        function left(num) {
+            document.getElementById("slideshow" + num).classList.add("animate__backOutLeft");
+            setTimeout(function fade() {
+                document.getElementById("slideshow" + num).classList.remove("animate__backOutLeft");
+            }, 800);
+            setTimeout(function updateLeft() {
+                if (current[num] != 0) {
+                    document.getElementById("slideshow" + num).src = slides[num][current[num] - 1];
+                    current[num] -= 1;
+                } else {
+                    document.getElementById("slideshow" + num).src = slides[num][slides[num].length - 1];
+                    current[num] = slides[num].length - 1;
+                }
+            }, 500);
         }
     </script>
         <footer id="navbar" class="footer fixed-bottom bg-dark"
