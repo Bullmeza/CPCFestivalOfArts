@@ -74,41 +74,40 @@
     }
     
 
-    
-    @media (min-width: 800px) {
-        #wrap {
-            transform: scale(0.6);
-            top: 0;
-            right: 0;
-        }
-        #menu {
-            transform: scale(0.1);
-            top: 0;
-            right: 0;
-        }
-        .rotate {
+    @media (min-aspect-ratio: 16/9) {
+            #wrap {
+                transform: scale(0.6);
+                top: 0;
+                right: 0;
+            }
+            #menu {
+                transform: scale(0.1);
+                top: 0;
+                right: 0;
+            }
+            .rotate {
         animation: turn 7s linear infinite;
-      }
+             }
     
-     @keyframes turn {
-        to {
+          @keyframes turn {
+             to {
             transform: rotate(360deg);
+             }
             }
         }
-    }
-    
-    @media (max-width: 799px) {
-        #wrap {
-            transform: scale(0.4);
-            top: -20px;
-            right: -40px;
-        }
-        #menu {
-            transform: scale(0.1);
-            top: -20px;
-            right: -40px;
-        }
-        .rotate {
+        
+        @media (max-aspect-ratio: 16/9) {
+            #wrap {
+                transform: scale(0.4);
+                top: -20px;
+                right: -40px;
+            }
+            #menu {
+                transform: scale(0.1);
+                top: -20px;
+                right: -40px;
+            }
+            .rotate {
         animation: turn 7s linear infinite;
       }
     
@@ -120,8 +119,7 @@
      .player_div{
          transform: scale(0.5) translate(-35%,-50%);
      }
-
-    }
+        }
 </style>
     <body>
 
@@ -441,7 +439,7 @@
                 <h1 class="title">Music at Crestood Prep</h1>
             </div>
         </div>
-		
+
         <div class="container-fluid" style="position: relative;">
             <div class="container" style="height: 85vh;">
                 <div class="container" id="img_slideshow0" style="height: 65vh;
@@ -634,8 +632,7 @@
             }
         }
     </script>
-	
-	<script>
+        <script>
         var slides_img = [
             ["img/music/2.JPG","img/music/3.JPG","img/music/4.JPG","img/music/5.JPG","img/music/6.JPG","img/music/7.JPG","img/music/8.JPG","img/music/9.JPG","img/music/10.JPG","img/music/11.JPG","img/music/12.JPG","img/music/13.JPG","img/music/14.JPG","img/music/15.JPG","img/music/16.JPG","img/music/17.JPG","img/music/18.JPG","img/music/19.JPG","img/music/20.JPG","img/music/21.JPG","img/music/22.JPG"]
         ];

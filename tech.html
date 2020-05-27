@@ -50,10 +50,10 @@
 
         <script src="https://player.vimeo.com/api/player.js"></script>
         <script src="pause.js"></script>
-		
-		<!-- lozad lazy loader-->
-		
-		<script src="https://cdn.jsdelivr.net/npm/lozad"></script>
+
+        <!-- lozad lazy loader-->
+
+        <script src="https://cdn.jsdelivr.net/npm/lozad"></script>
 
     </head>
 
@@ -303,7 +303,8 @@
                         frameborder="0"></iframe>
                 </div>
                 <div class="container text-center p-2" style="color: #343a40;">
-                    <a href="https://photos.app.goo.gl/gy2ZLiYSKgTSzp9c7" target="_blank" style="color: inherit;">
+                    <a href="https://photos.app.goo.gl/gy2ZLiYSKgTSzp9c7"
+                        target="_blank" style="color: inherit;">
                         <h1 class="paragraph">Trouble Viewing?</h1>
                     </a>
                 </div>
@@ -390,8 +391,9 @@
                         src="https://www.artsteps.com/embed/5ec32d3d744ad64b5d20db9e/560/315"
                         frameborder="0"></iframe>
                 </div>
-				<div class="container text-center p-2" style="color: #343a40;">
-                    <a href="https://photos.app.goo.gl/VoYEPjP5vfQ24dX48" target="_blank" style="color: inherit;">
+                <div class="container text-center p-2" style="color: #343a40;">
+                    <a href="https://photos.app.goo.gl/VoYEPjP5vfQ24dX48"
+                        target="_blank" style="color: inherit;">
                         <h1 class="paragraph">Trouble Viewing?</h1>
                     </a>
                 </div>
@@ -480,31 +482,38 @@
                 <a href="home.html">
                     <img src="img/logo/home.png" class="icon">
                 </a>
+                <h1 class="item_text" style="margin-top: -25px;">Home</h1>
             </div>
-
             <div class="item">
                 <a href="music.html">
                     <img src="img/logo/music.png" class="icon">
+                    <h1 class="item_text">Music</h1>
                 </a>
             </div>
             <div class="item">
                 <a href="drama.html">
                     <img src="img/logo/drama.png" class="icon">
+                    <h1 class="item_text">Drama</h1>
                 </a>
             </div>
             <div class="item">
                 <a href="coffeehouse.html">
                     <img src="img/logo/coffeehouse.png" class="icon">
+                    <h1 class="item_text" style="margin-top: -50px;">Coffee
+                        House
+                    </h1>
                 </a>
             </div>
             <div class="item item_active">
                 <a href="tech.html">
                     <img src="img/logo/comp.png" class="icon">
+                    <h1 class="item_text">Tech</h1>
                 </a>
             </div>
             <div class="item">
                 <a href="art.html">
                     <img src="img/logo/art.png" class="icon">
+                    <h1 class="item_text">Art</h1>
                 </a>
             </div>
         </div>
@@ -524,6 +533,20 @@
             translateX = "-46vw";
             translateY = "42.5vh";
         }
+        window.onresize = function(){
+            if (window.innerWidth > 799) {
+                zoom = 1.2;
+                zoom_original = 0.6;
+                translateX = "-46vw";
+                translateY = "42.5vh";
+                 }
+                 else{
+                    zoom = 0.8;
+                    zoom_original = 0.4;
+                    translateX = "-42.5vw";
+                    translateY = "40vh";
+                 }
+            }
 
         function expand() {
             if (!open) {
@@ -604,7 +627,7 @@
                 </a>
             </div>
         </footer>
-		<script>
+        <script>
 		const observer = lozad(); // lazy loads elements with default selector as ".lozad"
 		observer.observe();
 		</script>
