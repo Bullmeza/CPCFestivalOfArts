@@ -89,12 +89,6 @@ body {
        position: absolute; 
        top:20vh;
     }
-    #textcontainer{
-        position: absolute; 
-        top:70vh;
-        width: 40vw;
-        margin-left: 30vw;
-     }
 }
 
 
@@ -112,10 +106,6 @@ body {
         text-align: center;
     }
     #iconcontainer{
-        position: absolute; 
-        top:35vh;
-     }
-     #textcontainer{
         position: absolute; 
         top:30vh;
      }
