@@ -8,9 +8,6 @@
             shrink-to-fit=no">
 
 
-
-        <link rel="stylesheet" type="text/css" href="style/slideshow.css" />
-        <link rel="stylesheet" type="text/css" href="style/hexnav.css" />
         <link rel="stylesheet" type="text/css" href="style/bottomnav.css" />
         <link rel="stylesheet" type="text/css" href="style/style.css" />
         <!--Animations-->
@@ -38,13 +35,13 @@
             src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
-        <!--Icons-->
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
         <title>CPC's Virtual Festival of Arts, Music and Technology</title>
         <link rel="icon" href="img/logo/tree_blue.png" type="image/gif">
         <link rel="shortcut icon" type="image/x-icon"
             href="img/logo/tree_blue.png" />
+
     </head>
 
 
@@ -53,9 +50,8 @@
         body {
             background-color: #343a40;
             overflow: hidden;
-            font-family: Georgia; 
+            font-family: Georgia;
         }
-        
     </style>
         <div id="carouselIndicators" class="carousel slide"
             data-ride="carousel">
@@ -112,10 +108,11 @@
             </div>
         </div>
 
+
         <div id="iconcontainer" class="container-fluid text-center text-white
             fadeIn">
             <div class="container p-3" style="background-color:
-                rgba(255,255,255,0.6);">
+                rgba(255,255,255,0.6); color: #002d72;">
                 <img src="img/logo/I1.png" width="100%" class="animated
                     slideInLeft slow">
                 <img src="img/logo/I2.png" width="100%" class="animated
@@ -124,20 +121,16 @@
                     slideInLeft slow">
                 <img src="img/logo/I4.png" width="100%" class="animated
                     slideInRight slow">
+                <hr style="border: 2px solid #002d72;">
+                <h1 id="timer" style="font-size: 50px; padding: 5px;">
+                    Time Until Launch
+                </h1>
             </div>
         </div>
 
-        <div id="right">
-            <a href="intro2.html">
-                <div class="wrapper">
-                    <div class="toggle">
-                        <i class="material-icons" id="add">keyboard_arrow_right</i>
-                    </div>
-                </div>
-            </a>
-        </div>
 
-        <footer class="footer fixed-bottom bg-dark" style="max-height: 6vh;">
+        <footer class="footer fixed-bottom bg-dark" style="max-height:
+            6vh;">
             <div class="container-fluid m-0 p-0 text-center">
                 <a href="https://www.crestwood.on.ca/">
                     <div class="float-left p-2">
@@ -151,7 +144,8 @@
                         Excellence &centerdot; Nurture Individuality
                     </h1>
                 </div>
-                <a href="https://www.instagram.com/crestwoodpreparatory/?hl=en">
+                <a
+                    href="https://www.instagram.com/crestwoodpreparatory/?hl=en">
                     <div class="float-right filter">
                         <img src="img/logo/instagram.png" class="nav_icon">
                     </div>
@@ -180,12 +174,30 @@
                 </a>
             </div>
         </footer>
-
-
         <script>
         $('.carousel').carousel({
             interval: 3500
         })
+    </script>
+        <script>
+    var countDownDate = new Date("Jun 2, 2020 19:00:00").getTime();
+    var countdownfunction = setInterval(function() {
+    var now = new Date().getTime();
+      
+    var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+      
+      if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
     </script>
     </body>
 
