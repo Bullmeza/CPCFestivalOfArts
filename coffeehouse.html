@@ -7,12 +7,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1,
             shrink-to-fit=no">
 
+
         <link rel="stylesheet" type="text/css" href="style/slideshow.css" />
         <link rel="stylesheet" type="text/css" href="style/bottomnav.css" />
         <link rel="stylesheet" type="text/css" href="style/hexnav.css" />
         <link rel="stylesheet" type="text/css" href="style/style.css" />
         <!--Animations-->
         <link rel="stylesheet" href="style/animate.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+            />
+
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet"
@@ -21,11 +26,10 @@
             crossorigin="anonymous">
 
 
-
-
         <!--Icons-->
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 
 
         <!-- Optional JavaScript -->
@@ -42,31 +46,24 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
 
-        <script src="./audiojs/audio.min.js"></script>
-
-        <script>
-        audiojs.events.ready(function() {
-            audiojs.createAll();
-        });
-		</script>
-        <!-- Autopause -->
-        <script src="https://player.vimeo.com/api/player.js"></script>
-        <script src="pause.js"></script>
-
-
-
-
-
-
-
-
         <title>CPC's Virtual Festival of Arts, Music and Technology</title>
         <link rel="icon" href="img/logo/tree_blue.png" type="image/gif">
         <link rel="shortcut icon" type="image/x-icon"
             href="img/logo/tree_blue.png" />
 
+        <script src="./audiojs/audio.min.js"></script>
+        <script>
+        audiojs.events.ready(function() {
+            audiojs.createAll();
+        });
+    </script>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <script src="pause.js"></script>
 
-        <style>
+
+    </head>
+
+    <style>
     body {
         overflow: hidden;
     }
@@ -75,7 +72,8 @@
         position: relative;
         width: 100%;
     }
-            
+    
+
     @media (min-aspect-ratio: 16/9) {
             #wrap {
                 transform: scale(0.6);
@@ -122,13 +120,11 @@
          transform: scale(0.5) translate(-35%,-50%);
      }
         }
-
 </style>
-    </head>
-
-
     <body>
-        <!--intro id-->
+
+
+<!--intro id-->
 
         <div class="video-background vimeo" id="vid1">
             <iframe
@@ -550,9 +546,9 @@
                             style="width: 100%; height: 100%;" frameborder="0"
                             allow="autoplay; fullscreen" allowfullscreen></iframe>
                     </div>
-                    <div class="col p-3 contianer">
+					<div class="col p-3 contianer">
                         <div style="width: 450px; height: auto; position:
-                            relative; padding: -20px;">
+                            relative; padding: -20px;" class="player_div">
                             <img src="img/player.png" style="height: 100%;width:
                                 100%; position: relative; top: 0; z-index: 2;">
                             <img src="img/logo/ctreerecord.png"
@@ -666,7 +662,7 @@
                     </div>
                     <div class="col p-3 contianer">
                         <div style="width: 450px; height: auto; position:
-                            relative; padding: -20px;">
+                            relative; padding: -20px;" class="player_div">
                             <img src="img/player.png" style="height: 100%;width:
                                 100%; position: relative; top: 0; z-index: 2;">
                             <img src="img/logo/ctreerecord.png" id="player1"
@@ -701,10 +697,8 @@
 
 
 
-        <!--*********END OF BLOCKS *****************************-->
-
         <!--NAV-->
-        <div id="wrap" class="wrapper" style="z-index: 1000;">
+        <div id="wrap" class="wrapper">
             <div class="toggle" id="toggle" onclick="expand()">
                 <i class="material-icons" id="add">add</i>
             </div>
@@ -717,7 +711,7 @@
             </div>
 
 
-            <div class="item">
+            <div class="item item_active">
                 <a href="music.html">
                     <img src="img/logo/music.png" class="icon">
                 </a>
@@ -727,7 +721,7 @@
                     <img src="img/logo/drama.png" class="icon">
                 </a>
             </div>
-            <div class="item item_active">
+            <div class="item">
                 <a href="coffeehouse.html">
                     <img src="img/logo/coffeehouse.png" class="icon">
                 </a>
@@ -798,53 +792,6 @@
             }
         }
     </script>
-        <script>
-        window.onscroll = function() {
-            if (window.location.hash.includes("title")) {
-                document.getElementById("navbar").style.display = "block";
-            } else {
-                document.getElementById("navbar").style.display = "none";
-            }
-        }
-        var slides = [
-            ["https://player.vimeo.com/video/422886022","https://player.vimeo.com/video/422855469", "https://player.vimeo.com/video/422855309", "https://player.vimeo.com/video/422855051", "https://player.vimeo.com/video/422854405", "https://player.vimeo.com/video/422855888", "https://player.vimeo.com/video/422854182", "https://player.vimeo.com/video/422855740"],
-            [], 
-            []
-        ];
-        var current = [0, 0, 0, 0, 0];
-
-        function right(num) {
-            document.getElementById("slideshow" + num).classList.add("animate__backOutRight");
-            setTimeout(function fade() {
-                document.getElementById("slideshow" + num).classList.remove("animate__backOutRight");
-            }, 800);
-            setTimeout(function updateRight() {
-                if (current[num] != slides[num].length - 1) {
-                    document.getElementById("slideshow" + num).src = slides[num][current[num] + 1];
-                    current[num] += 1;
-                } else {
-                    document.getElementById("slideshow" + num).src = slides[num][0];
-                    current[num] = 0;
-                }
-            }, 500);
-        }
-
-        function left(num) {
-            document.getElementById("slideshow" + num).classList.add("animate__backOutLeft");
-            setTimeout(function fade() {
-                document.getElementById("slideshow" + num).classList.remove("animate__backOutLeft");
-            }, 800);
-            setTimeout(function updateLeft() {
-                if (current[num] != 0) {
-                    document.getElementById("slideshow" + num).src = slides[num][current[num] - 1];
-                    current[num] -= 1;
-                } else {
-                    document.getElementById("slideshow" + num).src = slides[num][slides[num].length - 1];
-                    current[num] = slides[num].length - 1;
-                }
-            }, 500);
-        }
-    </script>
         <footer id="navbar" class="footer fixed-bottom bg-dark"
             style="max-height: 6vh; display: none;">
             <div class="container-fluid m-0 p-0 text-center">
@@ -899,6 +846,53 @@
             }
         }
     </script>
+        <script>
+        var slides_img = [
+            ["img/music/2.JPG","img/music/3.JPG","img/music/4.JPG","img/music/5.JPG","img/music/6.JPG","img/music/7.JPG","img/music/8.JPG","img/music/9.JPG","img/music/10.JPG","img/music/11.JPG","img/music/12.JPG","img/music/13.JPG","img/music/14.JPG","img/music/15.JPG","img/music/16.JPG","img/music/17.JPG","img/music/18.JPG","img/music/19.JPG","img/music/20.JPG","img/music/21.JPG","img/music/22.JPG"]
+        ];
+        var current_img = [0, 0, 0, 0, 0];
+
+        var auto = setInterval("right_img(0)", 3000);
+        
+
+        function right_img(num) {
+            clearInterval(auto);
+            document.getElementById("img_slideshow" + num).classList.add("animate__backOutRight");
+            setTimeout(function fade() {
+                document.getElementById("img_slideshow" + num).classList.remove("animate__backOutRight");
+            }, 800);
+            setTimeout(function updateRight_img() {
+                if (current_img[num] != slides_img[num].length - 1) {
+                    document.getElementById("img_slideshow" + num).style.backgroundImage = "url('" + slides_img[num][current_img[num] + 1] + "')";
+                    current_img[num] += 1;
+                } else {
+                    document.getElementById("img_slideshow" + num).style.backgroundImage = "url('" + slides_img[num][0] + "')";
+                    current_img[num] = 0;
+                }
+            }, 20);
+            auto = setInterval("right_img(0)", 6000);
+        }
+
+        function left_img(num) {
+            clearInterval(auto);
+            document.getElementById("img_slideshow" + num).classList.add("animate__backOutLeft");
+            setTimeout(function fade() {
+                document.getElementById("img_slideshow" + num).classList.remove("animate__backOutLeft");
+            }, 800);
+            setTimeout(function updateLeft_img() {
+                if (current_img[num] != 0) {
+                    document.getElementById("img_slideshow" + num).style.backgroundImage = "url('" + slides_img[num][current_img[num] - 1] + "')";
+                    current_img[num] -= 1;
+                } else {
+                    document.getElementById("img_slideshow" + num).style.backgroundImage = "url('" + slides_img[num][slides_img[num].length - 1] + "')";
+                    current_img[num] = slides_img[num].length - 1;
+                }
+            }, 20);
+            auto = setInterval("left_img(0)", 6000);
+        }
+        
+    </script>
     </body>
+
 
 </html>
