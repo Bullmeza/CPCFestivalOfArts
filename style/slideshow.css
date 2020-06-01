@@ -140,10 +140,10 @@
   /*PHONE*/
   @media (max-width:850px) {
     .title {
-        font-size: 25px;
+        font-size: 22.5px;
     }
     .paragraph {
-        font-size: 15px;
+        font-size: 10px;
     }
   }
   
