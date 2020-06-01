@@ -122,5 +122,8 @@ body {
         height: 50vh;   
         max-width: 100%;
     }
+    .player_div{
+        margin-left: -20px;
+    }
 }
 
