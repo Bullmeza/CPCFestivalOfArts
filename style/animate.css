@@ -3306,3 +3306,40 @@
         animation-iteration-count: 1 !important;
     }
 }
+
+/* @media (min-aspect-ratio: 16/9) {
+    .right,
+    .left,
+    .bottom,
+    .up {
+        transform: scale(0.6);
+    }
+}
+
+
+
+
+@media (max-aspect-ratio: 16/9) {
+    #up {
+        bottom: 7vh;
+        right: -40px;
+        position: fixed;
+        width: 160px;
+        height: 140px;
+        transform: scale(0.6);
+    }
+    .bottom,
+    .up,
+    .right {
+        transform: scale(0.4);
+        right: -40px;
+    }
+    .left {
+        transform: scale(0.4);
+        left: -40px;
+    }
+    .left,
+    .right{
+        bottom: 40vh;
+    }
+} */
