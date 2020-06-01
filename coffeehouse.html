@@ -52,13 +52,9 @@
         <link rel="icon" href="img/logo/tree_blue.png" type="image/gif">
         <link rel="shortcut icon" type="image/x-icon"
             href="img/logo/tree_blue.png" />
-
-        <script src="./audiojs/audio.min.js"></script>
-        <script>
-        audiojs.events.ready(function() {
-            audiojs.createAll();
-        });
-    </script>
+        <script src="https://cdn.plyr.io/3.6.2/plyr.polyfilled.js"></script>
+		
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
         <script src="https://player.vimeo.com/api/player.js"></script>
         <script src="pause.js"></script>
 
@@ -122,6 +118,11 @@
          transform: scale(0.5) translate(-35%,-50%);
      }
         }
+		        .plyr{
+            --plyr-audio-controls-background:#343a40;
+            --plyr-audio-control-color: white;
+            --plyr-color-main: #002d72;
+        }
 </style>
     <body>
 
@@ -140,6 +141,7 @@
                 <div class="wrapper" style="margin-top: 8vh;">
                     <div class="toggle">
                         <i class="material-icons" id="char">keyboard_arrow_down</i>
+						<h1 class="slide_text">Next Block</h1>
                     </div>
                 </div>
             </a>
@@ -174,6 +176,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_up</i>
+								<h1 class="slide_text">Prev. Block</h1>
                             </div>
                         </div>
                     </a>
@@ -183,6 +186,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_down</i>
+								<h1 class="slide_text">Next Block</h1>
                             </div>
                         </div>
                     </a>
@@ -214,6 +218,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_up</i>
+								<h1 class="slide_text">Prev. Block</h1>
                             </div>
                         </div>
                     </a>
@@ -223,6 +228,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_down</i>
+								<h1 class="slide_text">Next Block</h1>
                             </div>
                         </div>
                     </a>
@@ -255,6 +261,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_up</i>
+								<h1 class="slide_text">Prev. Block</h1>
                             </div>
                         </div>
                     </a>
@@ -264,6 +271,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_down</i>
+								<h1 class="slide_text">Next Block</h1>
                             </div>
                         </div>
                     </a>
@@ -299,6 +307,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_up</i>
+								<h1 class="slide_text">Prev. Block</h1>
                             </div>
                         </div>
                     </a>
@@ -308,6 +317,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_down</i>
+								<h1 class="slide_text">Next Block</h1>
                             </div>
                         </div>
                     </a>
@@ -341,6 +351,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_up</i>
+								<h1 class="slide_text">Prev. Block</h1>
                             </div>
                         </div>
                     </a>
@@ -350,6 +361,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_down</i>
+								<h1 class="slide_text">Next Block</h1>
                             </div>
                         </div>
                     </a>
@@ -371,24 +383,26 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
         <div class="container-fluid" style="position: relative;">
             <div class="container-fluid w-75" style="height: 70vh;">
                 <div class="row">
-                    <div class="col p-3">
+                    <div class="col p-1">
                         <iframe class="vimeo"
                             src="https://player.vimeo.com/video/422508275"
                             style="width: 100%; height: 100%;" frameborder="0"
                             allow="autoplay; fullscreen" allowfullscreen></iframe>
                     </div>
-                    <div class="col p-3 contianer">
+                    <div class="col p-1">
                         <div style="width: 450px; height: auto; position:
-                            relative; padding: -20px;" class="player_div">
+                            relative;"
+                            class="player_div">
                             <img src="img/player.png" style="height: 100%;width:
                                 100%; position: relative; top: 0; z-index: 2;">
                             <img src="img/logo/ctreerecord.png"
-                                class="audio_player"
-                                style="width: 340px; height: 340px; z-index: -1;
-                                border-radius: 50%; position: absolute; top:
-                                0px; left: 5px;">
-                            <audio src="audio/leanonme.mp3" id="num2"
-                                preload="auto"></audio>
+                                class="audio_player" style="width: 340px;
+                                height: 340px; z-index: -1; border-radius: 50%;
+                                position: absolute; top: 0px; left: 5px;">
+                            <audio class="plyr" controls>
+                                <source src="audio/leanonme.mp3"
+                                    type="audio/mp3" />
+                            </audio>
                         </div>
                     </div>
                 </div>
@@ -398,6 +412,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_up</i>
+							<h1 class="slide_text">Prev. Block</h1>
                         </div>
                     </div>
                 </a>
@@ -407,6 +422,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_down</i>
+							<h1 class="slide_text">Next Block</h1>
                         </div>
                     </div>
                 </a>
@@ -440,6 +456,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_up</i>
+								<h1 class="slide_text">Prev. Block</h1>
                             </div>
                         </div>
                     </a>
@@ -449,6 +466,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_down</i>
+								<h1 class="slide_text">Next Block</h1>
                             </div>
                         </div>
                     </a>
@@ -482,6 +500,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_up</i>
+								<h1 class="slide_text">Prev. Block</h1>
                             </div>
                         </div>
                     </a>
@@ -491,6 +510,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_down</i>
+								<h1 class="slide_text">Next Block</h1>
                             </div>
                         </div>
                     </a>
@@ -540,6 +560,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_up</i>
+							<h1 class="slide_text">Prev. Block</h1>
                         </div>
                     </div>
                 </a>
@@ -549,6 +570,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_down</i>
+							<h1 class="slide_text">Next Block</h1>
                         </div>
                     </div>
                 </a>
@@ -583,6 +605,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_down</i>
+								<h1 class="slide_text">Next Block</h1>
                             </div>
                         </div>
                     </a>
@@ -592,6 +615,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_up</i>
+								<h1 class="slide_text">Prev. Block</h1>
                             </div>
                         </div>
                     </a>
@@ -600,6 +624,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_left</i>
+							<h1 class="slide_text">Prev. Clip</h1>
                         </div>
                     </div>
                 </div>
@@ -607,6 +632,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_right</i>
+							<h1 class="slide_text">Next Clip</h1>
                         </div>
                     </div>
                 </div>
@@ -653,6 +679,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_up</i>
+							<h1 class="slide_text">Prev. Block</h1>
                         </div>
                     </div>
                 </a>
@@ -662,6 +689,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                         <div class="wrapper">
                             <div class="toggle">
                                 <i class="material-icons" id="char">keyboard_arrow_down</i>
+								<h1 class="slide_text">Next Block</h1>
                             </div>
                         </div>
                     </a>
@@ -689,6 +717,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_arrow_up</i>
+							<h1 class="slide_text">Prev. Block</h1>
                         </div>
                     </div>
                 </a>
@@ -698,6 +727,7 @@ If you haven’t had the chance to hear Grade 12 grad Sierra Little perform, the
                     <div class="wrapper">
                         <div class="toggle">
                             <i class="material-icons" id="char">keyboard_capslock</i>
+							<h1 class="slide_text">Start Again</h1>
                         </div>
                     </div>
                 </a>
