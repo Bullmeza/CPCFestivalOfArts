@@ -1,11 +1,11 @@
-.bottom:hover,
-.up:hover,
 #right:hover {
     filter: invert(20%);
 }
 
 .right:hover #char,
-.left:hover #char{
+.left:hover #char,
+.bottom:hover #char,
+.up:hover #char{
     opacity: 0.1;
 }
 

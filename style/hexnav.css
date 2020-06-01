@@ -138,12 +138,12 @@
 .slide_text {
     font-size: 30px;
     position: absolute;
-    margin-top: -55px;
+    margin-top: -75px;
     color: white;
     z-index: 5;
     width: 100%;
     text-align: center;
-    font-family: Georgia;
+    font-family: Montserrat;
     font-weight: 600;
 }
 
