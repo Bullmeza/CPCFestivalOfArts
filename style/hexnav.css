@@ -81,6 +81,11 @@
     user-select: none;
 }
 
+#char{
+    background-color: #002d72;
+    z-index: 10;
+}
+
 .arrow_icon {
     font-size: 100px;
     color: white;
@@ -129,6 +134,17 @@
     text-align: center;
     font-family: Georgia;
     font-weight: 900;
+}
+.slide_text {
+    font-size: 30px;
+    position: absolute;
+    margin-top: -55px;
+    color: white;
+    z-index: 5;
+    width: 100%;
+    text-align: center;
+    font-family: Georgia;
+    font-weight: 600;
 }
 
 
